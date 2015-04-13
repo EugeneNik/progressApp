@@ -1,0 +1,7 @@
+Task ID,Created At,Completed At,Last Modified,Name,Assignee,Due Date,Tags,Notes,Projects,Parent Task
+31330485412966,2015-04-10,,2015-04-10,Qmake:,,,,,Project Build Systems,
+31330485412964,2015-04-10,,2015-04-10,Gradle:,,,,,Project Build Systems,
+31330485412962,2015-04-10,,2015-04-10,Maven:,,,,,Project Build Systems,
+31330485412960,2015-04-10,,2015-04-10,Ant:,,,,,Project Build Systems,
+31343605630494,2015-04-10,,2015-04-10,Прочитать Мануал по API и установке,,,,,Project Build Systems,
+31343605630497,2015-04-10,,2015-04-10,"Написать таргет, для запуска SQL файла, который обновит имеющуюся базу удалив все кастомные значения",,,,,Project Build Systems,
