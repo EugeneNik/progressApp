@@ -102,7 +102,9 @@ public class Task {
         }
     }
 
-    public boolean equals(Task task) {
+    @Override
+    public boolean equals(Object obj) {
+        Task task = (Task) obj;
         return this.parent == task.parent && this.task.get().equals(task.getTask());
     }
 }

@@ -1,777 +1,256 @@
-Android SDK:,null,0.0,1
-material design:,null,0.0,2
-,null,0.0,3
-Course (Parallels):,null,0.0,2
-"SDK,null,0.0,3
-Основные компоненты приложения. Жизненный цикл приложения,null,0.0,3
-Angular JS:,null,0.0,1
-Интерактивный учебник AngularJS:,null,0.0,2
-Introduction,null,0.0,3
-Basics,null,0.0,3
-Controllers,null,0.0,3
-Scopes,null,0.0,3
-Collections,null,0.0,3
-Modules,null,0.0,3
-Dependency Injection,null,0.0,3
-Services,null,0.0,3
-Filters,null,0.0,3
-Directives,null,0.0,3
-Directive Scopes,null,0.0,3
-Routing,null,0.0,3
-HTTP,null,0.0,3
-Курс AngularJS на codecademy:,null,0.0,2
-Unit1,null,0.0,3
-Unit2,null,0.0,3
-Unit3,null,0.0,3
-Unit4,null,0.0,3
-Unit5,null,0.0,3
-Architecture:,null,0.0,1
-Web Patterns:,null,0.0,2
-Прочитать статью ExtJS – учимся правильно писать компоненты,null,0.0,3
-Прочитать книгу Intoduction to Web Application Development,null,0.0,3
-Patterns:,null,0.0,2
-Прочитать книгу Java Design Patterns,null,0.0,3
-Прочитать книгу Шаблоны проектирования в Java. Гранд,null,0.0,3
-Bootstrap:,null,0.0,1
-CI:,null,0.0,1
-Jenkins:,null,0.0,2
-Teamcity:,null,0.0,2
-CSS:,null,0.0,1
-Ext Js:,null,0.0,1
-Прочитать статью развернутый обзор Ext js 2.2,null,0.0,2
-Прочитать статью Представляем Sencha Ext JS 5,null,0.0,2
-Прочитать статью Создание сложных приложений в Ext JS,null,0.0,2
-Введение в Ext JS 4:,null,0.0,2
-Введение в Ext JS,null,0.0,3
-Система классов в Ext JS 4,null,0.0,3
-Работа с элементами DOM,null,0.0,3
-Обработка событий компонентов,null,0.0,3
-Анимация в Ext Js,null,0.0,3
-Компоновка в Ext js ,null,0.0,3
-Компоненты в Ext JS ,null,0.0,3
-Работа с датами в Ext JS,null,0.0,3
-AJAX в Ext js,null,0.0,3
-Ext. XTemplate,null,0.0,3
-Работа с формами в Ext JS,null,0.0,3
-Работа с данными в Ext JS,null,0.0,3
-Таблицы и Ext.grid.Panel,null,0.0,3
-Архитектура приложения и MVC,null,0.0,3
-Рисование в Ext JS и диаграммы,null,0.0,3
-HTML 5:,null,0.0,1
-iOS:,null,0.0,1
-Java EE 6:,null,0.0,1
-JAX - WS 2.2:,null,0.0,2
-Java Mail 1.4:,null,0.0,2
-Написать консольное приложение для отправки электронной почты,null,0.0,3
-JTA 1.1:,null,0.0,2
-JMS API 1.1:,null,0.0,2
-Common Annotations for the Java Platform 1.1:,null,0.0,2
-JPA 2.0:,null,0.0,2
-Java EE Connector Architecture 1.6:,null,0.0,2
-EJB 3.1:,null,0.0,2
-Bean Validation 1.0:,null,0.0,2
-Dependency Injection for Java 1.0:,null,0.0,2
-Web Bean 1.0:,null,0.0,2
-JSTL 1.2:,null,0.0,2
-JSP 2.2:,null,0.0,2
-JSF 2.0:,null,0.0,2
-Java Servlet 3.0:,null,0.0,2
-JAXR 1.0:,null,0.0,2
-XML Messaging 1.3:,null,0.0,2
-JAX-RPC 1.1:,null,0.0,2
-JAXB 2.2:,null,0.0,2
-Web Services 1.3:,null,0.0,2
-JAX - RS 1.1:,null,0.0,2
-StAX 1.0:,null,0.0,2
-JAF 1.1:,null,0.0,2
-JMX 2.0:,null,0.0,2
-Java Database Connectivity 4.0:,null,0.0,2
-JAXP 1.3:,null,0.0,2
-J2EE Management 1.1:,null,0.0,2
-Java Authorization Contract for Container 1.3:,null,0.0,2
-Java EE 7:,null,0.0,1
-JAX - RS 2.0:,null,0.0,2
-JTA 1.2:,null,0.0,2
-Java Mail 1.5:,null,0.0,2
-JMS 2.0:,null,0.0,2
-JPA 2.1:,null,0.0,2
-Java EE Connector Architecture 1.7:,null,0.0,2
-Interceptors 1.2:,null,0.0,2
-EJB 3.2:,null,0.0,2
-Bean Validation 1.1:,null,0.0,2
-Dependency Injection for Java 1.1:,null,0.0,2
-Concurrency Utilities for Java EE 1.0:,null,0.0,2
-JSTL 1.2:,null,0.0,2
-JSP 2.3:,null,0.0,2
-JSF 2.2 :,null,0.0,2
-Servlet 3.1:,null,0.0,2
-JSON Processing:,null,0.0,2
-Web Socket:,null,0.0,2
-Java FX 8:,null,0.0,1
-Common:,null,0.0,2
-Java FX 8 Tutorial,null,0.0,3
-Написать простую форму заказа,null,0.0,3
-Реализовать компонент ComboCheckBox,null,0.0,3
-Прочитать статьи JavaFX 2.0 Game Tutorial 1-5,null,0.0,3
-Прочитать статьи JavaFX: Data Model for TreeTable,null,0.0,3
-Прочитать статью Fancy Forms with JavaFX CSS,null,0.0,3
-FXML:,null,0.0,2
-Java SE 6 common:,null,0.0,1
-Generics:,null,0.0,2
-Прочитать статью (в описании ссылка),null,0.0,3
-Collections:,null,0.0,2
-Прочитать статью Difference between ArrayList and Vector in Java,null,0.0,3
-JVM:,null,0.0,2
-Commons:,null,0.0,2
-Прочитать статью Exception Handling & Assertion,null,0.0,3
-Java SE 7:,null,0.0,1
-Java SE 8:,null,0.0,1
-Lambda:,null,0.0,2
-Прочитать статью Lambda Expressions,null,0.0,3
-Прочитать статью Lambda FAQ,null,0.0,3
-Прочитать статью Java 8: Lambda Part 1,null,0.0,3
-Прочитать статью Java 8: Lambda Part 2,null,0.0,3
-Lambda Expressions in Java. Tutorial,null,0.0,3
-Lambda Expressions in Java. Reference,null,0.0,3
-Streams:,null,0.0,2
-Aggregate Operations,null,0.0,3
-Reduction,null,0.0,3
-Parallelism,null,0.0,3
-State of the Lambda,null,0.0,3
-State of the Lambda: Libraries Edition,null,0.0,3
-Interface evolution via virtual extension methods,null,0.0,3
-What's Wrong with Java 8: Currying vs Closures,null,0.0,3
-"What's Wrong in Java 8,null,0.0,3
-"What's Wrong in Java 8,null,0.0,3
-"What's Wrong in Java 8,null,0.0,3
-"What's wrong in Java 8,null,0.0,3
-"What's wrong in Java 8,null,0.0,3
-Сергей Куксенко — JDK8: Stream style,null,0.0,3
-"Методы в интерфейсах,null,0.0,3
-Прочитать статью Default methods,null,0.0,3
-Прочитать статью Method References,null,0.0,3
-Аннотации:,null,0.0,2
-Lesson: Annotations,null,0.0,3
-Type Annotations Specification (JSR 308),null,0.0,3
-Reflection API:,null,0.0,2
-Trail: The Reflection API,null,0.0,3
-Mirrors: Design Principles for Meta-level Facilities of Object-Oriented Programming Languages,null,0.0,3
-Загрузка классов:,null,0.0,2
-Dynamic Class Loading in the JavaTM Virtual Machine,null,0.0,3
-Internals of Java Class Loading,null,0.0,3
-Inside Class Loaders,null,0.0,3
-Inside Class Loaders: Debugging,null,0.0,3
-Loading of Classes and Interfaces,null,0.0,3
-Linking of Classes and Interfaces,null,0.0,3
-Initialization of Classes and Interfaces,null,0.0,3
-Unloading of Classes and Interfaces,null,0.0,3
-Ms SQL:,null,0.0,1
-My SQL:,null,0.0,1
-Nodejs:,null,0.08333333333333333,1
-Знакомство с c9.io:,null,0.0,2
-https://c9.io/,null,0.0,3
-запуск mongo db на c9.io,null,0.0,3
-Screencast по Node.js часть 1:,null,0.0,2
-"Введение в Node.JS,null,0.0,3
-Что такое Node.JS? Почему Node.JS?,null,0.0,3
-Установка и запуск,null,0.0,3
-Исходники и документация,null,0.0,3
-Модули для Node.JS,null,0.0,3
-Приёмы работы с модулями,null,0.0,3
-Введение в NPM – менеджер пакетов для Node.JS,null,0.0,3
-Структура пакета NPM,null,0.0,3
-Глобальные модули,null,0.0,3
-Модуль util и наследование,null,0.0,3
-Модуль console,null,0.0,3
-Наследование от ошибок Error,null,0.0,3
-"События,null,0.0,3
-Node.JS как веб-сервер,null,0.0,3
-Эхо-сервер на Node.JS,null,0.0,3
-Документация к модулю http,null,0.0,3
-"Разработка,null,0.0,3
-Отладка скриптов под Node.JS,null,0.0,3
-"Логирование,null,0.0,3
-Введение в асинхронную разработку,null,0.0,3
-"Событийный цикл,null,0.0,3
-"Таймеры,null,0.0,3
-"Работа с файлами,null,0.0,3
-Безопасный путь к файлу в fs и path,null,0.0,3
-"Потоки данных в Node.JS,null,0.0,3
-"Writable поток ответа res,null,0.0,3
-"Чат через long-polling,null,0.0,3
-"Домены,null,0.0,3
-Чтение параметров из командной строки и окружения,null,0.0,3
-Screencast node.js часть 2:,null,0.0,2
-Создаём костяк сайта / Express: основы и Middleware,null,0.0,3
-"Улучшаем костяк сайта / Логгер,null,0.0,3
-"Улучшаем шаблонизацию / EJS: layout,null,0.0,3
-"Начинаем работать с базой / Основы MongoDB,null,0.0,3
-Создаём модель для пользователя / Основы Mongoose,null,0.0,3
-"Делаем скрипт для создания тестовой базы / Async,null,0.0,3
-"Веб-сервисы,null,0.0,3
-"Сессии,null,0.0,3
-"Авторизация /Express,null,0.0,3
-"COMET: обзор подходов / WS.JS,null,0.0,3
-Чат на Express и Socket.IO,null,0.0,3
-Опции Socket.IO и автореконнект,null,0.0,3
-Socket.IO + Express + авторизация,null,0.0,3
-задания:,null,0.3333333333333333,2
-Common шаблон ,null,1.0,3
-Whois сервис,null,0.0,3
-дневник тренировок,null,0.0,3
-No SQL:,null,0.0,1
-мини книга по mongodb:,null,0.0,2
-Глава 1 — Основы,null,0.0,3
-Глава 2 — Обновление,null,0.0,3
-Глава 3 — Осваиваем Find,null,0.0,3
-Глава 4 — Моделирование данных,null,0.0,3
-Глава 5 — Когда использовать MongoDB,null,0.0,3
-Глава 6 — MapReduce,null,0.0,3
-Глава 7 — Производительность и инструментарий,null,0.0,3
-Oracle SQL:,null,0.0,1
-Optimization:,null,0.0,2
-Training:,null,0.0,2
-Administration:,null,0.0,2
-Other:,null,0.0,1
-Python:,null,0.0,2
-Intellij Idea:,null,0.0,2
-"Написать плагин для идеи,null,0.0,3
-Google Chrome:,null,0.0,2
-"Написать расширение для хрома,null,0.0,3
-Project Build Systems:,null,0.0,1
-Qmake:,null,0.0,2
-Gradle:,null,0.0,2
-Maven:,null,0.0,2
-Ant:,null,0.0,2
-Прочитать Мануал по API и установке,null,0.0,3
-"Написать таргет,null,0.0,3
-SQL commons:,null,0.0,1
-VCS:,null,0.0,1
-Mercurial:,null,0.0,2
-Прочитать мануал по работе  и установке,null,0.0,3
-Создать проект на меркуриал,null,0.0,3
-GIT:,null,0.0,2
-книга Pro-git (довольно большая),null,0.0,3
-SVN:,null,0.0,2
-Work Process:,null,0.0,1
-Manifest:,null,0.0,2
-Scrum:,null,0.0,2
-Agile:,null,0.0,2
-Android SDK:,null,0.0,1
-material design:,null,0.0,2
-,null,0.0,3
-Course (Parallels):,null,0.0,2
-"SDK,null,0.0,3
-Основные компоненты приложения. Жизненный цикл приложения,null,0.0,3
-Angular JS:,null,0.0,1
-Интерактивный учебник AngularJS:,null,0.0,2
-Introduction,null,0.0,3
-Basics,null,0.0,3
-Controllers,null,0.0,3
-Scopes,null,0.0,3
-Collections,null,0.0,3
-Modules,null,0.0,3
-Dependency Injection,null,0.0,3
-Services,null,0.0,3
-Filters,null,0.0,3
-Directives,null,0.0,3
-Directive Scopes,null,0.0,3
-Routing,null,0.0,3
-HTTP,null,0.0,3
-Курс AngularJS на codecademy:,null,0.0,2
-Unit1,null,0.0,3
-Unit2,null,0.0,3
-Unit3,null,0.0,3
-Unit4,null,0.0,3
-Unit5,null,0.0,3
-Architecture:,null,0.0,1
-Web Patterns:,null,0.0,2
-Прочитать статью ExtJS – учимся правильно писать компоненты,null,0.0,3
-Прочитать книгу Intoduction to Web Application Development,null,0.0,3
-Patterns:,null,0.0,2
-Прочитать книгу Java Design Patterns,null,0.0,3
-Прочитать книгу Шаблоны проектирования в Java. Гранд,null,0.0,3
-Bootstrap:,null,0.0,1
-CI:,null,0.0,1
-Jenkins:,null,0.0,2
-Teamcity:,null,0.0,2
-CSS:,null,0.0,1
-Ext Js:,null,0.0,1
-Прочитать статью развернутый обзор Ext js 2.2,null,0.0,2
-Прочитать статью Представляем Sencha Ext JS 5,null,0.0,2
-Прочитать статью Создание сложных приложений в Ext JS,null,0.0,2
-Введение в Ext JS 4:,null,0.0,2
-Введение в Ext JS,null,0.0,3
-Система классов в Ext JS 4,null,0.0,3
-Работа с элементами DOM,null,0.0,3
-Обработка событий компонентов,null,0.0,3
-Анимация в Ext Js,null,0.0,3
-Компоновка в Ext js ,null,0.0,3
-Компоненты в Ext JS ,null,0.0,3
-Работа с датами в Ext JS,null,0.0,3
-AJAX в Ext js,null,0.0,3
-Ext. XTemplate,null,0.0,3
-Работа с формами в Ext JS,null,0.0,3
-Работа с данными в Ext JS,null,0.0,3
-Таблицы и Ext.grid.Panel,null,0.0,3
-Архитектура приложения и MVC,null,0.0,3
-Рисование в Ext JS и диаграммы,null,0.0,3
-HTML 5:,null,0.0,1
-iOS:,null,0.0,1
-Java EE 6:,null,0.0,1
-JAX - WS 2.2:,null,0.0,2
-Java Mail 1.4:,null,0.0,2
-Написать консольное приложение для отправки электронной почты,null,0.0,3
-JTA 1.1:,null,0.0,2
-JMS API 1.1:,null,0.0,2
-Common Annotations for the Java Platform 1.1:,null,0.0,2
-JPA 2.0:,null,0.0,2
-Java EE Connector Architecture 1.6:,null,0.0,2
-EJB 3.1:,null,0.0,2
-Bean Validation 1.0:,null,0.0,2
-Dependency Injection for Java 1.0:,null,0.0,2
-Web Bean 1.0:,null,0.0,2
-JSTL 1.2:,null,0.0,2
-JSP 2.2:,null,0.0,2
-JSF 2.0:,null,0.0,2
-Java Servlet 3.0:,null,0.0,2
-JAXR 1.0:,null,0.0,2
-XML Messaging 1.3:,null,0.0,2
-JAX-RPC 1.1:,null,0.0,2
-JAXB 2.2:,null,0.0,2
-Web Services 1.3:,null,0.0,2
-JAX - RS 1.1:,null,0.0,2
-StAX 1.0:,null,0.0,2
-JAF 1.1:,null,0.0,2
-JMX 2.0:,null,0.0,2
-Java Database Connectivity 4.0:,null,0.0,2
-JAXP 1.3:,null,0.0,2
-J2EE Management 1.1:,null,0.0,2
-Java Authorization Contract for Container 1.3:,null,0.0,2
-Java EE 7:,null,0.0,1
-JAX - RS 2.0:,null,0.0,2
-JTA 1.2:,null,0.0,2
-Java Mail 1.5:,null,0.0,2
-JMS 2.0:,null,0.0,2
-JPA 2.1:,null,0.0,2
-Java EE Connector Architecture 1.7:,null,0.0,2
-Interceptors 1.2:,null,0.0,2
-EJB 3.2:,null,0.0,2
-Bean Validation 1.1:,null,0.0,2
-Dependency Injection for Java 1.1:,null,0.0,2
-Concurrency Utilities for Java EE 1.0:,null,0.0,2
-JSTL 1.2:,null,0.0,2
-JSP 2.3:,null,0.0,2
-JSF 2.2 :,null,0.0,2
-Servlet 3.1:,null,0.0,2
-JSON Processing:,null,0.0,2
-Web Socket:,null,0.0,2
-Java FX 8:,null,0.0,1
-Common:,null,0.0,2
-Java FX 8 Tutorial,null,0.0,3
-Написать простую форму заказа,null,0.0,3
-Реализовать компонент ComboCheckBox,null,0.0,3
-Прочитать статьи JavaFX 2.0 Game Tutorial 1-5,null,0.0,3
-Прочитать статьи JavaFX: Data Model for TreeTable,null,0.0,3
-Прочитать статью Fancy Forms with JavaFX CSS,null,0.0,3
-FXML:,null,0.0,2
-Java SE 6 common:,null,0.0,1
-Generics:,null,0.0,2
-Прочитать статью (в описании ссылка),null,0.0,3
-Collections:,null,0.0,2
-Прочитать статью Difference between ArrayList and Vector in Java,null,0.0,3
-JVM:,null,0.0,2
-Commons:,null,0.0,2
-Прочитать статью Exception Handling & Assertion,null,0.0,3
-Java SE 7:,null,0.0,1
-Java SE 8:,null,0.0,1
-Lambda:,null,0.0,2
-Прочитать статью Lambda Expressions,null,0.0,3
-Прочитать статью Lambda FAQ,null,0.0,3
-Прочитать статью Java 8: Lambda Part 1,null,0.0,3
-Прочитать статью Java 8: Lambda Part 2,null,0.0,3
-Lambda Expressions in Java. Tutorial,null,0.0,3
-Lambda Expressions in Java. Reference,null,0.0,3
-Streams:,null,0.0,2
-Aggregate Operations,null,0.0,3
-Reduction,null,0.0,3
-Parallelism,null,0.0,3
-State of the Lambda,null,0.0,3
-State of the Lambda: Libraries Edition,null,0.0,3
-Interface evolution via virtual extension methods,null,0.0,3
-What's Wrong with Java 8: Currying vs Closures,null,0.0,3
-"What's Wrong in Java 8,null,0.0,3
-"What's Wrong in Java 8,null,0.0,3
-"What's Wrong in Java 8,null,0.0,3
-"What's wrong in Java 8,null,0.0,3
-"What's wrong in Java 8,null,0.0,3
-Сергей Куксенко — JDK8: Stream style,null,0.0,3
-"Методы в интерфейсах,null,0.0,3
-Прочитать статью Default methods,null,0.0,3
-Прочитать статью Method References,null,0.0,3
-Аннотации:,null,0.0,2
-Lesson: Annotations,null,0.0,3
-Type Annotations Specification (JSR 308),null,0.0,3
-Reflection API:,null,0.0,2
-Trail: The Reflection API,null,0.0,3
-Mirrors: Design Principles for Meta-level Facilities of Object-Oriented Programming Languages,null,0.0,3
-Загрузка классов:,null,0.0,2
-Dynamic Class Loading in the JavaTM Virtual Machine,null,0.0,3
-Internals of Java Class Loading,null,0.0,3
-Inside Class Loaders,null,0.0,3
-Inside Class Loaders: Debugging,null,0.0,3
-Loading of Classes and Interfaces,null,0.0,3
-Linking of Classes and Interfaces,null,0.0,3
-Initialization of Classes and Interfaces,null,0.0,3
-Unloading of Classes and Interfaces,null,0.0,3
-Ms SQL:,null,0.0,1
-My SQL:,null,0.0,1
-Nodejs:,null,0.0,1
-Знакомство с c9.io:,null,0.0,2
-https://c9.io/,null,0.0,3
-запуск mongo db на c9.io,null,0.0,3
-Screencast по Node.js часть 1:,null,0.0,2
-"Введение в Node.JS,null,0.0,3
-Что такое Node.JS? Почему Node.JS?,null,0.0,3
-Установка и запуск,null,0.0,3
-Исходники и документация,null,0.0,3
-Модули для Node.JS,null,0.0,3
-Приёмы работы с модулями,null,0.0,3
-Введение в NPM – менеджер пакетов для Node.JS,null,0.0,3
-Структура пакета NPM,null,0.0,3
-Глобальные модули,null,0.0,3
-Модуль util и наследование,null,0.0,3
-Модуль console,null,0.0,3
-Наследование от ошибок Error,null,0.0,3
-"События,null,0.0,3
-Node.JS как веб-сервер,null,0.0,3
-Эхо-сервер на Node.JS,null,0.0,3
-Документация к модулю http,null,0.0,3
-"Разработка,null,0.0,3
-Отладка скриптов под Node.JS,null,0.0,3
-"Логирование,null,0.0,3
-Введение в асинхронную разработку,null,0.0,3
-"Событийный цикл,null,0.0,3
-"Таймеры,null,0.0,3
-"Работа с файлами,null,0.0,3
-Безопасный путь к файлу в fs и path,null,0.0,3
-"Потоки данных в Node.JS,null,0.0,3
-"Writable поток ответа res,null,0.0,3
-"Чат через long-polling,null,0.0,3
-"Домены,null,0.0,3
-Чтение параметров из командной строки и окружения,null,0.0,3
-Screencast node.js часть 2:,null,0.0,2
-Создаём костяк сайта / Express: основы и Middleware,null,0.0,3
-"Улучшаем костяк сайта / Логгер,null,0.0,3
-"Улучшаем шаблонизацию / EJS: layout,null,0.0,3
-"Начинаем работать с базой / Основы MongoDB,null,0.0,3
-Создаём модель для пользователя / Основы Mongoose,null,0.0,3
-"Делаем скрипт для создания тестовой базы / Async,null,0.0,3
-"Веб-сервисы,null,0.0,3
-"Сессии,null,0.0,3
-"Авторизация /Express,null,0.0,3
-"COMET: обзор подходов / WS.JS,null,0.0,3
-Чат на Express и Socket.IO,null,0.0,3
-Опции Socket.IO и автореконнект,null,0.0,3
-Socket.IO + Express + авторизация,null,0.0,3
-задания:,null,0.0,2
-Common шаблон ,null,0.0,3
-Whois сервис,null,0.0,3
-дневник тренировок,null,0.0,3
-No SQL:,null,0.0,1
-мини книга по mongodb:,null,0.0,2
-Глава 1 — Основы,null,0.0,3
-Глава 2 — Обновление,null,0.0,3
-Глава 3 — Осваиваем Find,null,0.0,3
-Глава 4 — Моделирование данных,null,0.0,3
-Глава 5 — Когда использовать MongoDB,null,0.0,3
-Глава 6 — MapReduce,null,0.0,3
-Глава 7 — Производительность и инструментарий,null,0.0,3
-Oracle SQL:,null,0.0,1
-Optimization:,null,0.0,2
-Training:,null,0.0,2
-Administration:,null,0.0,2
-Other:,null,0.0,1
-Python:,null,0.0,2
-Intellij Idea:,null,0.0,2
-"Написать плагин для идеи,null,0.0,3
-Google Chrome:,null,0.0,2
-"Написать расширение для хрома,null,0.0,3
-Project Build Systems:,null,0.0,1
-Qmake:,null,0.0,2
-Gradle:,null,0.0,2
-Maven:,null,0.0,2
-Ant:,null,0.0,2
-Прочитать Мануал по API и установке,null,0.0,3
-"Написать таргет,null,0.0,3
-SQL commons:,null,0.0,1
-VCS:,null,0.0,1
-Mercurial:,null,0.0,2
-Прочитать мануал по работе  и установке,null,0.0,3
-Создать проект на меркуриал,null,0.0,3
-GIT:,null,0.0,2
-книга Pro-git (довольно большая),null,0.0,3
-SVN:,null,0.0,2
-Work Process:,null,0.0,1
-Manifest:,null,0.0,2
-Scrum:,null,0.0,2
-Agile:,null,0.0,2
-Android SDK:,null,0.0,1
-material design:,null,0.0,2
-,null,0.0,3
-Course (Parallels):,null,0.0,2
-"SDK,null,0.0,3
-Основные компоненты приложения. Жизненный цикл приложения,null,0.0,3
-Angular JS:,null,0.0,1
-Интерактивный учебник AngularJS:,null,0.0,2
-Introduction,null,0.0,3
-Basics,null,0.0,3
-Controllers,null,0.0,3
-Scopes,null,0.0,3
-Collections,null,0.0,3
-Modules,null,0.0,3
-Dependency Injection,null,0.0,3
-Services,null,0.0,3
-Filters,null,0.0,3
-Directives,null,0.0,3
-Directive Scopes,null,0.0,3
-Routing,null,0.0,3
-HTTP,null,0.0,3
-Курс AngularJS на codecademy:,null,0.0,2
-Unit1,null,0.0,3
-Unit2,null,0.0,3
-Unit3,null,0.0,3
-Unit4,null,0.0,3
-Unit5,null,0.0,3
-Architecture:,null,0.0,1
-Web Patterns:,null,0.0,2
-Прочитать статью ExtJS – учимся правильно писать компоненты,null,0.0,3
-Прочитать книгу Intoduction to Web Application Development,null,0.0,3
-Patterns:,null,0.0,2
-Прочитать книгу Java Design Patterns,null,0.0,3
-Прочитать книгу Шаблоны проектирования в Java. Гранд,null,0.0,3
-Bootstrap:,null,0.0,1
-CI:,null,0.0,1
-Jenkins:,null,0.0,2
-Teamcity:,null,0.0,2
-CSS:,null,0.0,1
-Ext Js:,null,0.0,1
-Прочитать статью развернутый обзор Ext js 2.2,null,0.0,2
-Прочитать статью Представляем Sencha Ext JS 5,null,0.0,2
-Прочитать статью Создание сложных приложений в Ext JS,null,0.0,2
-Введение в Ext JS 4:,null,0.0,2
-Введение в Ext JS,null,0.0,3
-Система классов в Ext JS 4,null,0.0,3
-Работа с элементами DOM,null,0.0,3
-Обработка событий компонентов,null,0.0,3
-Анимация в Ext Js,null,0.0,3
-Компоновка в Ext js ,null,0.0,3
-Компоненты в Ext JS ,null,0.0,3
-Работа с датами в Ext JS,null,0.0,3
-AJAX в Ext js,null,0.0,3
-Ext. XTemplate,null,0.0,3
-Работа с формами в Ext JS,null,0.0,3
-Работа с данными в Ext JS,null,0.0,3
-Таблицы и Ext.grid.Panel,null,0.0,3
-Архитектура приложения и MVC,null,0.0,3
-Рисование в Ext JS и диаграммы,null,0.0,3
-HTML 5:,null,0.0,1
-iOS:,null,0.0,1
-Java EE 6:,null,0.0,1
-JAX - WS 2.2:,null,0.0,2
-Java Mail 1.4:,null,0.0,2
-Написать консольное приложение для отправки электронной почты,null,0.0,3
-JTA 1.1:,null,0.0,2
-JMS API 1.1:,null,0.0,2
-Common Annotations for the Java Platform 1.1:,null,0.0,2
-JPA 2.0:,null,0.0,2
-Java EE Connector Architecture 1.6:,null,0.0,2
-EJB 3.1:,null,0.0,2
-Bean Validation 1.0:,null,0.0,2
-Dependency Injection for Java 1.0:,null,0.0,2
-Web Bean 1.0:,null,0.0,2
-JSTL 1.2:,null,0.0,2
-JSP 2.2:,null,0.0,2
-JSF 2.0:,null,0.0,2
-Java Servlet 3.0:,null,0.0,2
-JAXR 1.0:,null,0.0,2
-XML Messaging 1.3:,null,0.0,2
-JAX-RPC 1.1:,null,0.0,2
-JAXB 2.2:,null,0.0,2
-Web Services 1.3:,null,0.0,2
-JAX - RS 1.1:,null,0.0,2
-StAX 1.0:,null,0.0,2
-JAF 1.1:,null,0.0,2
-JMX 2.0:,null,0.0,2
-Java Database Connectivity 4.0:,null,0.0,2
-JAXP 1.3:,null,0.0,2
-J2EE Management 1.1:,null,0.0,2
-Java Authorization Contract for Container 1.3:,null,0.0,2
-Java EE 7:,null,0.0,1
-JAX - RS 2.0:,null,0.0,2
-JTA 1.2:,null,0.0,2
-Java Mail 1.5:,null,0.0,2
-JMS 2.0:,null,0.0,2
-JPA 2.1:,null,0.0,2
-Java EE Connector Architecture 1.7:,null,0.0,2
-Interceptors 1.2:,null,0.0,2
-EJB 3.2:,null,0.0,2
-Bean Validation 1.1:,null,0.0,2
-Dependency Injection for Java 1.1:,null,0.0,2
-Concurrency Utilities for Java EE 1.0:,null,0.0,2
-JSTL 1.2:,null,0.0,2
-JSP 2.3:,null,0.0,2
-JSF 2.2 :,null,0.0,2
-Servlet 3.1:,null,0.0,2
-JSON Processing:,null,0.0,2
-Web Socket:,null,0.0,2
-Java FX 8:,null,0.0,1
-Common:,null,0.0,2
-Java FX 8 Tutorial,null,0.0,3
-Написать простую форму заказа,null,0.0,3
-Реализовать компонент ComboCheckBox,null,0.0,3
-Прочитать статьи JavaFX 2.0 Game Tutorial 1-5,null,0.0,3
-Прочитать статьи JavaFX: Data Model for TreeTable,null,0.0,3
-Прочитать статью Fancy Forms with JavaFX CSS,null,0.0,3
-FXML:,null,0.0,2
-Java SE 6 common:,null,0.0,1
-Generics:,null,0.0,2
-Прочитать статью (в описании ссылка),null,0.0,3
-Collections:,null,0.0,2
-Прочитать статью Difference between ArrayList and Vector in Java,null,0.0,3
-JVM:,null,0.0,2
-Commons:,null,0.0,2
-Прочитать статью Exception Handling & Assertion,null,0.0,3
-Java SE 7:,null,0.0,1
-Java SE 8:,null,0.0,1
-Lambda:,null,0.0,2
-Прочитать статью Lambda Expressions,null,0.0,3
-Прочитать статью Lambda FAQ,null,0.0,3
-Прочитать статью Java 8: Lambda Part 1,null,0.0,3
-Прочитать статью Java 8: Lambda Part 2,null,0.0,3
-Lambda Expressions in Java. Tutorial,null,0.0,3
-Lambda Expressions in Java. Reference,null,0.0,3
-Streams:,null,0.0,2
-Aggregate Operations,null,0.0,3
-Reduction,null,0.0,3
-Parallelism,null,0.0,3
-State of the Lambda,null,0.0,3
-State of the Lambda: Libraries Edition,null,0.0,3
-Interface evolution via virtual extension methods,null,0.0,3
-What's Wrong with Java 8: Currying vs Closures,null,0.0,3
-"What's Wrong in Java 8,null,0.0,3
-"What's Wrong in Java 8,null,0.0,3
-"What's Wrong in Java 8,null,0.0,3
-"What's wrong in Java 8,null,0.0,3
-"What's wrong in Java 8,null,0.0,3
-Сергей Куксенко — JDK8: Stream style,null,0.0,3
-"Методы в интерфейсах,null,0.0,3
-Прочитать статью Default methods,null,0.0,3
-Прочитать статью Method References,null,0.0,3
-Аннотации:,null,0.0,2
-Lesson: Annotations,null,0.0,3
-Type Annotations Specification (JSR 308),null,0.0,3
-Reflection API:,null,0.0,2
-Trail: The Reflection API,null,0.0,3
-Mirrors: Design Principles for Meta-level Facilities of Object-Oriented Programming Languages,null,0.0,3
-Загрузка классов:,null,0.0,2
-Dynamic Class Loading in the JavaTM Virtual Machine,null,0.0,3
-Internals of Java Class Loading,null,0.0,3
-Inside Class Loaders,null,0.0,3
-Inside Class Loaders: Debugging,null,0.0,3
-Loading of Classes and Interfaces,null,0.0,3
-Linking of Classes and Interfaces,null,0.0,3
-Initialization of Classes and Interfaces,null,0.0,3
-Unloading of Classes and Interfaces,null,0.0,3
-Ms SQL:,null,0.0,1
-My SQL:,null,0.0,1
-Nodejs:,null,0.0,1
-Знакомство с c9.io:,null,0.0,2
-https://c9.io/,null,0.0,3
-запуск mongo db на c9.io,null,0.0,3
-Screencast по Node.js часть 1:,null,0.0,2
-"Введение в Node.JS,null,0.0,3
-Что такое Node.JS? Почему Node.JS?,null,0.0,3
-Установка и запуск,null,0.0,3
-Исходники и документация,null,0.0,3
-Модули для Node.JS,null,0.0,3
-Приёмы работы с модулями,null,0.0,3
-Введение в NPM – менеджер пакетов для Node.JS,null,0.0,3
-Структура пакета NPM,null,0.0,3
-Глобальные модули,null,0.0,3
-Модуль util и наследование,null,0.0,3
-Модуль console,null,0.0,3
-Наследование от ошибок Error,null,0.0,3
-"События,null,0.0,3
-Node.JS как веб-сервер,null,0.0,3
-Эхо-сервер на Node.JS,null,0.0,3
-Документация к модулю http,null,0.0,3
-"Разработка,null,0.0,3
-Отладка скриптов под Node.JS,null,0.0,3
-"Логирование,null,0.0,3
-Введение в асинхронную разработку,null,0.0,3
-"Событийный цикл,null,0.0,3
-"Таймеры,null,0.0,3
-"Работа с файлами,null,0.0,3
-Безопасный путь к файлу в fs и path,null,0.0,3
-"Потоки данных в Node.JS,null,0.0,3
-"Writable поток ответа res,null,0.0,3
-"Чат через long-polling,null,0.0,3
-"Домены,null,0.0,3
-Чтение параметров из командной строки и окружения,null,0.0,3
-Screencast node.js часть 2:,null,0.0,2
-Создаём костяк сайта / Express: основы и Middleware,null,0.0,3
-"Улучшаем костяк сайта / Логгер,null,0.0,3
-"Улучшаем шаблонизацию / EJS: layout,null,0.0,3
-"Начинаем работать с базой / Основы MongoDB,null,0.0,3
-Создаём модель для пользователя / Основы Mongoose,null,0.0,3
-"Делаем скрипт для создания тестовой базы / Async,null,0.0,3
-"Веб-сервисы,null,0.0,3
-"Сессии,null,0.0,3
-"Авторизация /Express,null,0.0,3
-"COMET: обзор подходов / WS.JS,null,0.0,3
-Чат на Express и Socket.IO,null,0.0,3
-Опции Socket.IO и автореконнект,null,0.0,3
-Socket.IO + Express + авторизация,null,0.0,3
-задания:,null,0.0,2
-Common шаблон ,null,0.0,3
-Whois сервис,null,0.0,3
-дневник тренировок,null,0.0,3
-No SQL:,null,0.0,1
-мини книга по mongodb:,null,0.0,2
-Глава 1 — Основы,null,0.0,3
-Глава 2 — Обновление,null,0.0,3
-Глава 3 — Осваиваем Find,null,0.0,3
-Глава 4 — Моделирование данных,null,0.0,3
-Глава 5 — Когда использовать MongoDB,null,0.0,3
-Глава 6 — MapReduce,null,0.0,3
-Глава 7 — Производительность и инструментарий,null,0.0,3
-Oracle SQL:,null,0.0,1
-Optimization:,null,0.0,2
-Training:,null,0.0,2
-Administration:,null,0.0,2
-Other:,null,0.0,1
-Python:,null,0.0,2
-Intellij Idea:,null,0.0,2
-"Написать плагин для идеи,null,0.0,3
-Google Chrome:,null,0.0,2
-"Написать расширение для хрома,null,0.0,3
-Project Build Systems:,null,0.0,1
-Qmake:,null,0.0,2
-Gradle:,null,0.0,2
-Maven:,null,0.0,2
-Ant:,null,0.0,2
-Прочитать Мануал по API и установке,null,0.0,3
-"Написать таргет,null,0.0,3
-SQL commons:,null,0.0,1
-VCS:,null,0.0,1
-Mercurial:,null,0.0,2
-Прочитать мануал по работе  и установке,null,0.0,3
-Создать проект на меркуриал,null,0.0,3
-GIT:,null,0.0,2
-книга Pro-git (довольно большая),null,0.0,3
-SVN:,null,0.0,2
-Work Process:,null,0.0,1
-Manifest:,null,0.0,2
-Scrum:,null,0.0,2
-Agile:,null,0.0,2
+Android SDK:,,0.0,1
+material design:,,0.0,2
+,,0.0,3
+Course (Parallels):,,0.0,2
+"SDK,,0.0,3
+Основные компоненты приложения. Жизненный цикл приложения,,0.0,3
+Angular JS:,,0.0,1
+������������� ������� AngularJS:,,0.0,2
+Introduction,,0.0,3
+Basics,,0.0,3
+Controllers,,0.0,3
+Scopes,,0.0,3
+Collections,,0.0,3
+Modules,,0.0,3
+Dependency Injection,,0.0,3
+Services,,0.0,3
+Filters,,0.0,3
+Directives,,0.0,3
+Directive Scopes,,0.0,3
+Routing,,0.0,3
+HTTP,,0.0,3
+Курс AngularJS на codecademy:,,0.0,2
+Unit1,,0.0,3
+Unit2,,0.0,3
+Unit3,,0.0,3
+Unit4,,0.0,3
+Unit5,,0.0,3
+Architecture:,,0.0,1
+Web Patterns:,,0.0,2
+Прочитать статью ExtJS – учимся правильно писать компоненты,,0.0,3
+Прочитать книгу Intoduction to Web Application Development,,0.0,3
+Patterns:,,0.0,2
+Прочитать книгу Java Design Patterns,,0.0,3
+Прочитать книгу Шаблоны проектирования в Java. Гранд,,0.0,3
+Bootstrap:,,0.0,1
+CI:,,0.0,1
+Jenkins:,,0.0,2
+Teamcity:,,0.0,2
+CSS:,,0.0,1
+Ext Js:,,0.0,1
+Прочитать статью развернутый обзор Ext js 2.2,,0.0,2
+Прочитать статью Представляем Sencha Ext JS 5,,0.0,2
+Прочитать статью Создание сложных приложений в Ext JS,,0.0,2
+Введение в Ext JS 4:,,0.0,2
+Введение в Ext JS,,0.0,3
+Система классов в Ext JS 4,,0.0,3
+Работа с элементами DOM,,0.0,3
+Обработка событий компонентов,,0.0,3
+Анимация в Ext Js,,0.0,3
+Компоновка в Ext js ,,0.0,3
+Компоненты в Ext JS ,,0.0,3
+Работа с датами в Ext JS,,0.0,3
+AJAX в Ext js,,0.0,3
+Ext. XTemplate,,0.0,3
+Работа с формами в Ext JS,,0.0,3
+Работа с данными в Ext JS,,0.0,3
+Таблицы и Ext.grid.Panel,,0.0,3
+Архитектура приложения и MVC,,0.0,3
+Рисование в Ext JS и диаграммы,,0.0,3
+HTML 5:,,0.0,1
+iOS:,,0.0,1
+Java EE 6:,,0.0,1
+JAX - WS 2.2:,,0.0,2
+Java Mail 1.4:,,0.0,2
+Написать консольное приложение для отправки электронной почты,,0.0,3
+JTA 1.1:,,0.0,2
+JMS API 1.1:,,0.0,2
+Common Annotations for the Java Platform 1.1:,,0.0,2
+JPA 2.0:,,0.0,2
+Java EE Connector Architecture 1.6:,,0.0,2
+EJB 3.1:,,0.0,2
+Bean Validation 1.0:,,0.0,2
+Dependency Injection for Java 1.0:,,0.0,2
+Web Bean 1.0:,,0.0,2
+JSTL 1.2:,,0.0,2
+JSP 2.2:,,0.0,2
+JSF 2.0:,,0.0,2
+Java Servlet 3.0:,,0.0,2
+JAXR 1.0:,,0.0,2
+XML Messaging 1.3:,,0.0,2
+JAX-RPC 1.1:,,0.0,2
+JAXB 2.2:,,0.0,2
+Web Services 1.3:,,0.0,2
+JAX - RS 1.1:,,0.0,2
+StAX 1.0:,,0.0,2
+JAF 1.1:,,0.0,2
+JMX 2.0:,,0.0,2
+Java Database Connectivity 4.0:,,0.0,2
+JAXP 1.3:,,0.0,2
+J2EE Management 1.1:,,0.0,2
+Java Authorization Contract for Container 1.3:,,0.0,2
+Java EE 7:,,0.0,1
+JAX - RS 2.0:,,0.0,2
+JTA 1.2:,,0.0,2
+Java Mail 1.5:,,0.0,2
+JMS 2.0:,,0.0,2
+JPA 2.1:,,0.0,2
+Java EE Connector Architecture 1.7:,,0.0,2
+Interceptors 1.2:,,0.0,2
+EJB 3.2:,,0.0,2
+Bean Validation 1.1:,,0.0,2
+Dependency Injection for Java 1.1:,,0.0,2
+Concurrency Utilities for Java EE 1.0:,,0.0,2
+JSTL 1.2:,,0.0,2
+JSP 2.3:,,0.0,2
+JSF 2.2 :,,0.0,2
+Servlet 3.1:,,0.0,2
+JSON Processing:,,0.0,2
+Web Socket:,,0.0,2
+Java FX 8:,,0.0,1
+Common:,,0.0,2
+Java FX 8 Tutorial,,0.0,3
+Написать простую форму заказа,,0.0,3
+Реализовать компонент ComboCheckBox,,0.0,3
+Прочитать статьи JavaFX 2.0 Game Tutorial 1-5,,0.0,3
+Прочитать статьи JavaFX: Data Model for TreeTable,,0.0,3
+Прочитать статью Fancy Forms with JavaFX CSS,,0.0,3
+FXML:,,0.0,2
+Java SE 6 common:,,0.0,1
+Generics:,,0.0,2
+Прочитать статью (в описании ссылка),,0.0,3
+Collections:,,0.0,2
+Прочитать статью Difference between ArrayList and Vector in Java,,0.0,3
+JVM:,,0.0,2
+Commons:,,0.0,2
+Прочитать статью Exception Handling & Assertion,,0.0,3
+Java SE 7:,,0.0,1
+Java SE 8:,,0.0,1
+Lambda:,,0.0,2
+Прочитать статью Lambda Expressions,,0.0,3
+Прочитать статью Lambda FAQ,,0.0,3
+Прочитать статью Java 8: Lambda Part 1,,0.0,3
+Прочитать статью Java 8: Lambda Part 2,,0.0,3
+Lambda Expressions in Java. Tutorial,,0.0,3
+Lambda Expressions in Java. Reference,,0.0,3
+Streams:,,0.0,2
+Aggregate Operations,,0.0,3
+Reduction,,0.0,3
+Parallelism,,0.0,3
+State of the Lambda,,0.0,3
+State of the Lambda: Libraries Edition,,0.0,3
+Interface evolution via virtual extension methods,,0.0,3
+What's Wrong with Java 8: Currying vs Closures,,0.0,3
+"What's Wrong in Java 8,,0.0,3
+"What's wrong in Java 8,,0.0,3
+Сергей Куксенко — JDK8: Stream style,,0.0,3
+"Методы в интерфейсах,,0.0,3
+Прочитать статью Default methods,,0.0,3
+Прочитать статью Method References,,0.0,3
+Аннотации:,,0.0,2
+Lesson: Annotations,,0.0,3
+Type Annotations Specification (JSR 308),,0.0,3
+Reflection API:,,0.0,2
+Trail: The Reflection API,,0.0,3
+Mirrors: Design Principles for Meta-level Facilities of Object-Oriented Programming Languages,,0.0,3
+Загрузка классов:,,0.0,2
+Dynamic Class Loading in the JavaTM Virtual Machine,,0.0,3
+Internals of Java Class Loading,,0.0,3
+Inside Class Loaders,,0.0,3
+Inside Class Loaders: Debugging,,0.0,3
+Loading of Classes and Interfaces,,0.0,3
+Linking of Classes and Interfaces,,0.0,3
+Initialization of Classes and Interfaces,,0.0,3
+Unloading of Classes and Interfaces,,0.0,3
+Ms SQL:,,0.0,1
+My SQL:,,0.0,1
+Nodejs:,,0.0,1
+Знакомство с c9.io:,,0.0,2
+https://c9.io/,,0.0,3
+запуск mongo db на c9.io,,0.0,3
+Screencast по Node.js часть 1:,,0.0,2
+"Введение в Node.JS,,0.0,3
+Что такое Node.JS? Почему Node.JS?,,0.0,3
+Установка и запуск,,0.0,3
+�?сходники и документация,,0.0,3
+Модули для Node.JS,,0.0,3
+Приёмы работы с модулями,,0.0,3
+Введение в NPM – менеджер пакетов для Node.JS,,0.0,3
+Структура пакета NPM,,0.0,3
+Глобальные модули,,0.0,3
+Модуль util и наследование,,0.0,3
+Модуль console,,0.0,3
+Наследование от ошибок Error,,0.0,3
+"События,,0.0,3
+Node.JS как веб-сервер,,0.0,3
+Эхо-сервер на Node.JS,,0.0,3
+Документация к модулю http,,0.0,3
+"Разработка,,0.0,3
+Отладка скриптов под Node.JS,,0.0,3
+"Логирование,,0.0,3
+Введение в асинхронную разработку,,0.0,3
+"Событийный цикл,,0.0,3
+"Таймеры,,0.0,3
+"Работа с файлами,,0.0,3
+Безопасный путь к файлу в fs и path,,0.0,3
+"Потоки данных в Node.JS,,0.0,3
+"Writable поток ответа res,,0.0,3
+"Чат через long-polling,,0.0,3
+"Домены,,0.0,3
+Чтение параметров из командной строки и окружения,,0.0,3
+Screencast node.js часть 2:,,0.0,2
+Создаём костяк сайта / Express: основы и Middleware,,0.0,3
+"Улучшаем костяк сайта / Логгер,,0.0,3
+"Улучшаем шаблонизацию / EJS: layout,,0.0,3
+"Начинаем работать с базой / Основы MongoDB,,0.0,3
+Создаём модель для пользователя / Основы Mongoose,,0.0,3
+"Делаем скрипт для создания тестовой базы / Async,,0.0,3
+"Веб-сервисы,,0.0,3
+"Сессии,,0.0,3
+"Авторизация /Express,,0.0,3
+"COMET: обзор подходов / WS.JS,,0.0,3
+Чат на Express и Socket.IO,,0.0,3
+Опции Socket.IO и автореконнект,,0.0,3
+Socket.IO + Express + авторизация,,0.0,3
+задания:,,0.0,2
+Common шаблон ,,0.0,3
+Whois сервис,,0.0,3
+дневник тренировок,,0.0,3
+No SQL:,,0.0,1
+мини книга по mongodb:,,0.0,2
+Глава 1 — Основы,,0.0,3
+Глава 2 — Обновление,,0.0,3
+Глава 3 — Осваиваем Find,,0.0,3
+Глава 4 — Моделирование данных,,0.0,3
+Глава 5 — Когда использовать MongoDB,,0.0,3
+Глава 6 — MapReduce,,0.0,3
+Глава 7 — Производительность и инструментарий,,0.0,3
+Oracle SQL:,,0.0,1
+Optimization:,,0.0,2
+Training:,,0.0,2
+Administration:,,0.0,2
+Other:,,0.0,1
+Python:,,0.0,2
+Intellij Idea:,,0.0,2
+"Написать плагин для идеи,,0.0,3
+Google Chrome:,,0.0,2
+"Написать расширение для хрома,,0.0,3
+Project Build Systems:,,0.0,1
+Qmake:,,0.0,2
+Gradle:,,0.0,2
+Maven:,,0.0,2
+Ant:,,0.0,2
+Прочитать Мануал по API и установке,,0.0,3
+"Написать таргет,,0.0,3
+SQL commons:,,0.0,1
+VCS:,,0.0,1
+Mercurial:,,0.0,2
+Прочитать мануал по работе  и установке,,0.0,3
+Создать проект на меркуриал,,0.0,3
+GIT:,,0.0,2
+книга Pro-git (довольно большая),,0.0,3
+SVN:,,0.0,2
+Work Process:,,0.0,1
+Manifest:,,0.0,2
+Scrum:,,0.0,2
+Agile:,,0.0,2

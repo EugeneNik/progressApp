@@ -18,8 +18,11 @@ public class CSVHelper {
                 themeName = themeName.replace("_", " ");
                 themeName += ":";
                 Task currentTask = new Task(themeName, 0.0, false, root);
-                if (root.getSubtasks().indexOf(currentTask) < 0) {
+                int index = root.getSubtasks().indexOf(currentTask);
+                if (index < 0) {
                     root.getSubtasks().add(currentTask);
+                } else {
+                    currentTask = root.getSubtasks().get(index);
                 }
                 parseAndFill(singleCSV, currentTask);
             }
@@ -37,8 +40,11 @@ public class CSVHelper {
                 String theme = values[4];
                 if (theme.endsWith(":")) {
                     Task subTheme = new Task(values[4], 0.0, false, root);
-                    if (root.getSubtasks().indexOf(subTheme) < 0) {
+                    int index = root.getSubtasks().indexOf(subTheme);
+                    if (index < 0) {
                         root.getSubtasks().add(subTheme);
+                    } else {
+                        subTheme = root.getSubtasks().get(index);
                     }
                     currentTheme = subTheme;
                 } else {
@@ -94,9 +100,6 @@ public class CSVHelper {
                         currentTheme = updateToProper(currentTheme, currentLevel, level);
                     }
                     String comments = values[1];
-                    if (!comments.equals("")) {
-                        int a =0;
-                    }
                     double progress = Double.parseDouble(values[2]);
                     Task subTheme = new Task(theme, progress, progress == 1.0, currentTheme);
                     subTheme.setDescription(comments);
