@@ -1,3 +1,4 @@
 Task ID,Created At,Completed At,Last Modified,Name,Assignee,Due Date,Tags,Notes,Projects,Parent Task
 31330485412970,2015-04-10,,2015-04-10,Jenkins:,,,,,CI,
+31706443923540,2015-04-14,,2015-04-14,Continuous Integration для Android с использованием Jenkins + Gradle,,,,,CI,
 31330485412968,2015-04-10,,2015-04-10,Teamcity:,,,,,CI,

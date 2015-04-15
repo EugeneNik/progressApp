@@ -22,6 +22,8 @@ import java.text.DecimalFormat;
  */
 public class MainStage extends Application {
 
+    public static long id = 0;
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -40,10 +42,11 @@ public class MainStage extends Application {
 
         tree.getColumns().addAll(descriptionColumn, progressColumn);
 
-        Task root = new Task("Root", 0.0, false, null);
+        Task root = new Task("Root".hashCode(),"Root", 0.0, false, null);
 
         CSVHelper.parseBackup(FileNamespace.BACKUP, root);
         CSVHelper.parseCSV(FileNamespace.RESOURCES, root);
+        //update progress
 
         final TreeItem<Task> rootItem = new TreeItem<>(root);
         tree.setRoot(rootItem);

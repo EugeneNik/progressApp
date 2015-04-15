@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
  */
 public class Task {
 
+    private long id;
     private StringProperty task;
     private StringProperty description = new SimpleStringProperty();
     private ObservableList<Task> subtasks = FXCollections.observableArrayList();
@@ -16,11 +17,20 @@ public class Task {
     private DoubleProperty progress;
     private BooleanProperty completed;
 
-    public Task(String task, Double progress, Boolean completed, Task parent) {
+    public Task(long id, String task, Double progress, Boolean completed, Task parent) {
+        this.id = id;
         this.task = new SimpleStringProperty(task);
         this.progress = new SimpleDoubleProperty(progress);
         this.completed = new SimpleBooleanProperty(completed);
         this.parent = parent;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public Task getParent() {
@@ -105,6 +115,6 @@ public class Task {
     @Override
     public boolean equals(Object obj) {
         Task task = (Task) obj;
-        return this.parent == task.parent && this.task.get().equals(task.getTask());
+        return task == null ? false : this.id == task.getId();
     }
 }
