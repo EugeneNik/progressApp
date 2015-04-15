@@ -45,11 +45,18 @@ public class MainStage extends Application {
             final ContextMenu rowMenu = new ContextMenu();
             MenuItem completeItem = new MenuItem("Complete task");
             completeItem.setOnAction(event -> {
-                if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
-                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(true);
+                if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf() && !tree.getSelectionModel().getSelectedItem().getValue().getCompleted()) {
+                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(1.0);
                 }
             });
-            rowMenu.getItems().add(completeItem);
+
+            MenuItem resetItem = new MenuItem("Reset progress");
+            resetItem.setOnAction(event -> {
+                if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
+                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
+                }
+            });
+            rowMenu.getItems().addAll(completeItem, resetItem);
             row.contextMenuProperty().bind(Bindings.when(Bindings.isNotNull(row.itemProperty()))
                     .then(rowMenu)
                     .otherwise((ContextMenu)null));

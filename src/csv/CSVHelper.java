@@ -72,7 +72,7 @@ public class CSVHelper {
         } else {
             out.println(root.getTask() + "," + root.getDescription() + "," + root.getProgress() + "," + level);
             for (Task task : root.getSubtasks()) {
-                printChildren(out, task, level+1);
+                printChildren(out, task, level + 1);
             }
         }
     }
@@ -92,7 +92,7 @@ public class CSVHelper {
                     if (currentLevel > level) {
                         String comments = values[1];
                         double progress = Double.parseDouble(values[2]);
-                        Task subTheme = new Task(values[0], progress, false, currentTheme);
+                        Task subTheme = new Task(values[0], progress, progress == 1.0, currentTheme);
                         subTheme.setDescription(comments);
                         currentTheme.getSubtasks().add(subTheme);
                         currentTheme = subTheme;
@@ -101,7 +101,7 @@ public class CSVHelper {
                         currentTheme = updateToProper(currentTheme, currentLevel, level);
                         String comments = values[1];
                         double progress = Double.parseDouble(values[2]);
-                        Task subTheme = new Task(values[0], progress, false, currentTheme);
+                        Task subTheme = new Task(values[0], progress, progress == 1.0, currentTheme);
                         subTheme.setDescription(comments);
                         currentTheme.getSubtasks().add(subTheme);
                         currentTheme = subTheme;

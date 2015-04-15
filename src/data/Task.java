@@ -83,20 +83,20 @@ public class Task {
         return completed;
     }
 
-    public void setCompleted(boolean completed) {
-        this.completed.set(completed);
-        this.setProgress(1.0);
-        updateParent();
+    public void setCompleted(double progress) {
+        this.completed.set(progress == 1.0);
+        updateParent(progress == 0 ? -this.getProgress() : progress);
+        this.setProgress(progress);
     }
 
     public boolean isLeaf() {
         return subtasks.isEmpty();
     }
 
-    public void updateParent() {
+    public void updateParent(double percentageToAdd) {
         Task iterator = this;
         while (iterator.parent != null) {
-            double percentage = 1.0 / iterator.parent.getSubtasks().size() * (iterator.getSubtasks().isEmpty() ? 1.0 : 1.0 / iterator.getSubtasks().size());
+            double percentage = 1.0 / iterator.parent.getSubtasks().size() * (iterator.getSubtasks().isEmpty() ? percentageToAdd : percentageToAdd / iterator.getSubtasks().size());
             iterator.parent.setProgress(iterator.getParent().getProgress() + percentage);
             iterator = iterator.parent;
         }
