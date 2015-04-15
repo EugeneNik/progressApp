@@ -32,7 +32,7 @@ public class Task {
     }
 
     public String getDescription() {
-        return description.get();
+        return description.get() == null || description.get().equals("null") ? "" : description.get();
     }
 
     public StringProperty descriptionProperty() {

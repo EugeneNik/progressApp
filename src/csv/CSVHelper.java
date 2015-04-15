@@ -9,7 +9,7 @@ import java.io.*;
  */
 public class CSVHelper {
 
-    public static void parseCSV(String directory, Task root) {
+    public static Task parseCSV(String directory, Task root) {
         File file = new File(directory);
         if (file.isDirectory()) {
             File[] files = file.listFiles();
@@ -24,6 +24,7 @@ public class CSVHelper {
                 parseAndFill(singleCSV, currentTask);
             }
         }
+        return root;
     }
 
     private static void parseAndFill(File file, Task root) {
@@ -77,7 +78,7 @@ public class CSVHelper {
         }
     }
 
-    public static void parseBackup(String path, Task task) {
+    public static Task parseBackup(String path, Task task) {
         File file = new File(path);
         int level = 0;
         if (file.exists()) {
@@ -89,29 +90,25 @@ public class CSVHelper {
                     String values[] = s.split(",");
                     String theme = values[0];
                     int currentLevel = Integer.parseInt(values[3]);
-                    if (currentLevel > level) {
-                        String comments = values[1];
-                        double progress = Double.parseDouble(values[2]);
-                        Task subTheme = new Task(values[0], progress, progress == 1.0, currentTheme);
-                        subTheme.setDescription(comments);
-                        currentTheme.getSubtasks().add(subTheme);
-                        currentTheme = subTheme;
-                        level = currentLevel;
-                    } else {
+                    if (currentLevel <= level) {
                         currentTheme = updateToProper(currentTheme, currentLevel, level);
-                        String comments = values[1];
-                        double progress = Double.parseDouble(values[2]);
-                        Task subTheme = new Task(values[0], progress, progress == 1.0, currentTheme);
-                        subTheme.setDescription(comments);
-                        currentTheme.getSubtasks().add(subTheme);
-                        currentTheme = subTheme;
-                        level = currentLevel;
                     }
+                    String comments = values[1];
+                    if (!comments.equals("")) {
+                        int a =0;
+                    }
+                    double progress = Double.parseDouble(values[2]);
+                    Task subTheme = new Task(theme, progress, progress == 1.0, currentTheme);
+                    subTheme.setDescription(comments);
+                    currentTheme.getSubtasks().add(subTheme);
+                    currentTheme = subTheme;
+                    level = currentLevel;
                 }
             } catch (IOException exeption) {
                 System.out.println(file.getAbsolutePath() + " can't be parsed");
             }
         }
+        return task;
     }
 
     private static Task updateToProper(Task task, int level, int currentLevel) {

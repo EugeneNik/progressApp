@@ -5,6 +5,7 @@ package common;
  */
 public interface FileNamespace {
 
-    public static final String RESOURCES = "resources/";
-    public static final String BACKUP = "backup/backup.csv";
+    String RESOURCES = "files/";
+    String BACKUP = "backup/backup.csv";
+    String CSS = "/resources/skin.css";
 }
