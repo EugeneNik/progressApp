@@ -42,7 +42,7 @@ public class MainStage extends Application {
 
         tree.getColumns().addAll(descriptionColumn, progressColumn);
 
-        Task root = new Task("Root".hashCode(),"Root", 0.0, false, null);
+        Task root = new Task("Root".hashCode(), "Root", 0.0, false, null);
 
         CSVHelper.parseBackup(FileNamespace.BACKUP, root);
         CSVHelper.parseCSV(FileNamespace.RESOURCES, root);
@@ -98,9 +98,23 @@ public class MainStage extends Application {
             MenuItem completeItem = new MenuItem("Complete task");
             completeItem.setOnAction(event -> {
                 if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf() && !tree.getSelectionModel().getSelectedItem().getValue().getCompleted()) {
+                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
                     tree.getSelectionModel().getSelectedItem().getValue().setCompleted(1.0);
                 }
             });
+
+            Menu partialCompleteItem = new Menu("Partial Complete");
+            for (int i = 10; i <= 90; i += 10) {
+                MenuItem item = new MenuItem(Integer.toString(i));
+                partialCompleteItem.getItems().add(item);
+                final int parameter = i;
+                item.setOnAction(event -> {
+                    if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
+                        tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
+                        tree.getSelectionModel().getSelectedItem().getValue().setCompleted(parameter / 100.0);
+                    }
+                });
+            }
 
             MenuItem resetItem = new MenuItem("Reset progress");
             resetItem.setOnAction(event -> {
@@ -108,7 +122,7 @@ public class MainStage extends Application {
                     tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
                 }
             });
-            rowMenu.getItems().addAll(completeItem, resetItem);
+            rowMenu.getItems().addAll(completeItem, partialCompleteItem, resetItem);
             row.contextMenuProperty().bind(Bindings.when(Bindings.isNotNull(row.itemProperty()))
                     .then(rowMenu)
                     .otherwise((ContextMenu) null));
