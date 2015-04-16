@@ -1,5 +1,6 @@
 package common;
 
+import asana.AsanaConnector;
 import csv.CSVHelper;
 import data.Task;
 import javafx.application.Application;
@@ -14,6 +15,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import org.json.JSONObject;
 
 import java.text.DecimalFormat;
 
@@ -46,6 +48,8 @@ public class MainStage extends Application {
 
         CSVHelper.parseBackup(FileNamespace.BACKUP, root);
         CSVHelper.parseCSV(FileNamespace.RESOURCES, root);
+        AsanaConnector connector = new AsanaConnector("8RMT80Uh.FKBNmLeUYsOCvFwKgJW1fVe");
+        JSONObject obj = connector.getProjects();
         //update progress
 
         final TreeItem<Task> rootItem = new TreeItem<>(root);
