@@ -1,6 +1,7 @@
 package common;
 
-import asana.AsanaConnector;
+import asana.AsanaHelper;
+import common.property.PropertyManager;
 import csv.CSVHelper;
 import data.Task;
 import javafx.application.Application;
@@ -15,7 +16,6 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import org.json.JSONObject;
 
 import java.text.DecimalFormat;
 
@@ -24,8 +24,6 @@ import java.text.DecimalFormat;
  */
 public class MainStage extends Application {
 
-    public static long id = 0;
-
     public static void main(String[] args) {
         launch(args);
     }
@@ -33,6 +31,7 @@ public class MainStage extends Application {
     @Override
     public void start(Stage primaryStage) {
 
+        PropertyManager.getApplicationSettings();
         TextArea commentArea = new TextArea();
         TreeTableView<Task> tree = new TreeTableView<>();
         tree.setColumnResizePolicy(TreeTableView.CONSTRAINED_RESIZE_POLICY);
@@ -47,9 +46,14 @@ public class MainStage extends Application {
         Task root = new Task("Root".hashCode(), "Root", 0.0, false, null);
 
         CSVHelper.parseBackup(FileNamespace.BACKUP, root);
-        CSVHelper.parseCSV(FileNamespace.RESOURCES, root);
-        AsanaConnector connector = new AsanaConnector("8RMT80Uh.FKBNmLeUYsOCvFwKgJW1fVe");
-        JSONObject obj = connector.getProjects();
+        try {
+            AsanaHelper.parseAsana(root);
+        } catch (Exception e) {
+            System.out.println("Asana Sync failed");
+        }
+        //CSVHelper.parseCSV(FileNamespace.RESOURCES, root);
+//        AsanaConnector connector = new AsanaConnector(PropertyManager.getValue(PropertyNamespace.APP_KEY));
+//        JSONObject obj = connector.getProjects();
         //update progress
 
         final TreeItem<Task> rootItem = new TreeItem<>(root);
@@ -159,6 +163,7 @@ public class MainStage extends Application {
 
         primaryStage.setOnCloseRequest(event -> {
             CSVHelper.saveBackup(FileNamespace.BACKUP, root);
+            PropertyManager.save();
         });
     }
 

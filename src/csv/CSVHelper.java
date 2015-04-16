@@ -10,6 +10,7 @@ import java.io.*;
 
 public class CSVHelper {
 
+    @Deprecated
     public static Task parseCSV(String directory, Task root) {
         File file = new File(directory);
         if (file.isDirectory()) {
@@ -31,6 +32,7 @@ public class CSVHelper {
         return root;
     }
 
+    @Deprecated
     private static void parseAndFill(File file, Task root) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));

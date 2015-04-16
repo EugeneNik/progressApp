@@ -12,3 +12,8 @@
 hs_err_pid*
 .idea/vcs.xml
 .idea/workspace.xml
+.idea/.name
+*.xml
+progressApp.iml
+resources/settings.properties
+.idea/libraries/json_20141113.xml
