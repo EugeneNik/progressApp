@@ -10,9 +10,10 @@ import org.json.JSONObject;
  * Created by DARIA on 17.04.2015.
  */
 public class AsanaHelper {
-    private static AsanaConnector connector = new AsanaConnector(PropertyManager.getValue(PropertyNamespace.APP_KEY));
+    public static AsanaConnector connector = new AsanaConnector(PropertyManager.getValue(PropertyNamespace.APP_KEY));
 
-    public static Task parseAsana(Task root) {
+    @Deprecated
+    public static Task parseAsana(Task root, javafx.concurrent.Task process) {
         JSONArray array = connector.getProjects().getJSONArray("data");
         for (int i = 0; i < array.length(); i++) {
             JSONObject project = array.getJSONObject(i);
@@ -28,11 +29,12 @@ public class AsanaHelper {
                 currentTask.setTask(themeName);
             }
             parseAndFill(currentTask);
+
         }
         return root;
     }
 
-    private static void parseAndFill(Task root) {
+    public static void parseAndFill(Task root) {
         Task currentTheme = root;
         JSONArray array = connector.getProjectTasks(Long.toString(root.getId())).getJSONArray("data");
 
@@ -44,6 +46,7 @@ public class AsanaHelper {
             String comment = getComments(story);
             if (theme.endsWith(":")) {
                 Task subTheme = new Task(id, theme, 0.0, false, root);
+                subTheme.setDescription(comment);
                 int index = root.getSubtasks().indexOf(subTheme);
                 if (index < 0) {
                     double progresses[] = new double[root.getSubtasks().size()];
@@ -68,6 +71,7 @@ public class AsanaHelper {
                 currentTheme = subTheme;
             } else {
                 Task task = new Task(id, theme, 0.0, false, currentTheme);
+                task.setDescription(comment);
                 if (currentTheme.getSubtasks().indexOf(task) < 0) {
                     double progresses[] = new double[currentTheme.getSubtasks().size()];
                     int i = 0;
@@ -97,7 +101,6 @@ public class AsanaHelper {
             JSONObject storyPoint = story.getJSONObject(i);
             if (storyPoint.getString("type").equals("comment")) {
                 comment.append(storyPoint.getString("text"));
-                comment.append("  ");
             }
         }
         return comment.toString();

@@ -1,284 +1,2098 @@
-31292497450774;Android SDK:;;0.0;1
-31351302806386;material design:;;0.0;2
-31351302806390;;;0.0;3
-31426782060521;Course (Parallels):;;0.0;2
-31426782060523;SDK, Gradle, AndroidStudio;http://learndroid.e-legion.ru/lessons;0.0;3
-31426782060525;Основные компоненты приложения. Жизненный цикл приложения;http://learndroid.e-legion.ru/lessons;0.0;3
-31292497450780;Angular JS:;;0.0;1
-31338386237409;Интерактивный учебник AngularJS:;;0.0;2
-31338386237411;Introduction;;0.0;3
-31338386237413;Basics;;0.0;3
-31338386237415;Controllers;;0.0;3
-31338386237417;Scopes;;0.0;3
-31338386237419;Collections;;0.0;3
-31338386237421;Modules;;0.0;3
-31338386237423;Dependency Injection;;0.0;3
-31338386237425;Services;;0.0;3
-31338386237427;Filters;;0.0;3
-31338386237429;Directives;;0.0;3
-31338386237431;Directive Scopes;;0.0;3
-31338386237433;Routing;;0.0;3
-31338386237435;HTTP;;0.0;3
-31338386237437;Курс AngularJS на codecademy:;;0.0;2
-31338386237439;Unit1;;0.0;3
-31338386237441;Unit2;;0.0;3
-31338386237443;Unit3;;0.0;3
-31338386237445;Unit4;;0.0;3
-31338386237447;Unit5;;0.0;3
-31292497450796;Architecture:;;0.0;1
-31330485412976;Web Patterns:;;0.0;2
-31343605630517;Прочитать статью ExtJS – учимся правильно писать компоненты;http://habrahabr.ru/post/88261/;0.0;3
-31426782060513;Прочитать книгу Intoduction to Web Application Development;https://mega.co.nz/#!l9xDCIwC!tNe2miaRjILmCvRifXAsDZu1dufUcIClkvsxOv0G4K8;0.0;3
-31330485412974;Patterns:;;0.0;2
-31426782060517;Прочитать книгу Java Design Patterns;https://mega.co.nz/#!YgwCAT6K!hByDwq46ymzF-_-93oDgbpdlqm1UGWhIoH7rrrqlvhQ;0.0;3
-31426782060600;Прочитать книгу Шаблоны проектирования в Java. Гранд;https://mega.co.nz/#!MoIzmQqD!12sznXmrELx_ZgP9GhRB-S2XwAmvl0hbYKtKbOfdo5c;0.0;3
-31292497450784;Bootstrap:;;0.0;1
-31330485412944;CI:;;0.0;1
-31330485412970;Jenkins:;;0.0;2
-31706443923540;Continuous Integration для Android с использованием Jenkins + Gradle;http://habrahabr.ru/post/205308/;0.0;3
-31330485412968;Teamcity:;;0.0;2
-31292497450806;CSS:;;0.0;1
-31292497450778;Ext Js:;;0.0;1
-31426782060592;Прочитать статью развернутый обзор Ext js 2.2;http://habrahabr.ru/post/30676/;0.0;2
-31426782060596;Прочитать статью Представляем Sencha Ext JS 5;http://habrahabr.ru/post/225169/;0.0;2
-31343605630522;Прочитать статью Создание сложных приложений в Ext JS;http://www.rusdoc.ru/articles/sozdanie_slozhnyx_prilozhenij_v_extjs/17174/;0.0;2
-31426782060531;Введение в Ext JS 4:;;0.0;2
-31426782060533;Введение в Ext JS;http://metanit.com/web/extjs/1.1.php;0.0;3
-31426782060537;Система классов в Ext JS 4;http://metanit.com/web/extjs/2.1.php;0.0;3
-31426782060541;Работа с элементами DOM;http://metanit.com/web/extjs/3.php;0.0;3
-31426782060545;Обработка событий компонентов;http://metanit.com/web/extjs/4.php;0.0;3
-31426782060549;Анимация в Ext Js;http://metanit.com/web/extjs/5.php;0.0;3
-31426782060553;Компоновка в Ext js;http://metanit.com/web/extjs/6.1.php;0.0;3
-31426782060557;Компоненты в Ext JS;http://metanit.com/web/extjs/7.1.php;0.0;3
-31426782060561;Работа с датами в Ext JS;http://metanit.com/web/extjs/8.php;0.0;3
-31426782060565;AJAX в Ext js;http://metanit.com/web/extjs/9.1.php;0.0;3
-31426782060569;Ext. XTemplate;http://metanit.com/web/extjs/10.php;0.0;3
-31426782060573;Работа с формами в Ext JS;;0.0;3
-31426782060576;Работа с данными в Ext JS;http://metanit.com/web/extjs/12.1.php;0.0;3
-31426782060580;Таблицы и Ext.grid.Panel;http://metanit.com/web/extjs/13.1.php;0.0;3
-31426782060584;Архитектура приложения и MVC;http://metanit.com/web/extjs/14.1.php;0.0;3
-31426782060588;Рисование в Ext JS и диаграммы;http://metanit.com/web/extjs/15.1.php;0.0;3
-31292497450804;HTML 5:;;0.0;1
-32004382048434;HTML5 File Upload Example;http://www.webcodegeeks.com/html5/html5-file-upload-example/;0.0;2
-32004382048436;HTML5 Geolocation API with Google Maps;http://www.webcodegeeks.com/html5/html5-geolocation-api-with-google-maps/;0.0;2
-32004382048440;HTML5 Dropdown menu example with CSS3;http://www.webcodegeeks.com/html5/html5-dropdown-menu-example-with-css3/;0.0;2
-32004382048446;HTML5 Audio Player Example;http://www.webcodegeeks.com/html5/html5-audio-player-example/;0.0;2
-32004382048450;HTML5 Web Camera Example;http://www.webcodegeeks.com/html5/html5-web-camera-example/;0.0;2
-32004382048454;HTML5 Local Storage Example;http://www.webcodegeeks.com/html5/html5-local-storage-example/;0.0;2
-32004382048458;HTML5 Geolocation Example – Weather Widget Demo;http://www.webcodegeeks.com/html5/html5-geolocation-example-weather-widget-demo/;0.0;2
-31292497450798;iOS:;;0.0;1
-31292497450770;Java EE 6:;;0.0;1
-31330485413034;JAX - WS 2.2:;;0.0;2
-31330485413072;Java Mail 1.4:;;0.0;2
-31330485413074;Написать консольное приложение для отправки электронной почты;В письме 1 вложение - csv. файл сам текст Html или plain text на выбор Критерий удачи - принимающему пришло письмо;0.0;3
-31330485413070;JTA 1.1:;;0.0;2
-31330485413068;JMS API 1.1:;;0.0;2
-31330485413066;Common Annotations for the Java Platform 1.1:;;0.0;2
-31330485413064;JPA 2.0:;;0.0;2
-31596456016191;Прочитать статью JPA Tutorial – The ULTIMATE Guide;http://www.javacodegeeks.com/2015/02/jpa-tutorial.html;0.0;3
-31330485413062;Java EE Connector Architecture 1.6:;;0.0;2
-31330485413060;EJB 3.1:;;0.0;2
-31330485413058;Bean Validation 1.0:;;0.0;2
-31330485413056;Dependency Injection for Java 1.0:;;0.0;2
-31330485413054;Web Bean 1.0:;;0.0;2
-31330485413052;JSTL 1.2:;;0.0;2
-31330485413050;JSP 2.2:;;0.0;2
-31330485413048;JSF 2.0:;;0.0;2
-31330485413046;Java Servlet 3.0:;;0.0;2
-31330485413044;JAXR 1.0:;;0.0;2
-31330485413042;XML Messaging 1.3:;;0.0;2
-31330485413040;JAX-RPC 1.1:;;0.0;2
-31330485413038;JAXB 2.2:;;0.0;2
-31330485413032;Web Services 1.3:;;0.0;2
-31330485413030;JAX - RS 1.1:;;0.0;2
-31343605630456;StAX 1.0:;;0.0;2
-31343605630454;JAF 1.1:;;0.0;2
-31343605630452;JMX 2.0:;;0.0;2
-31343605630450;Java Database Connectivity 4.0:;;0.0;2
-31343605630448;JAXP 1.3:;;0.0;2
-31343605630446;J2EE Management 1.1:;;0.0;2
-31343605630442;Java Authorization Contract for Container 1.3:;;0.0;2
-31292497450772;Java EE 7:;;0.0;1
-31343605630490;JAX - RS 2.0:;;0.0;2
-31343605630488;JTA 1.2:;;0.0;2
-31343605630486;Java Mail 1.5:;;0.0;2
-31343605630484;JMS 2.0:;;0.0;2
-31343605630482;JPA 2.1:;;0.0;2
-31343605630480;Java EE Connector Architecture 1.7:;;0.0;2
-31343605630478;Interceptors 1.2:;;0.0;2
-31343605630476;EJB 3.2:;;0.0;2
-31343605630474;Bean Validation 1.1:;;0.0;2
-31343605630472;Dependency Injection for Java 1.1:;;0.0;2
-31343605630470;Concurrency Utilities for Java EE 1.0:;;0.0;2
-31343605630468;JSTL 1.2:;;0.0;2
-31343605630466;JSP 2.3:;;0.0;2
-31343605630464;JSF 2.2 :;;0.0;2
-31343605630462;Servlet 3.1:;;0.0;2
-31343605630460;JSON Processing:;;0.0;2
-31343605630458;Web Socket:;;0.0;2
-31292497450768;Java FX 8:;;0.0;1
-31330485412958;Common:;;0.0;2
-31330485413020;Java FX 8 Tutorial;http://tinyletter.com/codemakery/letters/javafx-tutorial-update-for-jdk-8u40;0.0;3
-31330485412997;Написать простую форму заказа;На форме должны быть отображены Label с номером заказа, который должен меняться при нажатии на кнопку Submit Combobox - с выбором покупателя TextField - в котором будет название item NumberField с количеством Date Picker - due date Табличка в которой будут данные об операциях со всеми покупателями, при нажатии на строчку поля должны заполняться автоматически стирая заполненное (шаблон) Кнопки Submit, Cancel Submit - добавляет запись в таблицу, меняет лейбл и очищает значения Cancel очищает значения;0.0;3
-31330485413002;Реализовать компонент ComboCheckBox;Combobox элементы которого checkbox-ы;0.0;3
-31330485413006;Прочитать статьи JavaFX 2.0 Game Tutorial 1-5;https://carlfx.wordpress.com/2012/03/29/javafx-2-gametutorial-part-1/  остальные справа в Top Posts;0.0;3
-31330485413010;Прочитать статьи JavaFX: Data Model for TreeTable;http://www.lestard.eu/2015/treetable_datamodel/;0.0;3
-31330485413014;Прочитать статью Fancy Forms with JavaFX CSS;http://docs.oracle.com/javafx/2/get_started/css.htm;0.0;3
-31330485412954;FXML:;;0.0;2
-31596456016206;Прочитать статью How to allow users to customize the UI;http://www.javacodegeeks.com/2015/01/how-to-allow-users-to-customize-the-ui.html;0.0;3
-31229264206751;Java SE 6 (common):;;0.0;1
-31229264206788;Generics:;;0.0;2
-31330485412992;Прочитать статью (в описании ссылка);http://javarevisited.blogspot.ru/2011/09/generics-java-example-tutorial.html;0.0;3
-31292497450802;Collections:;;0.0;2
-31343605630438;Прочитать статью Difference between ArrayList and Vector in Java;http://javarevisited.blogspot.ru/2011/09/difference-vector-vs-arraylist-in-java.html;0.0;3
-31229264206796;JVM:;;0.0;2
-31568505703923;Прочитать статью 7 Things You Thought You Knew About Garbage Collection – and Are Totally Wrong;http://www.javacodegeeks.com/2015/04/7-things-you-thought-you-knew-about-garbage-collection-and-are-totally-wrong.html;0.0;3
-31428194745270;Commons:;;0.0;2
-31428194745272;Прочитать статью Exception Handling & Assertion;http://www3.ntu.edu.sg/home/ehchua/programming/java/J5a_ExceptionAssert.html;0.0;3
-31292497450764;Java SE 7:;;0.0;1
-31596456016212;NIO:;;0.0;2
-31596456016210;Прочитать статью Java 7 New IO API Example;http://examples.javacodegeeks.com/core-java/io/java-7-new-io-api-example/;0.0;3
-31292497450766;Java SE 8:;;0.0;1
-31330485412950;Lambda:;;0.0;2
-31428194745288;Прочитать статью Lambda Expressions;http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html;0.0;3
-31428194745292;Прочитать статью Lambda FAQ;http://www.lambdafaq.org/;0.0;3
-31428194745296;Прочитать статью Java 8: Lambda Part 1;http://www.oracle.com/technetwork/articles/java/architect-lambdas-part1-2080972.html;0.0;3
-31428194745300;Прочитать статью Java 8: Lambda Part 2;http://www.oracle.com/technetwork/articles/java/architect-lambdas-part2-2081439.html;0.0;3
-31428194745304;Lambda Expressions in Java. Tutorial;http://www.angelikalanger.com/Lambdas/Lambdas.pdf;0.0;3
-31428194745306;Lambda Expressions in Java. Reference;http://www.angelikalanger.com/Lambdas/LambdaReference.pre-release.pdf;0.0;3
-31330485412948;Streams:;;0.0;2
-31428194745312;Aggregate Operations;http://docs.oracle.com/javase/tutorial/collections/streams/index.html;0.0;3
-31428194745316;Reduction;http://docs.oracle.com/javase/tutorial/collections/streams/reduction.html;0.0;3
-31428194745318;Parallelism;http://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html;0.0;3
-31428194745320;State of the Lambda;http://cr.openjdk.java.net/~briangoetz/lambda/lambda-state-final.html;0.0;3
-31428194745322;State of the Lambda: Libraries Edition;http://cr.openjdk.java.net/~briangoetz/lambda/lambda-libraries-final.html;0.0;3
-31428194745324;Interface evolution via virtual extension methods;http://cr.openjdk.java.net/~briangoetz/lambda/Defender%20Methods%20v4.pdf;0.0;3
-31428194745326;What's Wrong with Java 8: Currying vs Closures;http://java.dzone.com/articles/whats-wrong-java-8-currying-vs;0.0;3
-31428194745328;What's Wrong in Java 8, Part II: Functions & Primitives;http://java.dzone.com/articles/whats-wrong-java-8-part-ii;0.0;3
-31428194745344;What's Wrong in Java 8, Part III: Streams and Parallel Streams;http://java.dzone.com/articles/whats-wrong-java-8-part-iii;0.0;3
-31428194745346;What's Wrong in Java 8, Part IV: Monads;http://java.dzone.com/articles/whats-wrong-java-8-part-iv;0.0;3
-31428194745348;What's wrong in Java 8, part V: Tuples;http://java.dzone.com/articles/whats-wrong-java-8-part-v;0.0;3
-31428194745350;What's wrong in Java 8, part VI: Strictness;http://java.dzone.com/articles/whats-wrong-java-8-part-vi;0.0;3
-31428194745420;Сергей Куксенко — JDK8: Stream style;http://www.youtube.com/watch?v=Zq--4Vh5RLI;0.0;3
-31428194745358;Аннотации:;;0.0;2
-31428194745362;Lesson: Annotations;http://docs.oracle.com/javase/tutorial/java/annotations/index.html;0.0;3
-31428194745366;Type Annotations Specification (JSR 308);http://types.cs.washington.edu/jsr308/specification/java-annotation-design.pdf;0.0;3
-31428194745370;Reflection API:;;0.0;2
-31428194745372;Trail: The Reflection API;http://docs.oracle.com/javase/tutorial/reflect/;0.0;3
-31428194745376;Mirrors: Design Principles for Meta-level Facilities of Object-Oriented Programming Languages;http://ftp.linux62.org/~glibersat/publis/p331-bracha.pdf;0.0;3
-31428194745383;Загрузка классов:;;0.0;2
-31428194745388;Dynamic Class Loading in the JavaTM Virtual Machine;http://148.206.49.174/coursdea/DynamicClassLoadingInTheJavaVirtualMachine.pdf;0.0;3
-31428194745392;Internals of Java Class Loading;http://www.onjava.com/pub/a/onjava/2005/01/26/classloading.html;0.0;3
-31428194745394;Inside Class Loaders;http://www.onjava.com/pub/a/onjava/2003/11/12/classloader.html;0.0;3
-31428194745396;Inside Class Loaders: Debugging;http://www.onjava.com/pub/a/onjava/2004/06/30/classloader2.html;0.0;3
-31428194745398;Loading of Classes and Interfaces;http://docs.oracle.com/javase/specs/jls/se7/html/jls-12.html#jls-12.2;0.0;3
-31428194745400;Linking of Classes and Interfaces;http://docs.oracle.com/javase/specs/jls/se7/html/jls-12.html#jls-12.3;0.0;3
-31428194745408;Initialization of Classes and Interfaces;http://docs.oracle.com/javase/specs/jls/se7/html/jls-12.html#jls-12.4;0.0;3
-31428194745410;Unloading of Classes and Interfaces;http://docs.oracle.com/javase/specs/jls/se7/html/jls-12.html#jls-12.7;0.0;3
-31428194745275;Методы в интерфейсах, ссылки на методы, множественное наследование:;;0.0;2
-31428194745280;Прочитать статью Default methods;http://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html;0.0;3
-31428194745283;Прочитать статью Method References;http://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html;0.0;3
-31292497450792;Ms SQL:;;0.0;1
-31292497450788;My SQL:;;0.0;1
-31292497450782;Node.js:;;0.0;1
-31351302806325;Знакомство с c9.io:;;0.0;2
-31351302806328;https://c9.io/;;0.0;3
-31351302806356;запуск mongo db на c9.io;;0.0;3
-31351302806261;Screencast по Node.js часть 1:;;0.0;2
-31351302806263;Введение в Node.JS, об этом скринкасте;;0.0;3
-31351302806267;Что такое Node.JS? Почему Node.JS?;;0.0;3
-31351302806269;Установка и запуск;;0.0;3
-31351302806271;Исходники и документация;;0.0;3
-31351302806273;Модули для Node.JS;;0.0;3
-31351302806275;Приёмы работы с модулями;;0.0;3
-31351302806277;Введение в NPM – менеджер пакетов для Node.JS;;0.0;3
-31351302806279;Структура пакета NPM;;0.0;3
-31351302806281;Глобальные модули;;0.0;3
-31351302806283;Модуль util и наследование;;0.0;3
-31351302806285;Модуль console;;0.0;3
-31351302806287;Наследование от ошибок Error;;0.0;3
-31351302806289;События, EventEmitter и утечки памяти;;0.0;3
-31351302806291;Node.JS как веб-сервер;;0.0;3
-31351302806293;Эхо-сервер на Node.JS;;0.0;3
-31351302806295;Документация к модулю http;;0.0;3
-31351302806297;Разработка, supervisor;;0.0;3
-31351302806299;Отладка скриптов под Node.JS;;0.0;3
-31351302806301;Логирование, модули debug и winston;;0.0;3
-31351302806303;Введение в асинхронную разработку;;0.0;3
-31351302806305;Событийный цикл, библиотека libUV;;0.0;3
-31351302806307;Таймеры, process.nextTick, ref/unref;;0.0;3
-31351302806309;Работа с файлами, модуль fs;;0.0;3
-31351302806311;Безопасный путь к файлу в fs и path;;0.0;3
-31351302806313;Потоки данных в Node.JS, fs.ReadStream;;0.0;3
-31351302806315;Writable поток ответа res, метод pipe;;0.0;3
-31351302806317;Чат через long-polling, чтение POST;;0.0;3
-31351302806319;Домены, «асинхронный try..catch»;;0.0;3
-31351302806321;Чтение параметров из командной строки и окружения;;0.0;3
-31351302806323;Screencast node.js часть 2:;;0.0;2
-31351302806330;Создаём костяк сайта / Express: основы и Middleware;;0.0;3
-31351302806332;Улучшаем костяк сайта / Логгер, конфигурация, шаблонка для HTML;;0.0;3
-31351302806334;Улучшаем шаблонизацию / EJS: layout, block, partials;;0.0;3
-31351302806336;Начинаем работать с базой / Основы MongoDB, native driver;;0.0;3
-31351302806338;Создаём модель для пользователя / Основы Mongoose;;0.0;3
-31351302806340;Делаем скрипт для создания тестовой базы / Async, организация кода [обновлено];;0.0;3
-31351302806342;Веб-сервисы, работа с ошибками / Express, Mongoose;;0.0;3
-31351302806344;Сессии, отслеживание посетителей /Express/;;0.0;3
-31351302806346;Авторизация /Express, Mongoose, Async, EJS/;;0.0;3
-31351302806348;COMET: обзор подходов / WS.JS, Sock.JS, Socket.IO;;0.0;3
-31351302806350;Чат на Express и Socket.IO;;0.0;3
-31351302806352;Опции Socket.IO и автореконнект;;0.0;3
-31351302806354;Socket.IO + Express + авторизация;;0.0;3
-31351302806358;задания:;;0.0;2
-31351302806360;Common шаблон;;0.0;3
-31351302806362;Whois сервис;;0.0;3
-31351302806364;дневник тренировок;;0.0;3
-31292497450790;No SQL:;;0.0;1
-31351302806366;мини книга по mongodb:;;0.0;2
-31351302806368;Глава 1 — Основы;;0.0;3
-31351302806370;Глава 2 — Обновление;;0.0;3
-31351302806372;Глава 3 — Осваиваем Find;;0.0;3
-31351302806374;Глава 4 — Моделирование данных;;0.0;3
-31351302806376;Глава 5 — Когда использовать MongoDB;;0.0;3
-31351302806378;Глава 6 — MapReduce;;0.0;3
-31351302806380;Глава 7 — Производительность и инструментарий;;0.0;3
-31292497450786;Oracle SQL:;;0.0;1
-31330485412990;Optimization:;;0.0;2
-31330485412988;Training:;;0.0;2
-31330485412986;Administration:;;0.0;2
-31292497450776;Other:;;0.0;1
-31330485413026;Python:;;0.0;2
-31343605630430;Intellij Idea:;;0.0;2
-31343605630432;Написать плагин для идеи, который собирает статистику по проекту сколько строчек кода в каждом файле (в конце саммари по проекту);Пустые строки пропускаются;0.0;3
-31343605630426;Google Chrome:;;0.0;2
-31343605630428;Написать расширение для хрома, которое считает сколько кликов ты сделал и выдает столбчатую диаграмму по дням;;0.0;3
-31596456016199;Net Beans:;;0.0;2
-31596456016201;Написать плагин для Нетбинс;http://www.javacodegeeks.com/2015/02/write-netbeans-plugin.html;0.0;3
-31330485412946;Project Build Systems:;;0.0;1
-31330485412966;Qmake:;;0.0;2
-31330485412964;Gradle:;;0.0;2
-31706443923516;Статья Gradle User Guide;http://gradle.org/docs/current/userguide/userguide_single.html;0.0;3
-31706443923520;Статья Gradle и решение задач автоматизации;http://habrahabr.ru/post/192268/;0.0;3
-31706443923524;Gradle: Tasks Are Code;http://habrahabr.ru/post/107085/;0.0;3
-31706443923528;Gradle: Better Way To Build;http://habrahabr.ru/post/107085/;0.0;3
-31706443923532;Почему Gradle?;http://habrahabr.ru/post/106717/;0.0;3
-31706443923536;Многомодульный Java-проект с Gradle. Шаг за шагом;http://habrahabr.ru/post/225189/;0.0;3
-31330485412962;Maven:;;0.0;2
-31783559839441;Статья Maven — автоматизация сборки проекта;http://habrahabr.ru/post/77333/;0.0;3
-31783559839445;Статья Apache Maven — основы;http://habrahabr.ru/post/77382/;0.0;3
-31783559839449;Статья Руководство по Maven;http://www.apache-maven.ru/;0.0;3
-31783559839453;Статья Знакомство с Maven;http://devcolibri.com/742;0.0;3
-31330485412960;Ant:;;0.0;2
-31343605630494;Прочитать Мануал по API и установке;;0.0;3
-31343605630497;Написать таргет, для запуска SQL файла, который обновит имеющуюся базу удалив все кастомные значения;Нужно удалить все столбцы которые могут принимать null значение;0.0;3
-31292497450794;SQL (commons):;;0.0;1
-31330485412942;VCS:;;0.0;1
-31330485412982;Mercurial:;;0.0;2
-31343605630509;Прочитать мануал по работе  и установке;http://mercurial.selenic.com/wiki/RussianTutorial;0.0;3
-31343605630513;Создать проект на меркуриал;;0.0;3
-31330485412980;GIT:;;0.0;2
-31351302806382;книга Pro-git (довольно большая);;0.0;3
-31330485412978;SVN:;;0.0;2
-31343605630501;Work Process:;;0.0;1
-31343605630507;Manifest:;;0.0;2
-31343605630505;Scrum:;;0.0;2
-31343605630503;Agile:;;0.0;2
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taskJAXB>
+    <id>2553090</id>
+    <name>Root</name>
+    <comment></comment>
+    <progress>0.0</progress>
+    <tasks>
+        <tasks>
+            <id>31229264206751</id>
+            <name>Java SE 6 (common):</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31229264206788</id>
+                    <name>Generics:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31330485412992</id>
+                            <name>Прочитать статью (в описании ссылка)</name>
+                            <comment>http://javarevisited.blogspot.ru/2011/09/generics-java-example-tutorial.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31292497450802</id>
+                    <name>Collections:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31343605630438</id>
+                            <name>Прочитать статью Difference between ArrayList and Vector in Java</name>
+                            <comment>http://javarevisited.blogspot.ru/2011/09/difference-vector-vs-arraylist-in-java.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31229264206796</id>
+                    <name>JVM:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31568505703923</id>
+                            <name>Прочитать статью 7 Things You Thought You Knew About Garbage Collection – and Are Totally Wrong</name>
+                            <comment>http://www.javacodegeeks.com/2015/04/7-things-you-thought-you-knew-about-garbage-collection-and-are-totally-wrong.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31428194745270</id>
+                    <name>Commons:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31428194745272</id>
+                            <name>Прочитать статью Exception Handling &amp; Assertion</name>
+                            <comment>http://www3.ntu.edu.sg/home/ehchua/programming/java/J5a_ExceptionAssert.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450764</id>
+            <name>Java SE 7:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31596456016212</id>
+                    <name>NIO:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31596456016210</id>
+                            <name>Прочитать статью Java 7 New IO API Example</name>
+                            <comment>http://examples.javacodegeeks.com/core-java/io/java-7-new-io-api-example/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450766</id>
+            <name>Java SE 8:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31330485412950</id>
+                    <name>Lambda:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31428194745288</id>
+                            <name>Прочитать статью Lambda Expressions</name>
+                            <comment>http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745292</id>
+                            <name>Прочитать статью Lambda FAQ</name>
+                            <comment>http://www.lambdafaq.org/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745296</id>
+                            <name>Прочитать статью Java 8: Lambda Part 1</name>
+                            <comment>http://www.oracle.com/technetwork/articles/java/architect-lambdas-part1-2080972.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745300</id>
+                            <name>Прочитать статью Java 8: Lambda Part 2</name>
+                            <comment>http://www.oracle.com/technetwork/articles/java/architect-lambdas-part2-2081439.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745304</id>
+                            <name>Lambda Expressions in Java. Tutorial</name>
+                            <comment>http://www.angelikalanger.com/Lambdas/Lambdas.pdf</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745306</id>
+                            <name>Lambda Expressions in Java. Reference</name>
+                            <comment>http://www.angelikalanger.com/Lambdas/LambdaReference.pre-release.pdf</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485412948</id>
+                    <name>Streams:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31428194745420</id>
+                            <name>Сергей Куксенко — JDK8: Stream style</name>
+                            <comment>http://www.youtube.com/watch?v=Zq--4Vh5RLI</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745312</id>
+                            <name>Aggregate Operations</name>
+                            <comment>http://docs.oracle.com/javase/tutorial/collections/streams/index.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745316</id>
+                            <name>Reduction</name>
+                            <comment>http://docs.oracle.com/javase/tutorial/collections/streams/reduction.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745318</id>
+                            <name>Parallelism</name>
+                            <comment>http://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745320</id>
+                            <name>State of the Lambda</name>
+                            <comment>http://cr.openjdk.java.net/~briangoetz/lambda/lambda-state-final.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745322</id>
+                            <name>State of the Lambda: Libraries Edition</name>
+                            <comment>http://cr.openjdk.java.net/~briangoetz/lambda/lambda-libraries-final.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745324</id>
+                            <name>Interface evolution via virtual extension methods</name>
+                            <comment>http://cr.openjdk.java.net/~briangoetz/lambda/Defender%20Methods%20v4.pdf</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745326</id>
+                            <name>What's Wrong with Java 8: Currying vs Closures</name>
+                            <comment>http://java.dzone.com/articles/whats-wrong-java-8-currying-vs</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745328</id>
+                            <name>What's Wrong in Java 8, Part II: Functions &amp; Primitives</name>
+                            <comment>http://java.dzone.com/articles/whats-wrong-java-8-part-ii</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745344</id>
+                            <name>What's Wrong in Java 8, Part III: Streams and Parallel Streams</name>
+                            <comment>http://java.dzone.com/articles/whats-wrong-java-8-part-iii</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745346</id>
+                            <name>What's Wrong in Java 8, Part IV: Monads</name>
+                            <comment>http://java.dzone.com/articles/whats-wrong-java-8-part-iv</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745348</id>
+                            <name>What's wrong in Java 8, part V: Tuples</name>
+                            <comment>http://java.dzone.com/articles/whats-wrong-java-8-part-v</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745350</id>
+                            <name>What's wrong in Java 8, part VI: Strictness</name>
+                            <comment>http://java.dzone.com/articles/whats-wrong-java-8-part-vi</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31428194745275</id>
+                    <name>Методы в интерфейсах, ссылки на методы, множественное наследование:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31428194745280</id>
+                            <name>Прочитать статью Default methods</name>
+                            <comment>http://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745283</id>
+                            <name>Прочитать статью Method References</name>
+                            <comment>http://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31428194745358</id>
+                    <name>Аннотации:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31428194745362</id>
+                            <name>Lesson: Annotations</name>
+                            <comment>http://docs.oracle.com/javase/tutorial/java/annotations/index.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745366</id>
+                            <name>Type Annotations Specification (JSR 308)</name>
+                            <comment>http://types.cs.washington.edu/jsr308/specification/java-annotation-design.pdf</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31428194745370</id>
+                    <name>Reflection API:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31428194745372</id>
+                            <name>Trail: The Reflection API</name>
+                            <comment>http://docs.oracle.com/javase/tutorial/reflect/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745376</id>
+                            <name>Mirrors: Design Principles for Meta-level Facilities of Object-Oriented Programming Languages</name>
+                            <comment>http://ftp.linux62.org/~glibersat/publis/p331-bracha.pdf</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31428194745383</id>
+                    <name>Загрузка классов:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31428194745388</id>
+                            <name>Dynamic Class Loading in the JavaTM Virtual Machine</name>
+                            <comment>http://148.206.49.174/coursdea/DynamicClassLoadingInTheJavaVirtualMachine.pdf</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745392</id>
+                            <name>Internals of Java Class Loading</name>
+                            <comment>http://www.onjava.com/pub/a/onjava/2005/01/26/classloading.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745394</id>
+                            <name>Inside Class Loaders</name>
+                            <comment>http://www.onjava.com/pub/a/onjava/2003/11/12/classloader.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745396</id>
+                            <name>Inside Class Loaders: Debugging</name>
+                            <comment>http://www.onjava.com/pub/a/onjava/2004/06/30/classloader2.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745398</id>
+                            <name>Loading of Classes and Interfaces</name>
+                            <comment>http://docs.oracle.com/javase/specs/jls/se7/html/jls-12.html#jls-12.2</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745400</id>
+                            <name>Linking of Classes and Interfaces</name>
+                            <comment>http://docs.oracle.com/javase/specs/jls/se7/html/jls-12.html#jls-12.3</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745408</id>
+                            <name>Initialization of Classes and Interfaces</name>
+                            <comment>http://docs.oracle.com/javase/specs/jls/se7/html/jls-12.html#jls-12.4</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31428194745410</id>
+                            <name>Unloading of Classes and Interfaces</name>
+                            <comment>http://docs.oracle.com/javase/specs/jls/se7/html/jls-12.html#jls-12.7</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450768</id>
+            <name>Java FX 8:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31330485412958</id>
+                    <name>Common:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31330485413020</id>
+                            <name>Java FX 8 Tutorial</name>
+                            <comment>http://tinyletter.com/codemakery/letters/javafx-tutorial-update-for-jdk-8u40</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31330485412997</id>
+                            <name>Написать простую форму заказа</name>
+                            <comment>На форме должны быть отображены
+Label с номером заказа, который должен меняться при нажатии на кнопку Submit
+Combobox - с выбором покупателя
+TextField - в котором будет название item
+NumberField с количеством
+Date Picker - due date
+Табличка в которой будут данные об операциях со всеми покупателями, при нажатии на строчку поля должны заполняться автоматически стирая заполненное (шаблон)
+
+Кнопки Submit, Cancel
+
+Submit - добавляет запись в таблицу, меняет лейбл и очищает значения
+Cancel очищает значения</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31330485413002</id>
+                            <name>Реализовать компонент ComboCheckBox</name>
+                            <comment>Combobox элементы которого checkbox-ы</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31330485413006</id>
+                            <name>Прочитать статьи JavaFX 2.0 Game Tutorial 1-5</name>
+                            <comment>https://carlfx.wordpress.com/2012/03/29/javafx-2-gametutorial-part-1/
+
+остальные справа в Top Posts</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31330485413010</id>
+                            <name>Прочитать статьи JavaFX: Data Model for TreeTable</name>
+                            <comment>http://www.lestard.eu/2015/treetable_datamodel/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31330485413014</id>
+                            <name>Прочитать статью Fancy Forms with JavaFX CSS</name>
+                            <comment>http://docs.oracle.com/javafx/2/get_started/css.htm</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485412954</id>
+                    <name>FXML:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31596456016206</id>
+                            <name>Прочитать статью How to allow users to customize the UI</name>
+                            <comment>http://www.javacodegeeks.com/2015/01/how-to-allow-users-to-customize-the-ui.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450770</id>
+            <name>Java EE 6:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31330485413034</id>
+                    <name>JAX - WS 2.2:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413072</id>
+                    <name>Java Mail 1.4:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31330485413074</id>
+                            <name>Написать консольное приложение для отправки электронной почты</name>
+                            <comment>В письме 1 вложение - csv. файл
+сам текст Html или plain text на выбор
+
+Критерий удачи - принимающему пришло письмо</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485413070</id>
+                    <name>JTA 1.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413068</id>
+                    <name>JMS API 1.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413066</id>
+                    <name>Common Annotations for the Java Platform 1.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413064</id>
+                    <name>JPA 2.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31596456016191</id>
+                            <name>Прочитать статью JPA Tutorial – The ULTIMATE Guide</name>
+                            <comment>http://www.javacodegeeks.com/2015/02/jpa-tutorial.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485413062</id>
+                    <name>Java EE Connector Architecture 1.6:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413060</id>
+                    <name>EJB 3.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413058</id>
+                    <name>Bean Validation 1.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413056</id>
+                    <name>Dependency Injection for Java 1.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413054</id>
+                    <name>Web Bean 1.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413052</id>
+                    <name>JSTL 1.2:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413050</id>
+                    <name>JSP 2.2:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413048</id>
+                    <name>JSF 2.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413046</id>
+                    <name>Java Servlet 3.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413044</id>
+                    <name>JAXR 1.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413042</id>
+                    <name>XML Messaging 1.3:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413040</id>
+                    <name>JAX-RPC 1.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413038</id>
+                    <name>JAXB 2.2:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413032</id>
+                    <name>Web Services 1.3:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485413030</id>
+                    <name>JAX - RS 1.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630456</id>
+                    <name>StAX 1.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630454</id>
+                    <name>JAF 1.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630452</id>
+                    <name>JMX 2.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630450</id>
+                    <name>Java Database Connectivity 4.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630448</id>
+                    <name>JAXP 1.3:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630446</id>
+                    <name>J2EE Management 1.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630442</id>
+                    <name>Java Authorization Contract for Container 1.3:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450772</id>
+            <name>Java EE 7:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31343605630490</id>
+                    <name>JAX - RS 2.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630488</id>
+                    <name>JTA 1.2:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630486</id>
+                    <name>Java Mail 1.5:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630484</id>
+                    <name>JMS 2.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630482</id>
+                    <name>JPA 2.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630480</id>
+                    <name>Java EE Connector Architecture 1.7:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630478</id>
+                    <name>Interceptors 1.2:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630476</id>
+                    <name>EJB 3.2:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630474</id>
+                    <name>Bean Validation 1.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630472</id>
+                    <name>Dependency Injection for Java 1.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630470</id>
+                    <name>Concurrency Utilities for Java EE 1.0:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630468</id>
+                    <name>JSTL 1.2:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630466</id>
+                    <name>JSP 2.3:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630464</id>
+                    <name>JSF 2.2 :</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630462</id>
+                    <name>Servlet 3.1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630460</id>
+                    <name>JSON Processing:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630458</id>
+                    <name>Web Socket:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450774</id>
+            <name>Android SDK:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31351302806386</id>
+                    <name>material design:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31351302806390</id>
+                            <name></name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31426782060521</id>
+                    <name>Course (Parallels):</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31426782060523</id>
+                            <name>SDK, Gradle, AndroidStudio</name>
+                            <comment>http://learndroid.e-legion.ru/lessons</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060525</id>
+                            <name>Основные компоненты приложения. Жизненный цикл приложения</name>
+                            <comment>http://learndroid.e-legion.ru/lessons</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450776</id>
+            <name>Other:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31330485413026</id>
+                    <name>Python:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>32009454272194</id>
+                            <name>Python: Simplifying the creation of a stop word list with defaultdict</name>
+                            <comment>http://www.webcodegeeks.com/python/python-simplifying-creation-stop-word-list-defaultdict/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>32009454272202</id>
+                            <name>Python: Checking any value in a list exists in a line of text</name>
+                            <comment>http://www.webcodegeeks.com/python/python-checking-value-list-exists-line-text/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31343605630430</id>
+                    <name>Intellij Idea:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31343605630432</id>
+                            <name>Написать плагин для идеи, который собирает статистику по проекту сколько строчек кода в каждом файле (в конце саммари по проекту)</name>
+                            <comment>Пустые строки пропускаются</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31343605630426</id>
+                    <name>Google Chrome:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31343605630428</id>
+                            <name>Написать расширение для хрома, которое считает сколько кликов ты сделал и выдает столбчатую диаграмму по дням</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31596456016199</id>
+                    <name>Net Beans:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31596456016201</id>
+                            <name>Написать плагин для Нетбинс</name>
+                            <comment>http://www.javacodegeeks.com/2015/02/write-netbeans-plugin.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450778</id>
+            <name>Ext Js:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31426782060592</id>
+                    <name>Прочитать статью развернутый обзор Ext js 2.2</name>
+                    <comment>http://habrahabr.ru/post/30676/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31426782060596</id>
+                    <name>Прочитать статью Представляем Sencha Ext JS 5</name>
+                    <comment>http://habrahabr.ru/post/225169/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630522</id>
+                    <name>Прочитать статью Создание сложных приложений в Ext JS</name>
+                    <comment>http://www.rusdoc.ru/articles/sozdanie_slozhnyx_prilozhenij_v_extjs/17174/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31426782060531</id>
+                    <name>Введение в Ext JS 4:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31426782060533</id>
+                            <name>Введение в Ext JS</name>
+                            <comment>http://metanit.com/web/extjs/1.1.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060537</id>
+                            <name>Система классов в Ext JS 4</name>
+                            <comment>http://metanit.com/web/extjs/2.1.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060541</id>
+                            <name>Работа с элементами DOM</name>
+                            <comment>http://metanit.com/web/extjs/3.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060545</id>
+                            <name>Обработка событий компонентов</name>
+                            <comment>http://metanit.com/web/extjs/4.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060549</id>
+                            <name>Анимация в Ext Js</name>
+                            <comment>http://metanit.com/web/extjs/5.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060553</id>
+                            <name>Компоновка в Ext js</name>
+                            <comment>http://metanit.com/web/extjs/6.1.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060557</id>
+                            <name>Компоненты в Ext JS</name>
+                            <comment>http://metanit.com/web/extjs/7.1.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060561</id>
+                            <name>Работа с датами в Ext JS</name>
+                            <comment>http://metanit.com/web/extjs/8.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060565</id>
+                            <name>AJAX в Ext js</name>
+                            <comment>http://metanit.com/web/extjs/9.1.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060569</id>
+                            <name>Ext. XTemplate</name>
+                            <comment>http://metanit.com/web/extjs/10.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060573</id>
+                            <name>Работа с формами в Ext JS</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060576</id>
+                            <name>Работа с данными в Ext JS</name>
+                            <comment>http://metanit.com/web/extjs/12.1.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060580</id>
+                            <name>Таблицы и Ext.grid.Panel</name>
+                            <comment>http://metanit.com/web/extjs/13.1.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060584</id>
+                            <name>Архитектура приложения и MVC</name>
+                            <comment>http://metanit.com/web/extjs/14.1.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060588</id>
+                            <name>Рисование в Ext JS и диаграммы</name>
+                            <comment>http://metanit.com/web/extjs/15.1.php</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450780</id>
+            <name>Angular JS:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31338386237409</id>
+                    <name>Интерактивный учебник AngularJS:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31338386237411</id>
+                            <name>Introduction</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237413</id>
+                            <name>Basics</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237415</id>
+                            <name>Controllers</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237417</id>
+                            <name>Scopes</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237419</id>
+                            <name>Collections</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237421</id>
+                            <name>Modules</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237423</id>
+                            <name>Dependency Injection</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237425</id>
+                            <name>Services</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237427</id>
+                            <name>Filters</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237429</id>
+                            <name>Directives</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237431</id>
+                            <name>Directive Scopes</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237433</id>
+                            <name>Routing</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237435</id>
+                            <name>HTTP</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31338386237437</id>
+                    <name>Курс AngularJS на codecademy:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31338386237439</id>
+                            <name>Unit1</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237441</id>
+                            <name>Unit2</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237443</id>
+                            <name>Unit3</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237445</id>
+                            <name>Unit4</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31338386237447</id>
+                            <name>Unit5</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450782</id>
+            <name>Node.js:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31351302806325</id>
+                    <name>Знакомство с c9.io:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31351302806328</id>
+                            <name>https://c9.io/</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806356</id>
+                            <name>запуск mongo db на c9.io</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31351302806261</id>
+                    <name>Screencast по Node.js часть 1:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31351302806263</id>
+                            <name>Введение в Node.JS, об этом скринкасте</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806267</id>
+                            <name>Что такое Node.JS? Почему Node.JS?</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806269</id>
+                            <name>Установка и запуск</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806271</id>
+                            <name>Исходники и документация</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806273</id>
+                            <name>Модули для Node.JS</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806275</id>
+                            <name>Приёмы работы с модулями</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806277</id>
+                            <name>Введение в NPM – менеджер пакетов для Node.JS</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806279</id>
+                            <name>Структура пакета NPM</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806281</id>
+                            <name>Глобальные модули</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806283</id>
+                            <name>Модуль util и наследование</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806285</id>
+                            <name>Модуль console</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806287</id>
+                            <name>Наследование от ошибок Error</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806289</id>
+                            <name>События, EventEmitter и утечки памяти</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806291</id>
+                            <name>Node.JS как веб-сервер</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806293</id>
+                            <name>Эхо-сервер на Node.JS</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806295</id>
+                            <name>Документация к модулю http</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806297</id>
+                            <name>Разработка, supervisor</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806299</id>
+                            <name>Отладка скриптов под Node.JS</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806301</id>
+                            <name>Логирование, модули debug и winston</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806303</id>
+                            <name>Введение в асинхронную разработку</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806305</id>
+                            <name>Событийный цикл, библиотека libUV</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806307</id>
+                            <name>Таймеры, process.nextTick, ref/unref</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806309</id>
+                            <name>Работа с файлами, модуль fs</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806311</id>
+                            <name>Безопасный путь к файлу в fs и path</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806313</id>
+                            <name>Потоки данных в Node.JS, fs.ReadStream</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806315</id>
+                            <name>Writable поток ответа res, метод pipe</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806317</id>
+                            <name>Чат через long-polling, чтение POST</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806319</id>
+                            <name>Домены, «асинхронный try..catch»</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806321</id>
+                            <name>Чтение параметров из командной строки и окружения</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31351302806323</id>
+                    <name>Screencast node.js часть 2:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31351302806330</id>
+                            <name>Создаём костяк сайта / Express: основы и Middleware</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806332</id>
+                            <name>Улучшаем костяк сайта / Логгер, конфигурация, шаблонка для HTML</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806334</id>
+                            <name>Улучшаем шаблонизацию / EJS: layout, block, partials</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806336</id>
+                            <name>Начинаем работать с базой / Основы MongoDB, native driver</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806338</id>
+                            <name>Создаём модель для пользователя / Основы Mongoose</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806340</id>
+                            <name>Делаем скрипт для создания тестовой базы / Async, организация кода [обновлено]</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806342</id>
+                            <name>Веб-сервисы, работа с ошибками / Express, Mongoose</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806344</id>
+                            <name>Сессии, отслеживание посетителей /Express/</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806346</id>
+                            <name>Авторизация /Express, Mongoose, Async, EJS/</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806348</id>
+                            <name>COMET: обзор подходов / WS.JS, Sock.JS, Socket.IO</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806350</id>
+                            <name>Чат на Express и Socket.IO</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806352</id>
+                            <name>Опции Socket.IO и автореконнект</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806354</id>
+                            <name>Socket.IO + Express + авторизация</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31351302806358</id>
+                    <name>задания:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31351302806360</id>
+                            <name>Common шаблон</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806362</id>
+                            <name>Whois сервис</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806364</id>
+                            <name>дневник тренировок</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450784</id>
+            <name>Bootstrap:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks/>
+        </tasks>
+        <tasks>
+            <id>31292497450786</id>
+            <name>Oracle SQL:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31330485412990</id>
+                    <name>Optimization:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485412988</id>
+                    <name>Training:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485412986</id>
+                    <name>Administration:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450788</id>
+            <name>My SQL:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks/>
+        </tasks>
+        <tasks>
+            <id>31292497450790</id>
+            <name>No SQL:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31351302806366</id>
+                    <name>мини книга по mongodb:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31351302806368</id>
+                            <name>Глава 1 — Основы</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806370</id>
+                            <name>Глава 2 — Обновление</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806372</id>
+                            <name>Глава 3 — Осваиваем Find</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806374</id>
+                            <name>Глава 4 — Моделирование данных</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806376</id>
+                            <name>Глава 5 — Когда использовать MongoDB</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806378</id>
+                            <name>Глава 6 — MapReduce</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31351302806380</id>
+                            <name>Глава 7 — Производительность и инструментарий</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450792</id>
+            <name>Ms SQL:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks/>
+        </tasks>
+        <tasks>
+            <id>31292497450794</id>
+            <name>SQL (commons):</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks/>
+        </tasks>
+        <tasks>
+            <id>31292497450796</id>
+            <name>Architecture:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31330485412976</id>
+                    <name>Web Patterns:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31343605630517</id>
+                            <name>Прочитать статью ExtJS – учимся правильно писать компоненты</name>
+                            <comment>http://habrahabr.ru/post/88261/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060513</id>
+                            <name>Прочитать книгу Intoduction to Web Application Development</name>
+                            <comment>https://mega.co.nz/#!l9xDCIwC!tNe2miaRjILmCvRifXAsDZu1dufUcIClkvsxOv0G4K8</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485412974</id>
+                    <name>Patterns:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31426782060517</id>
+                            <name>Прочитать книгу Java Design Patterns</name>
+                            <comment>https://mega.co.nz/#!YgwCAT6K!hByDwq46ymzF-_-93oDgbpdlqm1UGWhIoH7rrrqlvhQ</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31426782060600</id>
+                            <name>Прочитать книгу Шаблоны проектирования в Java. Гранд</name>
+                            <comment>https://mega.co.nz/#!MoIzmQqD!12sznXmrELx_ZgP9GhRB-S2XwAmvl0hbYKtKbOfdo5c</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450798</id>
+            <name>iOS:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks/>
+        </tasks>
+        <tasks>
+            <id>31292497450804</id>
+            <name>HTML 5:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>32004382048434</id>
+                    <name>HTML5 File Upload Example</name>
+                    <comment>http://www.webcodegeeks.com/html5/html5-file-upload-example/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>32004382048436</id>
+                    <name>HTML5 Geolocation API with Google Maps</name>
+                    <comment>http://www.webcodegeeks.com/html5/html5-geolocation-api-with-google-maps/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>32004382048440</id>
+                    <name>HTML5 Dropdown menu example with CSS3</name>
+                    <comment>http://www.webcodegeeks.com/html5/html5-dropdown-menu-example-with-css3/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>32004382048446</id>
+                    <name>HTML5 Audio Player Example</name>
+                    <comment>http://www.webcodegeeks.com/html5/html5-audio-player-example/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>32004382048450</id>
+                    <name>HTML5 Web Camera Example</name>
+                    <comment>http://www.webcodegeeks.com/html5/html5-web-camera-example/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>32004382048454</id>
+                    <name>HTML5 Local Storage Example</name>
+                    <comment>http://www.webcodegeeks.com/html5/html5-local-storage-example/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>32004382048458</id>
+                    <name>HTML5 Geolocation Example – Weather Widget Demo</name>
+                    <comment>http://www.webcodegeeks.com/html5/html5-geolocation-example-weather-widget-demo/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31292497450806</id>
+            <name>CSS:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>32009454272190</id>
+                    <name>CSS Multiple Classes Example</name>
+                    <comment>http://www.webcodegeeks.com/css/css-multiple-classes-example/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>32009454272198</id>
+                    <name>CSS Table Design Example</name>
+                    <comment>http://www.webcodegeeks.com/css/css-table-design-example/</comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31330485412942</id>
+            <name>VCS:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31330485412982</id>
+                    <name>Mercurial:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31343605630509</id>
+                            <name>Прочитать мануал по работе  и установке</name>
+                            <comment>http://mercurial.selenic.com/wiki/RussianTutorial</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31343605630513</id>
+                            <name>Создать проект на меркуриал</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485412980</id>
+                    <name>GIT:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31351302806382</id>
+                            <name>книга Pro-git (довольно большая)</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485412978</id>
+                    <name>SVN:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31330485412944</id>
+            <name>CI:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31330485412970</id>
+                    <name>Jenkins:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31706443923540</id>
+                            <name>Continuous Integration для Android с использованием Jenkins + Gradle</name>
+                            <comment>http://habrahabr.ru/post/205308/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485412968</id>
+                    <name>Teamcity:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31330485412946</id>
+            <name>Project Build Systems:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31330485412966</id>
+                    <name>Qmake:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31330485412964</id>
+                    <name>Gradle:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31706443923516</id>
+                            <name>Статья Gradle User Guide</name>
+                            <comment>http://gradle.org/docs/current/userguide/userguide_single.html</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31706443923520</id>
+                            <name>Статья Gradle и решение задач автоматизации</name>
+                            <comment>http://habrahabr.ru/post/192268/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31706443923524</id>
+                            <name>Gradle: Tasks Are Code</name>
+                            <comment>http://habrahabr.ru/post/107085/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31706443923528</id>
+                            <name>Gradle: Better Way To Build</name>
+                            <comment>http://habrahabr.ru/post/107085/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31706443923532</id>
+                            <name>Почему Gradle?</name>
+                            <comment>http://habrahabr.ru/post/106717/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31706443923536</id>
+                            <name>Многомодульный Java-проект с Gradle. Шаг за шагом</name>
+                            <comment>http://habrahabr.ru/post/225189/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485412962</id>
+                    <name>Maven:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31783559839441</id>
+                            <name>Статья Maven — автоматизация сборки проекта</name>
+                            <comment>http://habrahabr.ru/post/77333/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31783559839445</id>
+                            <name>Статья Apache Maven — основы</name>
+                            <comment>http://habrahabr.ru/post/77382/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31783559839449</id>
+                            <name>Статья Руководство по Maven</name>
+                            <comment>http://www.apache-maven.ru/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31783559839453</id>
+                            <name>Статья Знакомство с Maven</name>
+                            <comment>http://devcolibri.com/742</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>31330485412960</id>
+                    <name>Ant:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>31343605630494</id>
+                            <name>Прочитать Мануал по API и установке</name>
+                            <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>31343605630497</id>
+                            <name>Написать таргет, для запуска SQL файла, который обновит имеющуюся базу удалив все кастомные значения</name>
+                            <comment>Нужно удалить все столбцы которые могут принимать null значение</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>31343605630501</id>
+            <name>Work Process:</name>
+            <comment></comment>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>31343605630507</id>
+                    <name>Manifest:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630505</id>
+                    <name>Scrum:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>31343605630503</id>
+                    <name>Agile:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+            </tasks>
+        </tasks>
+    </tasks>
+</taskJAXB>

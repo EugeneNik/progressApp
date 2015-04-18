@@ -9,4 +9,5 @@ public interface FileNamespace {
     String BACKUP = "backup/backup.csv";
     String CSS = "/resources/skin.css";
     String SETTINGS = "resources/settings.properties";
+    String REFRESH = "resources/icons/refresh.png";
 }

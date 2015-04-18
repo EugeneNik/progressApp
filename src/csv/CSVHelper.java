@@ -8,6 +8,7 @@ import java.io.*;
  * Created by DARIA on 12.04.2015.
  */
 
+@Deprecated
 public class CSVHelper {
     public static void saveBackup(String path, Task root) {
         try {

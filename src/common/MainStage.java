@@ -2,20 +2,34 @@ package common;
 
 import asana.AsanaHelper;
 import common.property.PropertyManager;
-import csv.CSVHelper;
 import data.Task;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.concurrent.WorkerStateEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import jaxb.TaskJAXB;
+import jaxb.utils.JaxbConverter;
+import jaxb.utils.JaxbMarshaller;
+import jaxb.utils.JaxbUnmarshaller;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import ui.StatusBar;
+import utils.ImageUtils;
 
 import java.text.DecimalFormat;
 
@@ -33,6 +47,12 @@ public class MainStage extends Application {
 
         PropertyManager.getApplicationSettings();
         TextArea commentArea = new TextArea();
+
+        commentArea.setMinWidth(700);
+        Button syncButton = new Button("Sync");
+        syncButton.setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.REFRESH)));
+
+        final StatusBar statusBar = new StatusBar();
         TreeTableView<Task> tree = new TreeTableView<>();
         tree.setColumnResizePolicy(TreeTableView.CONSTRAINED_RESIZE_POLICY);
 
@@ -43,18 +63,10 @@ public class MainStage extends Application {
 
         tree.getColumns().addAll(descriptionColumn, progressColumn);
 
-        Task root = new Task("Root".hashCode(), "Root", 0.0, false, null);
+        Task root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.BACKUP));
 
-        CSVHelper.parseBackup(FileNamespace.BACKUP, root);
-        try {
-            AsanaHelper.parseAsana(root);
-        } catch (Exception e) {
-            System.out.println("Asana Sync failed");
-        }
-        //CSVHelper.parseCSV(FileNamespace.RESOURCES, root);
-//        AsanaConnector connector = new AsanaConnector(PropertyManager.getValue(PropertyNamespace.APP_KEY));
-//        JSONObject obj = connector.getProjects();
-        //update progress
+        //CSVHelper.parseBackup(FileNamespace.BACKUP, root);
+        //root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(TaskJAXB.class, FileNamespace.BACKUP);
 
         final TreeItem<Task> rootItem = new TreeItem<>(root);
         tree.setRoot(rootItem);
@@ -150,21 +162,89 @@ public class MainStage extends Application {
             }
         });
 
+        syncButton.setOnAction(event -> {
+            javafx.concurrent.Task<Void> task = new javafx.concurrent.Task() {
+                @Override
+                protected Void call() throws Exception {
+                    updateMessage("Wait for data loading...");
+
+                    try {
+                        JSONArray array = AsanaHelper.connector.getProjects().getJSONArray("data");
+                        updateProgress(0, array.length());
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject project = array.getJSONObject(i);
+                            String themeName = project.getString("name");
+                            Long id = project.getLong("id");
+                            themeName += ":";
+                            Task currentTask = new Task(id, themeName, 0.0, false, root);
+                            int index = root.getSubtasks().indexOf(currentTask);
+                            if (index < 0) {
+                                root.getSubtasks().add(currentTask);
+                            } else {
+                                currentTask = root.getSubtasks().get(index);
+                                currentTask.setTask(themeName);
+                            }
+                            AsanaHelper.parseAndFill(currentTask);
+                            updateProgress(i + 1, array.length());
+                        }
+                        Platform.runLater(() -> {
+                            final TreeItem<Task> rootItem = new TreeItem<>(root);
+                            tree.setRoot(rootItem);
+                            tree.setShowRoot(false);
+
+                            addTreeItemsRecursive(root, rootItem);
+                            updateMessage("Loaded");
+                        });
+                    } catch (Exception e) {
+                        updateMessage("Asana Sync failed");
+                        System.err.println(e);
+                    }
+
+                    updateProgress(0, 0);
+                    done();
+                    return null;
+                }
+            };
+            statusBar.textProperty().bind(task.messageProperty());
+            statusBar.progressProperty().bind(task.progressProperty());
+
+            task.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
+                @Override
+                public void handle(WorkerStateEvent event) {
+                    statusBar.textProperty().unbind();
+                    statusBar.progressProperty().unbind();
+                }
+            });
+
+            Thread t = new Thread(task);
+            t.setDaemon(true);
+            t.start();
+        });
+
+        primaryStage.setOnCloseRequest(event -> {
+            //CSVHelper.saveBackup(FileNamespace.BACKUP, root);
+            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(root), TaskJAXB.class, FileNamespace.BACKUP);
+            PropertyManager.save();
+        });
+
         VBox parent = new VBox();
-        parent.getChildren().addAll(tree, commentArea);
+        HBox bottom = new HBox();
+        BorderPane rightBottom = new BorderPane();
+        rightBottom.setPadding(new Insets(5, 0, 0, 15));
+        rightBottom.setTop(syncButton);
+        bottom.getChildren().addAll(commentArea, rightBottom);
+        parent.getChildren().addAll(tree, bottom, statusBar);
 
         String cssPath = this.getClass().getResource(FileNamespace.CSS).toExternalForm();
         Scene scene = new Scene(parent, 800, 600);
         scene.getStylesheets().add(cssPath);
 
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
 
         primaryStage.show();
 
-        primaryStage.setOnCloseRequest(event -> {
-            CSVHelper.saveBackup(FileNamespace.BACKUP, root);
-            PropertyManager.save();
-        });
+
     }
 
     private void addTreeItemsRecursive(Task task, TreeItem<Task> item) {
