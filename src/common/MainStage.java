@@ -10,13 +10,13 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
+import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.input.KeyCode;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -31,12 +31,17 @@ import org.json.JSONObject;
 import ui.StatusBar;
 import utils.ImageUtils;
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.DecimalFormat;
 
 /**
  * Created by DARIA on 12.04.2015.
  */
 public class MainStage extends Application {
+    private TreeTableView<Task> tree;
+    private TreeItem<Task> foundElement;
 
     public static void main(String[] args) {
         launch(args);
@@ -48,12 +53,17 @@ public class MainStage extends Application {
         PropertyManager.getApplicationSettings();
         TextArea commentArea = new TextArea();
 
+        TextField searchField = new TextField();
+        searchField.setMaxWidth(80);
+
         commentArea.setMinWidth(700);
+        Button openLink = new Button("Open link");
+        openLink.setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.GLOBAL_SEARCH)));
         Button syncButton = new Button("Sync");
         syncButton.setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.REFRESH)));
 
         final StatusBar statusBar = new StatusBar();
-        TreeTableView<Task> tree = new TreeTableView<>();
+        tree = new TreeTableView<>();
         tree.setColumnResizePolicy(TreeTableView.CONSTRAINED_RESIZE_POLICY);
 
         TreeTableColumn<Task, String> descriptionColumn = new TreeTableColumn<>("Description");
@@ -112,6 +122,20 @@ public class MainStage extends Application {
             }
         });
 
+        searchField.setOnKeyPressed(event -> {
+            if (event.getCode().equals(KeyCode.ENTER)) {
+                if (!searchField.getText().equals("")) {
+                    if (!recursiveSearch(rootItem, searchField.getText())) {
+                        statusBar.setText("Item not found: " + searchField.getText());
+                    } else {
+                        tree.getSelectionModel().select(foundElement);
+                        tree.scrollTo(tree.getRow(foundElement));
+                        statusBar.setText("Item " + searchField.getText() + " found");
+                    }
+                }
+            }
+        });
+
         tree.setRowFactory(treeTableView -> {
             final TreeTableRow<Task> row = new TreeTableRow<>();
             final ContextMenu rowMenu = new ContextMenu();
@@ -162,6 +186,15 @@ public class MainStage extends Application {
             }
         });
 
+        openLink.setOnAction(event -> {
+            try {
+                URI u = new URI(commentArea.getText());
+                java.awt.Desktop.getDesktop().browse(u);
+            } catch (URISyntaxException | IOException e) {
+                statusBar.setText("Error in provided URL, check it please");
+            }
+        });
+
         syncButton.setOnAction(event -> {
             javafx.concurrent.Task<Void> task = new javafx.concurrent.Task() {
                 @Override
@@ -197,10 +230,10 @@ public class MainStage extends Application {
                         });
                     } catch (Exception e) {
                         updateMessage("Asana Sync failed");
-                        System.err.println(e);
+                        e.printStackTrace();
                     }
 
-                    updateProgress(0, 0);
+                    updateProgress(1, 1);
                     done();
                     return null;
                 }
@@ -229,9 +262,12 @@ public class MainStage extends Application {
 
         VBox parent = new VBox();
         HBox bottom = new HBox();
-        BorderPane rightBottom = new BorderPane();
-        rightBottom.setPadding(new Insets(5, 0, 0, 15));
-        rightBottom.setTop(syncButton);
+        FlowPane rightBottom = new FlowPane(Orientation.VERTICAL);
+        rightBottom.setRowValignment(VPos.CENTER);
+        rightBottom.setColumnHalignment(HPos.CENTER);
+        rightBottom.setPadding(new Insets(5, 0, 0, 5));
+        rightBottom.setVgap(8);
+        rightBottom.getChildren().addAll(searchField, openLink, syncButton);
         bottom.getChildren().addAll(commentArea, rightBottom);
         parent.getChildren().addAll(tree, bottom, statusBar);
 
@@ -243,8 +279,22 @@ public class MainStage extends Application {
         primaryStage.setResizable(false);
 
         primaryStage.show();
+    }
 
-
+    private boolean recursiveSearch(TreeItem<Task> task, String name) {
+        if (task.getValue().getTask().indexOf(name) >= 0) {
+            task.setExpanded(true);
+            foundElement = task;
+            return true;
+        } else {
+            for (TreeItem<Task> child : task.getChildren()) {
+                if (recursiveSearch(child, name)) {
+                    task.setExpanded(true);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private void addTreeItemsRecursive(Task task, TreeItem<Task> item) {

@@ -890,6 +890,13 @@ Cancel очищает значения</comment>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>32009454272206</id>
+                            <name>Python: Streaming/Appending to a file</name>
+                            <comment>http://www.webcodegeeks.com/python/python-streaming-appending-file/</comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -1224,6 +1231,21 @@ Cancel очищает значения</comment>
                             <id>31338386237447</id>
                             <name>Unit5</name>
                             <comment></comment>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>32009454272210</id>
+                    <name>Статьи:</name>
+                    <comment></comment>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>32009454272212</id>
+                            <name>Real-time Communication in AngularJS with ($Q)orlate</name>
+                            <comment>http://www.webcodegeeks.com/javascript/angular-js/real-time-communication-angularjs-qorlate/</comment>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>

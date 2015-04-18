@@ -10,4 +10,5 @@ public interface FileNamespace {
     String CSS = "/resources/skin.css";
     String SETTINGS = "resources/settings.properties";
     String REFRESH = "resources/icons/refresh.png";
+    String GLOBAL_SEARCH = "resources/icons/global.png";
 }
