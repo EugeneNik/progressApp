@@ -35,10 +35,13 @@ public class AsanaHelper {
     private static void parseAndFill(Task root) {
         Task currentTheme = root;
         JSONArray array = connector.getProjectTasks(Long.toString(root.getId())).getJSONArray("data");
+
         for (int j = 0; j < array.length(); j++) {
             JSONObject object = array.getJSONObject(j);
             String theme = object.getString("name");
             Long id = object.getLong("id");
+            JSONArray story = connector.getTaskStory(Long.toString(id)).getJSONArray("data");
+            String comment = getComments(story);
             if (theme.endsWith(":")) {
                 Task subTheme = new Task(id, theme, 0.0, false, root);
                 int index = root.getSubtasks().indexOf(subTheme);
@@ -57,9 +60,9 @@ public class AsanaHelper {
                         }
                         task.setCompleted(progresses[i++]);
                     }
-
                 } else {
                     subTheme = root.getSubtasks().get(index);
+                    subTheme.setDescription(comment);
                     subTheme.setTask(theme);
                 }
                 currentTheme = subTheme;
@@ -82,8 +85,22 @@ public class AsanaHelper {
                     }
                 } else {
                     currentTheme.getSubtasks().get(currentTheme.getSubtasks().indexOf(task)).setTask(theme);
+                    currentTheme.getSubtasks().get(currentTheme.getSubtasks().indexOf(task)).setDescription(comment);
                 }
             }
         }
     }
+
+    private static String getComments(JSONArray story) {
+        StringBuilder comment = new StringBuilder();
+        for (int i = 0; i < story.length(); i++) {
+            JSONObject storyPoint = story.getJSONObject(i);
+            if (storyPoint.getString("type").equals("comment")) {
+                comment.append(storyPoint.getString("text"));
+                comment.append("  ");
+            }
+        }
+        return comment.toString();
+    }
+
 }

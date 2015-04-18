@@ -68,6 +68,7 @@ public class AsanaConnector {
 
         return json;
     }
+
     public JSONObject getWorkspaceRecord(String workspaceId) {
         String url = apiUrl + "/workspaces/" + workspaceId;
         String result = getData(url);
@@ -97,6 +98,7 @@ public class AsanaConnector {
 
         return json;
     }
+
     public JSONObject getProjectTasks(String projectId) {
         String url = apiUrl + "/projects/" + projectId + "/tasks";
         String result = getData(url);
@@ -105,6 +107,7 @@ public class AsanaConnector {
 
         return json;
     }
+
     public JSONObject getProjectRecord(String projectId) {
         String url = apiUrl + "/projects/" + projectId;
         String result = getData(url);
@@ -113,6 +116,7 @@ public class AsanaConnector {
 
         return json;
     }
+
     public JSONObject createProject() {
 
         JSONObject json = null;
@@ -129,6 +133,7 @@ public class AsanaConnector {
 
         return json;
     }
+
     public JSONObject getUserRecord(String userId) {
         String url = apiUrl + "/users/" + userId;
         String result = getData(url);
@@ -147,6 +152,17 @@ public class AsanaConnector {
 
         return json;
     }
+
+    // All methods related to stories
+    public JSONObject getTaskStory(String taskId) {
+        String url = apiUrl + "/tasks/" + taskId + "/stories";
+        String result = getData(url);
+
+        JSONObject json = convertToJSON(result);
+
+        return json;
+    }
+
     public JSONObject getStory(String storyId) {
         String url = apiUrl + "/stories/" + storyId;
         String result = getData(url);
@@ -168,7 +184,7 @@ public class AsanaConnector {
             urlConn.setDoOutput(true);
             urlConn.setRequestProperty("Content-type", "text/json");
             urlConn.setRequestProperty("accept", "text/json");
-            urlConn.setRequestProperty("authorization",  "Basic " + bauth);
+            urlConn.setRequestProperty("authorization", "Basic " + bauth);
 
             int responseCode = urlConn.getResponseCode();
 
@@ -193,12 +209,14 @@ public class AsanaConnector {
 
         return data;
     }
+
     private String basicAuth(String key) {
         key = key + ":";
         byte[] byteKey = key.getBytes();
         String auth = DatatypeConverter.printBase64Binary(byteKey);
         return auth;
     }
+
     private String convertStreamToString(InputStream inputStream) {
 
         try {
@@ -207,6 +225,7 @@ public class AsanaConnector {
             return "";
         }
     }
+
     private JSONObject convertToJSON(String result) {
         JSONObject json;
         try {
