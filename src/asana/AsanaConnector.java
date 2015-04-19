@@ -144,7 +144,7 @@ public class AsanaConnector {
     }
 
     // All methods related to stories
-    public JSONObject getTaskStories(String taskId) {
+    public JSONObject getTaskDescription(String taskId) {
         String url = apiUrl + "/tasks/" + taskId;
         String result = getData(url);
 

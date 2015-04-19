@@ -42,8 +42,9 @@ public class AsanaHelper {
             JSONObject object = array.getJSONObject(j);
             String theme = object.getString("name");
             Long id = object.getLong("id");
+            JSONObject description = connector.getTaskDescription(Long.toString(id)).getJSONObject("data");
             JSONArray story = connector.getTaskStory(Long.toString(id)).getJSONArray("data");
-            String comment = getComments(story);
+            String comment = getNotes(description) + getComments(story);
             if (theme.endsWith(":")) {
                 Task subTheme = new Task(id, theme, 0.0, false, root);
                 subTheme.setDescription(comment);
@@ -65,6 +66,7 @@ public class AsanaHelper {
                     }
                 } else {
                     subTheme = root.getSubtasks().get(index);
+                    System.out.println(comment);
                     subTheme.setDescription(comment);
                     subTheme.setTask(theme);
                 }
@@ -101,7 +103,18 @@ public class AsanaHelper {
             JSONObject storyPoint = story.getJSONObject(i);
             if (storyPoint.getString("type").equals("comment")) {
                 comment.append(storyPoint.getString("text"));
+                comment.append("\n");
             }
+        }
+        return comment.toString();
+    }
+
+    private static String getNotes(JSONObject story) {
+        StringBuilder comment = new StringBuilder();
+        String notes = story.getString("notes");
+        if (!notes.equals("")) {
+            comment.append(notes);
+            comment.append("\n");
         }
         return comment.toString();
     }

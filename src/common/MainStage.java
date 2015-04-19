@@ -8,8 +8,6 @@ import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.concurrent.WorkerStateEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -73,10 +71,15 @@ public class MainStage extends Application {
 
         tree.getColumns().addAll(descriptionColumn, progressColumn);
 
-        Task root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.BACKUP));
+        tree.setOnKeyPressed(event -> {
+            if (event.getCode().equals(KeyCode.ENTER)) {
+                if (tree.getSelectionModel().getSelectedItem() != null) {
+                    openLink.fire();
+                }
+            }
+        });
 
-        //CSVHelper.parseBackup(FileNamespace.BACKUP, root);
-        //root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(TaskJAXB.class, FileNamespace.BACKUP);
+        Task root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.BACKUP));
 
         final TreeItem<Task> rootItem = new TreeItem<>(root);
         tree.setRoot(rootItem);
@@ -187,11 +190,19 @@ public class MainStage extends Application {
         });
 
         openLink.setOnAction(event -> {
-            try {
-                URI u = new URI(commentArea.getText());
-                java.awt.Desktop.getDesktop().browse(u);
-            } catch (URISyntaxException | IOException e) {
-                statusBar.setText("Error in provided URL, check it please");
+            String[] stringsBySpace = commentArea.getText().split(" ");
+            for (String s : stringsBySpace) {
+                String[] stringsByEndLine = s.split("\n");
+                for (String str : stringsByEndLine) {
+                    try {
+                        if (str.startsWith("http") || str.startsWith("www")) {
+                            URI u = new URI(str);
+                            java.awt.Desktop.getDesktop().browse(u);
+                        }
+                    } catch (URISyntaxException | IOException e) {
+                        statusBar.setText("Error in provided URL, check it please");
+                    }
+                }
             }
         });
 
@@ -241,12 +252,9 @@ public class MainStage extends Application {
             statusBar.textProperty().bind(task.messageProperty());
             statusBar.progressProperty().bind(task.progressProperty());
 
-            task.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
-                @Override
-                public void handle(WorkerStateEvent event) {
-                    statusBar.textProperty().unbind();
-                    statusBar.progressProperty().unbind();
-                }
+            task.setOnSucceeded(event1 -> {
+                statusBar.textProperty().unbind();
+                statusBar.progressProperty().unbind();
             });
 
             Thread t = new Thread(task);
@@ -255,7 +263,6 @@ public class MainStage extends Application {
         });
 
         primaryStage.setOnCloseRequest(event -> {
-            //CSVHelper.saveBackup(FileNamespace.BACKUP, root);
             JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(root), TaskJAXB.class, FileNamespace.BACKUP);
             PropertyManager.save();
         });
