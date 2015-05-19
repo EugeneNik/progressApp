@@ -7,6 +7,7 @@ public interface FileNamespace {
 
     String RESOURCES = "files/";
     String BACKUP = "backup/backup.csv";
+    String STRUCTURE = "backup/structure.csv";
     String CSS = "/resources/skin.css";
     String SETTINGS = "resources/settings.properties";
     String REFRESH = "resources/icons/refresh.png";

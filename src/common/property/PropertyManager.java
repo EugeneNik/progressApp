@@ -19,6 +19,7 @@ import java.util.Properties;
 public class PropertyManager {
 
     private static BaseProperty<String> APP_KEY;
+    private static BaseProperty<Integer> TIMER_UPDATE_FREQUENCY;
 
     /**
      * map to collect setting name and setting
@@ -31,6 +32,7 @@ public class PropertyManager {
             try (InputStream is = new FileInputStream(FileNamespace.SETTINGS)) {
                 prop.load(is);
                 APP_KEY = new BaseProperty<>(PropertyNamespace.APP_KEY, prop.getProperty(PropertyNamespace.APP_KEY, ""), "");
+                TIMER_UPDATE_FREQUENCY = new BaseProperty<>(PropertyNamespace.TIMER_UPDATE_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.TIMER_UPDATE_FREQUENCY, "5")), 5);
                 registerApplicationSettings();
             }
         } catch (IOException | NumberFormatException e) {
@@ -52,6 +54,7 @@ public class PropertyManager {
 
     private static void registerApplicationSettings() {
         settingsList.put(PropertyNamespace.APP_KEY, APP_KEY);
+        settingsList.put(PropertyNamespace.TIMER_UPDATE_FREQUENCY, TIMER_UPDATE_FREQUENCY);
     }
 
     public static void save() {

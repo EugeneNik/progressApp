@@ -17,6 +17,7 @@ public class JaxbMarshaller {
             JAXBContext jc = JAXBContext.newInstance(clazz);
             Marshaller marshaller = jc.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
             OutputStream os = null;
             os = new FileOutputStream(fileName);
             marshaller.marshal(object, os);

@@ -16,3 +16,4 @@ hs_err_pid*
 progressApp.iml
 resources/settings.properties
 .idea/libraries/json_20141113.xml
+backup/backup.csv

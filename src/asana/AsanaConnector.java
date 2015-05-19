@@ -190,7 +190,8 @@ public class AsanaConnector {
 
             if (responseCode == 200) {
                 // handle an OK response
-                System.out.println("Response Code: 200");
+                System.out.println(url.toString());
+                //System.out.println("Response Code: 200");
 
                 InputStream inStream = urlConn.getInputStream();
                 data = convertStreamToString(inStream);
@@ -220,7 +221,7 @@ public class AsanaConnector {
     private String convertStreamToString(InputStream inputStream) {
 
         try {
-            return new Scanner(inputStream).useDelimiter("\\A").next();
+            return new Scanner(inputStream, "UTF-8").useDelimiter("\\A").next();
         } catch (NoSuchElementException e) {
             return "";
         }

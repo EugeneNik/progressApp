@@ -6,6 +6,10 @@ import data.Task;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.geometry.*;
@@ -18,6 +22,9 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import jaxb.TaskJAXB;
@@ -33,6 +40,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.DecimalFormat;
+import java.util.List;
 
 /**
  * Created by DARIA on 12.04.2015.
@@ -47,7 +55,6 @@ public class MainStage extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
         PropertyManager.getApplicationSettings();
         TextArea commentArea = new TextArea();
 
@@ -79,16 +86,95 @@ public class MainStage extends Application {
             }
         });
 
-        Task root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.BACKUP));
+        Task root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.STRUCTURE));
+        Task back = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.BACKUP));
+
+        root.mergeTask(back);
+
+        SuggestionService suggestionService = new SuggestionService(root);
+        List<Task> tasks = suggestionService.suggest();
 
         final TreeItem<Task> rootItem = new TreeItem<>(root);
         tree.setRoot(rootItem);
         tree.setShowRoot(false);
 
+        primaryStage.titleProperty().bind(root.taskProperty().concat(Bindings.format(" (%.2f%%)", root.progressProperty().multiply(100.0))));
+
         addTreeItemsRecursive(root, rootItem);
 
-
         descriptionColumn.setCellValueFactory(param -> param.getValue().getValue().taskProperty());
+        descriptionColumn.setCellFactory(param -> {
+            final TreeTableCell<Task, String> cell = new TreeTableCell<Task, String>() {
+                @Override
+                protected void updateItem(String t, boolean bln) {
+                    super.updateItem(t, bln);
+                    if (bln) {
+                        setContextMenu(null);
+                        setGraphic(null);
+                    } else {
+                        setText(t);
+                        if (getTreeTableRow() != null && getTreeTableRow().getTreeItem() != null && getTreeTableRow().getTreeItem().isLeaf()) {
+                            final ContextMenu rowMenu = new ContextMenu();
+                            MenuItem completeItem = new MenuItem("Complete task");
+                            completeItem.setOnAction(event -> {
+                                if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf() && !tree.getSelectionModel().getSelectedItem().getValue().getCompleted()) {
+                                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
+                                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(1.0);
+                                }
+                            });
+
+                            Menu changeStoryPoints = new Menu("Change estimate");
+                            for (int i = 1; i <= 32; i *= 2) {
+                                MenuItem item = new MenuItem(Integer.toString(i));
+                                changeStoryPoints.getItems().add(item);
+                                final int parameter = i;
+                                item.setOnAction(event -> {
+                                    if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
+                                        tree.getSelectionModel().getSelectedItem().getValue().updateStoryPoints(parameter);
+                                    }
+                                });
+                            }
+
+                            Menu partialCompleteItem = new Menu("Partial Complete");
+                            for (int i = 10; i <= 90; i += 10) {
+                                MenuItem item = new MenuItem(Integer.toString(i));
+                                partialCompleteItem.getItems().add(item);
+                                final int parameter = i;
+                                item.setOnAction(event -> {
+                                    if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
+                                        tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
+                                        tree.getSelectionModel().getSelectedItem().getValue().setCompleted(parameter / 100.0);
+                                    }
+                                });
+                            }
+
+                            MenuItem resetItem = new MenuItem("Reset progress");
+                            resetItem.setOnAction(event -> {
+                                if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
+                                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
+                                }
+                            });
+                            rowMenu.getItems().addAll(completeItem, partialCompleteItem, resetItem, changeStoryPoints);
+                            if (getContextMenu() == null) {
+                                setContextMenu(rowMenu);
+                            }
+                        }
+                        if (getTreeTableRow() != null && getTreeTableRow().getTreeItem() != null) {
+                            StackPane storyPoints = new StackPane();
+                            Circle circle = new Circle(12, Color.CORAL);
+                            Text text = new Text("");
+                            text.textProperty().bind(Bindings.format("%.0f", getTreeTableRow().getTreeItem().getValue().storyPointsProperty()));
+                            storyPoints.getChildren().addAll(circle, text);
+                            setGraphic(storyPoints);
+                        }
+
+                    }
+                }
+            };
+
+            return cell;
+        });
+
         progressColumn.setCellFactory(new Callback<TreeTableColumn<Task, Double>, TreeTableCell<Task, Double>>() {
 
             @Override
@@ -107,11 +193,14 @@ public class MainStage extends Application {
                             progressBar.progressProperty().addListener((observable, oldValue, newValue) -> {
                                 if (newValue != null && newValue.doubleValue() == 1.0) {
                                     progressBar.getStyleClass().addAll("green-bar");
+                                } else if (progressBar.getStyleClass().contains("green-bar")) {
+                                    progressBar.getStyleClass().remove("green-bar");
                                 }
                             });
                             progressBar.setProgress(t);
                             DecimalFormat format = new DecimalFormat("#0.00");
                             Label label = new Label(format.format(t * 100) + "%");
+                            label.getStyleClass().addAll("progress-text");
                             box.getChildren().addAll(progressBar, label);
                             progressBar.prefWidthProperty().bind(this.widthProperty());
                             setGraphic(box);
@@ -139,53 +228,13 @@ public class MainStage extends Application {
             }
         });
 
-        tree.setRowFactory(treeTableView -> {
-            final TreeTableRow<Task> row = new TreeTableRow<>();
-            final ContextMenu rowMenu = new ContextMenu();
-            MenuItem completeItem = new MenuItem("Complete task");
-            completeItem.setOnAction(event -> {
-                if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf() && !tree.getSelectionModel().getSelectedItem().getValue().getCompleted()) {
-                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
-                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(1.0);
-                }
-            });
-
-            Menu partialCompleteItem = new Menu("Partial Complete");
-            for (int i = 10; i <= 90; i += 10) {
-                MenuItem item = new MenuItem(Integer.toString(i));
-                partialCompleteItem.getItems().add(item);
-                final int parameter = i;
-                item.setOnAction(event -> {
-                    if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
-                        tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
-                        tree.getSelectionModel().getSelectedItem().getValue().setCompleted(parameter / 100.0);
-                    }
-                });
+        tree.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (oldValue != null && oldValue.getValue() != null) {
+                oldValue.getValue().descriptionProperty().unbind();
             }
-
-            MenuItem resetItem = new MenuItem("Reset progress");
-            resetItem.setOnAction(event -> {
-                if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
-                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
-                }
-            });
-            rowMenu.getItems().addAll(completeItem, partialCompleteItem, resetItem);
-            row.contextMenuProperty().bind(Bindings.when(Bindings.isNotNull(row.itemProperty()))
-                    .then(rowMenu)
-                    .otherwise((ContextMenu) null));
-            return row;
-        });
-
-        tree.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<Task>>() {
-            @Override
-            public void changed(ObservableValue<? extends TreeItem<Task>> observable, TreeItem<Task> oldValue, TreeItem<Task> newValue) {
-                if (oldValue != null && oldValue.getValue() != null) {
-                    oldValue.getValue().descriptionProperty().unbind();
-                }
-                if (newValue != null && newValue.getValue() != null) {
-                    commentArea.setText(newValue.getValue().getDescription());
-                    newValue.getValue().descriptionProperty().bind(commentArea.textProperty());
-                }
+            if (newValue != null && newValue.getValue() != null) {
+                commentArea.setText(newValue.getValue().getDescription());
+                newValue.getValue().descriptionProperty().bind(commentArea.textProperty());
             }
         });
 
@@ -220,7 +269,7 @@ public class MainStage extends Application {
                             String themeName = project.getString("name");
                             Long id = project.getLong("id");
                             themeName += ":";
-                            Task currentTask = new Task(id, themeName, 0.0, false, root);
+                            Task currentTask = new Task(id, themeName, 0.0, 0.0, false, root);
                             int index = root.getSubtasks().indexOf(currentTask);
                             if (index < 0) {
                                 root.getSubtasks().add(currentTask);
@@ -264,6 +313,8 @@ public class MainStage extends Application {
 
         primaryStage.setOnCloseRequest(event -> {
             JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(root), TaskJAXB.class, FileNamespace.BACKUP);
+            root.anullate();
+            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(root), TaskJAXB.class, FileNamespace.STRUCTURE);
             PropertyManager.save();
         });
 

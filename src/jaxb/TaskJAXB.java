@@ -17,6 +17,7 @@ public class TaskJAXB {
     private long id;
     private String name;
     private String comment;
+    private double storyPoints;
     private double progress;
 
     @XmlElementWrapper
@@ -24,6 +25,14 @@ public class TaskJAXB {
 
     public TaskJAXB() {
         this.tasks = new ArrayList<>();
+    }
+
+    public double getStoryPoints() {
+        return storyPoints;
+    }
+
+    public void setStoryPoints(double storyPoints) {
+        this.storyPoints = storyPoints;
     }
 
     public long getId() {

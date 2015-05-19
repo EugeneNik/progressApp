@@ -3,21 +3,21 @@
     <id>2553090</id>
     <name>My Progress</name>
     <comment></comment>
-    <storyPoints>4087.0</storyPoints>
-    <progress>0.0210727969348659</progress>
+    <storyPoints>0.0</storyPoints>
+    <progress>0.0</progress>
     <tasks>
         <tasks>
             <id>31229264206751</id>
             <name>Java SE 6 (common):</name>
             <comment></comment>
-            <storyPoints>332.0</storyPoints>
-            <progress>0.015873015873015872</progress>
+            <storyPoints>0.0</storyPoints>
+            <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31229264206788</id>
                     <name>Generics:</name>
                     <comment></comment>
-                    <storyPoints>4.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -35,8 +35,8 @@
                     <id>31292497450802</id>
                     <name>Collections:</name>
                     <comment></comment>
-                    <storyPoints>34.0</storyPoints>
-                    <progress>0.14285714285714285</progress>
+                    <storyPoints>0.0</storyPoints>
+                    <progress>0.0</progress>
                     <tasks>
                         <tasks>
                             <id>31343605630438</id>
@@ -53,7 +53,7 @@
                             <comment>http://habrahabr.ru/post/232963/
 </comment>
                             <storyPoints>4.0</storyPoints>
-                            <progress>1.0</progress>
+                            <progress>0.0</progress>
                             <tasks/>
                         </tasks>
                         <tasks>
@@ -107,7 +107,7 @@
                     <id>31229264206796</id>
                     <name>JVM:</name>
                     <comment></comment>
-                    <storyPoints>28.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -161,7 +161,7 @@
                     <id>31428194745270</id>
                     <name>Commons:</name>
                     <comment></comment>
-                    <storyPoints>98.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -287,7 +287,7 @@
                     <id>32159513454993</id>
                     <name>Hibernate:</name>
                     <comment></comment>
-                    <storyPoints>48.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -350,7 +350,7 @@
                     <id>32159513455011</id>
                     <name>JDBC:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -377,7 +377,7 @@
                     <id>32159513455019</id>
                     <name>Other:</name>
                     <comment></comment>
-                    <storyPoints>32.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -422,7 +422,7 @@
                     <id>32178788684425</id>
                     <name>Performance:</name>
                     <comment></comment>
-                    <storyPoints>64.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -503,7 +503,7 @@
                     <id>33521827634382</id>
                     <name>Spring:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -523,14 +523,14 @@
             <id>31292497450764</id>
             <name>Java SE 7:</name>
             <comment></comment>
-            <storyPoints>10.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31596456016212</id>
                     <name>NIO:</name>
                     <comment></comment>
-                    <storyPoints>4.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -548,7 +548,7 @@
                     <id>32159513454999</id>
                     <name>Try-with-resources:</name>
                     <comment></comment>
-                    <storyPoints>2.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -566,7 +566,7 @@
                     <id>32178788684463</id>
                     <name>Commons:</name>
                     <comment></comment>
-                    <storyPoints>4.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -586,14 +586,14 @@
             <id>31292497450766</id>
             <name>Java SE 8:</name>
             <comment></comment>
-            <storyPoints>388.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31330485412950</id>
                     <name>Lambda:</name>
                     <comment></comment>
-                    <storyPoints>60.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -674,7 +674,7 @@
                     <id>31330485412948</id>
                     <name>Streams:</name>
                     <comment></comment>
-                    <storyPoints>112.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -809,7 +809,7 @@
                     <id>31428194745275</id>
                     <name>Методы в интерфейсах, ссылки на методы, множественное наследование:</name>
                     <comment></comment>
-                    <storyPoints>24.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -845,7 +845,7 @@
                     <id>31428194745358</id>
                     <name>Аннотации:</name>
                     <comment></comment>
-                    <storyPoints>24.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -881,7 +881,7 @@
                     <id>31428194745370</id>
                     <name>Reflection API:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -908,7 +908,7 @@
                     <id>31428194745383</id>
                     <name>Загрузка классов:</name>
                     <comment></comment>
-                    <storyPoints>64.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -989,7 +989,7 @@
                     <id>32022395808440</id>
                     <name>Functional:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1016,7 +1016,7 @@
                     <id>32159513454984</id>
                     <name>Commons:</name>
                     <comment></comment>
-                    <storyPoints>64.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1097,7 +1097,7 @@
                     <id>32178788684479</id>
                     <name>JVM:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1116,14 +1116,14 @@
             <id>31292497450768</id>
             <name>Java FX 8:</name>
             <comment></comment>
-            <storyPoints>80.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31330485412958</id>
                     <name>Common:</name>
                     <comment></comment>
-                    <storyPoints>72.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1226,7 +1226,7 @@ Cancel очищает значения
                     <id>31330485412954</id>
                     <name>FXML:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1246,14 +1246,14 @@ Cancel очищает значения
             <id>33279485580113</id>
             <name>Java EE (common):</name>
             <comment></comment>
-            <storyPoints>32.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>33279485580117</id>
                     <name>Performance:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1280,7 +1280,7 @@ Cancel очищает значения
                     <id>33521827634462</id>
                     <name>EJB:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1309,14 +1309,14 @@ Cancel очищает значения
             <id>31292497450770</id>
             <name>Java EE 6:</name>
             <comment></comment>
-            <storyPoints>344.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31330485413034</id>
                     <name>JAX - WS 2.2:</name>
                     <comment></comment>
-                    <storyPoints>32.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1361,7 +1361,7 @@ Cancel очищает значения
                     <id>31330485413072</id>
                     <name>Java Mail 1.4:</name>
                     <comment></comment>
-                    <storyPoints>32.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1424,7 +1424,7 @@ Cancel очищает значения
                     <id>31330485413064</id>
                     <name>JPA 2.0:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1459,7 +1459,7 @@ Cancel очищает значения
                     <id>31330485413060</id>
                     <name>EJB 3.1:</name>
                     <comment></comment>
-                    <storyPoints>24.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1503,7 +1503,7 @@ Cancel очищает значения
                     <id>31330485413056</id>
                     <name>Dependency Injection for Java 1.0:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1529,7 +1529,7 @@ Cancel очищает значения
                     <id>31330485413052</id>
                     <name>JSTL 1.2:</name>
                     <comment></comment>
-                    <storyPoints>24.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1605,7 +1605,7 @@ Cancel очищает значения
                     <id>31330485413040</id>
                     <name>JAX-RPC 1.1:</name>
                     <comment></comment>
-                    <storyPoints>24.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1657,7 +1657,7 @@ Cancel очищает значения
                     <id>31330485413030</id>
                     <name>JAX - RS 1.1:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1684,7 +1684,7 @@ Cancel очищает значения
                     <id>31343605630456</id>
                     <name>StAX 1.0:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1726,7 +1726,7 @@ Cancel очищает значения
                     <id>31343605630448</id>
                     <name>JAXP 1.3:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1771,14 +1771,14 @@ Cancel очищает значения
             <id>31292497450772</id>
             <name>Java EE 7:</name>
             <comment></comment>
-            <storyPoints>392.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31343605630490</id>
                     <name>JAX - RS 2.0:</name>
                     <comment></comment>
-                    <storyPoints>136.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1940,7 +1940,7 @@ Cancel очищает значения
                     <id>31343605630488</id>
                     <name>JTA 1.2:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1967,7 +1967,7 @@ Cancel очищает значения
                     <id>31343605630486</id>
                     <name>Java Mail 1.5:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1985,7 +1985,7 @@ Cancel очищает значения
                     <id>31343605630484</id>
                     <name>JMS 2.0:</name>
                     <comment></comment>
-                    <storyPoints>40.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2039,7 +2039,7 @@ Cancel очищает значения
                     <id>31343605630482</id>
                     <name>JPA 2.1:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2073,7 +2073,7 @@ Cancel очищает значения
                     <id>31343605630476</id>
                     <name>EJB 3.2:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2100,7 +2100,7 @@ Cancel очищает значения
                     <id>31343605630474</id>
                     <name>Bean Validation 1.1:</name>
                     <comment></comment>
-                    <storyPoints>24.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2168,7 +2168,7 @@ Cancel очищает значения
                     <id>31343605630464</id>
                     <name>JSF 2.2 :</name>
                     <comment></comment>
-                    <storyPoints>56.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2256,7 +2256,7 @@ Cancel очищает значения
                     <id>31343605630458</id>
                     <name>Web Socket:</name>
                     <comment></comment>
-                    <storyPoints>24.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2294,7 +2294,7 @@ Cancel очищает значения
             <id>32178788684623</id>
             <name>Java EE 8:</name>
             <comment></comment>
-            <storyPoints>120.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -2423,7 +2423,7 @@ Cancel очищает значения
             <id>33521827634402</id>
             <name>Servers:</name>
             <comment></comment>
-            <storyPoints>32.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -2438,7 +2438,7 @@ Cancel очищает значения
                     <id>33521827634408</id>
                     <name>Apache Tomcat:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2465,7 +2465,7 @@ Cancel очищает значения
                     <id>33521827634406</id>
                     <name>JBoss:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2485,14 +2485,14 @@ Cancel очищает значения
             <id>31292497450774</id>
             <name>Android SDK:</name>
             <comment></comment>
-            <storyPoints>224.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31351302806386</id>
                     <name>material design:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2518,7 +2518,7 @@ Cancel очищает значения
                     <id>31426782060521</id>
                     <name>Course (Parallels):</name>
                     <comment></comment>
-                    <storyPoints>112.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2590,7 +2590,7 @@ Cancel очищает значения
                     <id>33957728425759</id>
                     <name>Статьи:</name>
                     <comment></comment>
-                    <storyPoints>96.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2717,7 +2717,7 @@ Cancel очищает значения
             <id>32532952073434</id>
             <name>Javascript (common):</name>
             <comment></comment>
-            <storyPoints>55.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -2851,7 +2851,7 @@ Cancel очищает значения
             <id>31292497450778</id>
             <name>Ext Js:</name>
             <comment></comment>
-            <storyPoints>264.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -2885,7 +2885,7 @@ Cancel очищает значения
                     <id>31426782060531</id>
                     <name>Введение в Ext JS 4:</name>
                     <comment></comment>
-                    <storyPoints>240.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3030,7 +3030,7 @@ Cancel очищает значения
             <id>31292497450780</id>
             <name>Angular JS:</name>
             <comment></comment>
-            <storyPoints>320.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -3038,7 +3038,7 @@ Cancel очищает значения
                     <name>Интерактивный учебник AngularJS:</name>
                     <comment>http://www.angularjsbook.com/angular-basics/chapters/
 </comment>
-                    <storyPoints>208.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3165,7 +3165,7 @@ Cancel очищает значения
                     <name>Курс AngularJS на codecademy:</name>
                     <comment>http://www.codecademy.com/learn/learn-angularjs
 </comment>
-                    <storyPoints>80.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3214,7 +3214,7 @@ Cancel очищает значения
                     <id>32009454272210</id>
                     <name>Статьи:</name>
                     <comment></comment>
-                    <storyPoints>32.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3261,14 +3261,14 @@ Cancel очищает значения
             <id>31292497450782</id>
             <name>Node.js:</name>
             <comment></comment>
-            <storyPoints>712.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31351302806325</id>
                     <name>Знакомство с c9.io:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3294,7 +3294,7 @@ Cancel очищает значения
                     <name>Screencast по Node.js часть 1:</name>
                     <comment>https://learn.javascript.ru/nodejs-screencast
 </comment>
-                    <storyPoints>464.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3535,7 +3535,7 @@ Cancel очищает значения
                     <id>31351302806323</id>
                     <name>Screencast node.js часть 2:</name>
                     <comment></comment>
-                    <storyPoints>208.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3648,7 +3648,7 @@ Cancel очищает значения
                     <id>31351302806358</id>
                     <name>задания:</name>
                     <comment></comment>
-                    <storyPoints>24.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3692,7 +3692,7 @@ Cancel очищает значения
             <id>31292497450804</id>
             <name>HTML 5:</name>
             <comment></comment>
-            <storyPoints>72.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -3782,14 +3782,14 @@ Cancel очищает значения
             <id>31292497450806</id>
             <name>CSS:</name>
             <comment></comment>
-            <storyPoints>32.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>33521827634392</id>
                     <name>CSS 3:</name>
                     <comment></comment>
-                    <storyPoints>32.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3863,14 +3863,14 @@ Cancel очищает значения
             <id>31292497450786</id>
             <name>Oracle SQL:</name>
             <comment></comment>
-            <storyPoints>24.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31330485412990</id>
                     <name>Optimization:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3915,14 +3915,14 @@ Cancel очищает значения
             <id>31292497450788</id>
             <name>My SQL:</name>
             <comment></comment>
-            <storyPoints>4.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>34374091430721</id>
                     <name>Connector:</name>
                     <comment></comment>
-                    <storyPoints>4.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -3942,7 +3942,7 @@ Cancel очищает значения
             <id>31292497450790</id>
             <name>No SQL:</name>
             <comment></comment>
-            <storyPoints>120.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -3950,7 +3950,7 @@ Cancel очищает значения
                     <name>мини книга по mongodb:</name>
                     <comment>http://jsman.ru/mongo-book/
 </comment>
-                    <storyPoints>112.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4015,7 +4015,7 @@ Cancel очищает значения
                     <id>33521827634428</id>
                     <name>commons:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4035,7 +4035,7 @@ Cancel очищает значения
             <id>31292497450792</id>
             <name>Ms SQL:</name>
             <comment></comment>
-            <storyPoints>128.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -4080,7 +4080,7 @@ Cancel очищает значения
             <id>31292497450794</id>
             <name>SQL (commons):</name>
             <comment></comment>
-            <storyPoints>8.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -4098,14 +4098,14 @@ Cancel очищает значения
             <id>31292497450796</id>
             <name>Architecture:</name>
             <comment></comment>
-            <storyPoints>32.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31330485412976</id>
                     <name>Web Patterns:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4132,7 +4132,7 @@ Cancel очищает значения
                     <id>31330485412974</id>
                     <name>Patterns:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4161,14 +4161,14 @@ Cancel очищает значения
             <id>31330485412942</id>
             <name>VCS:</name>
             <comment></comment>
-            <storyPoints>64.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31330485412982</id>
                     <name>Mercurial:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4194,7 +4194,7 @@ Cancel очищает значения
                     <id>31330485412980</id>
                     <name>GIT:</name>
                     <comment></comment>
-                    <storyPoints>40.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4221,7 +4221,7 @@ Cancel очищает значения
                     <id>31330485412978</id>
                     <name>SVN:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4241,14 +4241,14 @@ Cancel очищает значения
             <id>31330485412944</id>
             <name>CI:</name>
             <comment></comment>
-            <storyPoints>36.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>33521827634479</id>
                     <name>commons:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4266,7 +4266,7 @@ Cancel очищает значения
                     <id>31330485412970</id>
                     <name>Jenkins:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4284,7 +4284,7 @@ Cancel очищает значения
                     <id>31330485412968</id>
                     <name>Teamcity:</name>
                     <comment></comment>
-                    <storyPoints>20.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4322,14 +4322,14 @@ Cancel очищает значения
             <id>31330485412946</id>
             <name>Project Build Systems:</name>
             <comment></comment>
-            <storyPoints>150.0</storyPoints>
-            <progress>0.1</progress>
+            <storyPoints>0.0</storyPoints>
+            <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31330485412966</id>
                     <name>Qmake:</name>
                     <comment></comment>
-                    <storyPoints>48.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4392,7 +4392,7 @@ Cancel очищает значения
                     <id>31330485412964</id>
                     <name>Gradle:</name>
                     <comment></comment>
-                    <storyPoints>64.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4473,8 +4473,8 @@ Cancel очищает значения
                     <id>31330485412962</id>
                     <name>Maven:</name>
                     <comment></comment>
-                    <storyPoints>26.0</storyPoints>
-                    <progress>0.4</progress>
+                    <storyPoints>0.0</storyPoints>
+                    <progress>0.0</progress>
                     <tasks>
                         <tasks>
                             <id>31783559839441</id>
@@ -4482,7 +4482,7 @@ Cancel очищает значения
                             <comment>http://habrahabr.ru/post/77333/
 </comment>
                             <storyPoints>2.0</storyPoints>
-                            <progress>1.0</progress>
+                            <progress>0.0</progress>
                             <tasks/>
                         </tasks>
                         <tasks>
@@ -4491,7 +4491,7 @@ Cancel очищает значения
                             <comment>http://habrahabr.ru/post/77382/
 </comment>
                             <storyPoints>4.0</storyPoints>
-                            <progress>1.0</progress>
+                            <progress>0.0</progress>
                             <tasks/>
                         </tasks>
                         <tasks>
@@ -4527,7 +4527,7 @@ Cancel очищает значения
                     <id>31330485412960</id>
                     <name>Ant:</name>
                     <comment></comment>
-                    <storyPoints>12.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4555,7 +4555,7 @@ Cancel очищает значения
             <id>31343605630501</id>
             <name>Work Process:</name>
             <comment></comment>
-            <storyPoints>28.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -4570,7 +4570,7 @@ Cancel очищает значения
                     <id>31343605630505</id>
                     <name>Scrum:</name>
                     <comment></comment>
-                    <storyPoints>12.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4607,14 +4607,14 @@ Cancel очищает значения
             <id>31292497450776</id>
             <name>Other:</name>
             <comment></comment>
-            <storyPoints>68.0</storyPoints>
+            <storyPoints>0.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31330485413026</id>
                     <name>Python:</name>
                     <comment></comment>
-                    <storyPoints>20.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4659,7 +4659,7 @@ Cancel очищает значения
                     <id>31343605630430</id>
                     <name>Intellij Idea:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4677,7 +4677,7 @@ Cancel очищает значения
                     <id>31343605630426</id>
                     <name>Google Chrome:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -4694,7 +4694,7 @@ Cancel очищает значения
                     <id>31596456016199</id>
                     <name>Net Beans:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>

@@ -19,7 +19,7 @@ public class JaxbUnmarshaller {
         try {
             input = new FileInputStream(name);
         } catch (FileNotFoundException e) {
-            return JaxbConverter.convertToJaxb(new Task("Root".hashCode(), "Root", 0.0, false, null));
+            return JaxbConverter.convertToJaxb(new Task("My progress".hashCode(), "My progress", 0.0, 0.0, false, null));
         }
         try {
             JAXBContext jc = JAXBContext.newInstance(TaskJAXB.class);
