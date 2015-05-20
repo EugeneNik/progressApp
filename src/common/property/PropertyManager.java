@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Properties;
 
@@ -18,8 +19,31 @@ import java.util.Properties;
  */
 public class PropertyManager {
 
+    /**
+     * Key to Asana access
+     */
     private static BaseProperty<String> APP_KEY;
+
+    /**
+     * timer on sync update
+     */
     private static BaseProperty<Integer> TIMER_UPDATE_FREQUENCY;
+
+
+
+    //suggestion properties
+
+    /**
+     * time in millis when suggestion analyzer started last
+     */
+    private static BaseProperty<Long> LAST_ANALYZATION_MADE;
+
+    /**
+     * frequency in days when analyzer should be launched
+     */
+    private static BaseProperty<Integer> ANALYZER_FREQUENCY;
+
+
 
     /**
      * map to collect setting name and setting
@@ -33,6 +57,8 @@ public class PropertyManager {
                 prop.load(is);
                 APP_KEY = new BaseProperty<>(PropertyNamespace.APP_KEY, prop.getProperty(PropertyNamespace.APP_KEY, ""), "");
                 TIMER_UPDATE_FREQUENCY = new BaseProperty<>(PropertyNamespace.TIMER_UPDATE_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.TIMER_UPDATE_FREQUENCY, "5")), 5);
+                LAST_ANALYZATION_MADE = new BaseProperty<>(PropertyNamespace.LAST_ANALYZATION_MADE, Long.parseLong(prop.getProperty(PropertyNamespace.LAST_ANALYZATION_MADE, "0")), 0L);
+                ANALYZER_FREQUENCY = new BaseProperty<>(PropertyNamespace.ANALYZER_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.ANALYZER_FREQUENCY, "7")), 7);
                 registerApplicationSettings();
             }
         } catch (IOException | NumberFormatException e) {
@@ -53,8 +79,18 @@ public class PropertyManager {
     }
 
     private static void registerApplicationSettings() {
-        settingsList.put(PropertyNamespace.APP_KEY, APP_KEY);
-        settingsList.put(PropertyNamespace.TIMER_UPDATE_FREQUENCY, TIMER_UPDATE_FREQUENCY);
+        for (Field field : PropertyManager.class.getDeclaredFields()) {
+            if (field.getType() == BaseProperty.class) {
+                try {
+                    String propertyName = PropertyNamespace.class.getField(field.getName()).get(PropertyNamespace.class.getField(field.getName())).toString();
+                    settingsList.put(propertyName, (BaseProperty)field.get(null));
+                } catch (NoSuchFieldException exception) {
+                    System.err.println("Add " + field.getName()+" to PropertyNamespace");
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     public static void save() {
