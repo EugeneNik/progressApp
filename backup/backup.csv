@@ -3,15 +3,15 @@
     <id>2553090</id>
     <name>My Progress</name>
     <comment></comment>
-    <storyPoints>4087.0</storyPoints>
-    <progress>0.0210727969348659</progress>
+    <storyPoints>4319.0</storyPoints>
+    <progress>0.02101806239737274</progress>
     <tasks>
         <tasks>
             <id>31229264206751</id>
             <name>Java SE 6 (common):</name>
             <comment></comment>
-            <storyPoints>332.0</storyPoints>
-            <progress>0.015873015873015872</progress>
+            <storyPoints>380.0</storyPoints>
+            <progress>0.01564625850340136</progress>
             <tasks>
                 <tasks>
                     <id>31229264206788</id>
@@ -107,7 +107,7 @@
                     <id>31229264206796</id>
                     <name>JVM:</name>
                     <comment></comment>
-                    <storyPoints>28.0</storyPoints>
+                    <storyPoints>44.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -155,13 +155,31 @@
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>34551791372281</id>
+                            <name>Do we really still need a 32-bit JVM?</name>
+                            <comment>http://www.javacodegeeks.com/2015/05/do-we-really-still-need-a-32-bit-jvm.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34562095673855</id>
+                            <name>Garbage Collectors – Serial vs. Parallel vs. CMS vs. G1 (and what’s new in Java 8)</name>
+                            <comment>http://www.javacodegeeks.com/2014/09/garbage-collectors-serial-vs-parallel-vs-cms-vs-g1-and-whats-new-in-java-8.html?utm_content=buffer0249d&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
                     <id>31428194745270</id>
                     <name>Commons:</name>
                     <comment></comment>
-                    <storyPoints>98.0</storyPoints>
+                    <storyPoints>106.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -281,6 +299,15 @@
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>34979365407584</id>
+                            <name>Transient variables in Java</name>
+                            <comment>http://examples.javacodegeeks.com/core-java/transient-variables-in-java/?utm_content=buffer8ec1a&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -350,7 +377,7 @@
                     <id>32159513455011</id>
                     <name>JDBC:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>32.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -366,6 +393,24 @@
                             <id>32159513455013</id>
                             <name>JDBC Batch Update Example</name>
                             <comment>http://examples.javacodegeeks.com/core-java/sql/jdbc-batch-update-example/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34551791372277</id>
+                            <name>JDBC Tutorial – The ULTIMATE Guide</name>
+                            <comment>http://www.javacodegeeks.com/2015/02/jdbc-tutorial.html?utm_content=buffer9fb4e&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34551791372297</id>
+                            <name>Creating an object stream from a JDBC ResultSet</name>
+                            <comment>http://www.javacodegeeks.com/2014/09/creating-an-object-stream-from-a-jdbc-resultset.html?utm_content=buffer29466&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <progress>0.0</progress>
@@ -517,6 +562,24 @@
                         </tasks>
                     </tasks>
                 </tasks>
+                <tasks>
+                    <id>34593549140933</id>
+                    <name>Security:</name>
+                    <comment></comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>34593549140935</id>
+                            <name>9 Security mistakes every Java Developer must avoid</name>
+                            <comment>http://www.javacodegeeks.com/2015/05/9-security-mistakes-every-java-developer-must-avoid.html?utm_content=buffer819d3&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
             </tasks>
         </tasks>
         <tasks>
@@ -586,7 +649,7 @@
             <id>31292497450766</id>
             <name>Java SE 8:</name>
             <comment></comment>
-            <storyPoints>388.0</storyPoints>
+            <storyPoints>396.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -989,7 +1052,7 @@
                     <id>32022395808440</id>
                     <name>Functional:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>24.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1005,6 +1068,15 @@
                             <id>32402086076193</id>
                             <name>Functional-Style Callbacks Using Java 8's CompletableFuture</name>
                             <comment>http://www.infoq.com/articles/Functional-Style-Callbacks-Using-CompletableFuture?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34714232348348</id>
+                            <name>Functional Programming in Java 8 with Javaslang</name>
+                            <comment>http://www.javacodegeeks.com/2015/05/functional-programming-in-java-8-with-javaslang.html
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <progress>0.0</progress>
@@ -1246,7 +1318,7 @@ Cancel очищает значения
             <id>33279485580113</id>
             <name>Java EE (common):</name>
             <comment></comment>
-            <storyPoints>32.0</storyPoints>
+            <storyPoints>40.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -1303,13 +1375,31 @@ Cancel очищает значения
                         </tasks>
                     </tasks>
                 </tasks>
+                <tasks>
+                    <id>34788644704447</id>
+                    <name>JSF:</name>
+                    <comment></comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>34788644704449</id>
+                            <name>How JSF Works and how to Debug it – is polyglot an alternative?</name>
+                            <comment>http://www.javacodegeeks.com/2014/09/how-jsf-works-and-how-to-debug-it-is-polyglot-an-alternative.html?utm_content=buffer7db9d&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
             </tasks>
         </tasks>
         <tasks>
             <id>31292497450770</id>
             <name>Java EE 6:</name>
             <comment></comment>
-            <storyPoints>344.0</storyPoints>
+            <storyPoints>416.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -1451,9 +1541,91 @@ Cancel очищает значения
                     <id>31330485413062</id>
                     <name>Java EE Connector Architecture 1.6:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>72.0</storyPoints>
                     <progress>0.0</progress>
-                    <tasks/>
+                    <tasks>
+                        <tasks>
+                            <id>34788644704407</id>
+                            <name>JSR 322: JavaTM EE Connector Architecture 1.6</name>
+                            <comment>https://jcp.org/en/jsr/detail?id=322
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34788644704411</id>
+                            <name>A Look Inside the JBoss JCA Project; New Features in JCA 1.6</name>
+                            <comment>http://java.dzone.com/articles/jboss-jca
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34788644704415</id>
+                            <name>Announcing JBoss JCA 1.0.0.Alpha1</name>
+                            <comment>http://relation.to/Bloggers/AnnouncingJBossJCA100Alpha1
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34788644704419</id>
+                            <name>JBoss JCA 1.0.0.Alpha2 is out</name>
+                            <comment>http://relation.to/Bloggers/JBossJCA100Alpha2IsOut
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34788644704423</id>
+                            <name>JBoss JCA 1.0.0.Alpha3 is out</name>
+                            <comment>http://relation.to/Bloggers/JBossJCA100Alpha3IsOut
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34788644704427</id>
+                            <name>JBoss JCA 1.0.0.Alpha4 is out</name>
+                            <comment>http://relation.to/Bloggers/JBossJCA100Alpha4IsOut
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34788644704429</id>
+                            <name>JBoss JCA 1.0.0.Alpha5 is out</name>
+                            <comment>http://relation.to/Bloggers/JBossJCA100Alpha5IsOut
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34788644704431</id>
+                            <name>JBoss JCA 1.0.0.Alpha6 is out</name>
+                            <comment>http://relation.to/Bloggers/JBossJCA100Alpha6IsOut
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34788644704433</id>
+                            <name>JBoss JCA 1.0.0.Alpha7 is out</name>
+                            <comment>http://relation.to/Bloggers/JBossJCA100Alpha7IsOut
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
                 </tasks>
                 <tasks>
                     <id>31330485413060</id>
@@ -1657,7 +1829,7 @@ Cancel очищает значения
                     <id>31330485413030</id>
                     <name>JAX - RS 1.1:</name>
                     <comment></comment>
-                    <storyPoints>16.0</storyPoints>
+                    <storyPoints>24.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1673,6 +1845,15 @@ Cancel очищает значения
                             <id>33957728425801</id>
                             <name>JSON with JAX-RS Example</name>
                             <comment>http://examples.javacodegeeks.com/core-java/json-jax-rs-example/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34788644704443</id>
+                            <name>JAX-RS 1.1: What's New?</name>
+                            <comment>http://www.javaworld.com/article/2073264/jax-rs-1-1--what-s-new-.html
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <progress>0.0</progress>
@@ -1771,14 +1952,14 @@ Cancel очищает значения
             <id>31292497450772</id>
             <name>Java EE 7:</name>
             <comment></comment>
-            <storyPoints>392.0</storyPoints>
+            <storyPoints>400.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
                     <id>31343605630490</id>
                     <name>JAX - RS 2.0:</name>
                     <comment></comment>
-                    <storyPoints>136.0</storyPoints>
+                    <storyPoints>144.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -1929,6 +2110,15 @@ Cancel очищает значения
                             <id>34289862247624</id>
                             <name>JAX-RS 2.0: A first interim report</name>
                             <comment>https://weblogs.java.net/blog/mkarg/archive/2011/07/24/jax-rs-20-first-interim-report
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34714232348334</id>
+                            <name>JAX-RS Client Example</name>
+                            <comment>http://examples.javacodegeeks.com/core-java/jax-rs-client-example/
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <progress>0.0</progress>
@@ -2485,7 +2675,7 @@ Cancel очищает значения
             <id>31292497450774</id>
             <name>Android SDK:</name>
             <comment></comment>
-            <storyPoints>224.0</storyPoints>
+            <storyPoints>240.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -2590,7 +2780,7 @@ Cancel очищает значения
                     <id>33957728425759</id>
                     <name>Статьи:</name>
                     <comment></comment>
-                    <storyPoints>96.0</storyPoints>
+                    <storyPoints>112.0</storyPoints>
                     <progress>0.0</progress>
                     <tasks>
                         <tasks>
@@ -2701,6 +2891,24 @@ Cancel очищает значения
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>34551791372293</id>
+                            <name>Android Calendarview Example</name>
+                            <comment>http://examples.javacodegeeks.com/android/core/widget/android-calendarview-example/?utm_content=buffer6d603&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>34551791372305</id>
+                            <name>Android TimerTask Example</name>
+                            <comment>http://examples.javacodegeeks.com/android/core/activity/android-timertask-example/?utm_content=buffere3c50&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
             </tasks>
@@ -2717,7 +2925,7 @@ Cancel очищает значения
             <id>32532952073434</id>
             <name>Javascript (common):</name>
             <comment></comment>
-            <storyPoints>55.0</storyPoints>
+            <storyPoints>79.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -2840,6 +3048,33 @@ Cancel очищает значения
                     <id>34365544744229</id>
                     <name>JavaScript Tutorial – Part 4: Object Creation and Prototype Chains</name>
                     <comment>http://www.webcodegeeks.com/javascript/javascript-tutorial-part-4-object-creation-prototype-chains/
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>34551791372273</id>
+                    <name>5 nifty JavaScript tricks that you may not know</name>
+                    <comment>http://www.webcodegeeks.com/javascript/5-nifty-javascript-tricks-that-you-may-not-know/?utm_content=buffer96b63&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>34551791372301</id>
+                    <name>JavaScript Closure – examples</name>
+                    <comment>http://www.webcodegeeks.com/javascript/javascript-closure-examples/?utm_content=bufferd2bee&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>34966511991694</id>
+                    <name>Promises vs Callbacks – Code comparison</name>
+                    <comment>http://www.webcodegeeks.com/javascript/promises-vs-callbacks-code-comparison/?utm_content=bufferd8bf4&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
                     <storyPoints>8.0</storyPoints>
                     <progress>0.0</progress>
@@ -3692,7 +3927,7 @@ Cancel очищает значения
             <id>31292497450804</id>
             <name>HTML 5:</name>
             <comment></comment>
-            <storyPoints>72.0</storyPoints>
+            <storyPoints>96.0</storyPoints>
             <progress>0.0</progress>
             <tasks>
                 <tasks>
@@ -3771,6 +4006,33 @@ Cancel очищает значения
                     <id>34123119929131</id>
                     <name>HTML5 websocket example</name>
                     <comment>http://www.webcodegeeks.com/html5/html5-websocket-example/?utm_content=buffer0cdf4&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>34551791372285</id>
+                    <name>Browser to browser communication with Vert.x, websockets and HTML5</name>
+                    <comment>http://www.webcodegeeks.com/html5/browser-to-browser-communication-with-vert-x-websockets-and-html5/?utm_content=buffere6c91&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>34551791372289</id>
+                    <name>HTML5 Local Storage Example</name>
+                    <comment>http://www.webcodegeeks.com/html5/html5-local-storage-example/?utm_content=buffere40a1&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>34714232348352</id>
+                    <name>HTML5 Navigation Bar Example</name>
+                    <comment>http://www.webcodegeeks.com/html5/html5-navigation-bar-example/?utm_content=buffer62de6&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
                     <storyPoints>8.0</storyPoints>
                     <progress>0.0</progress>
@@ -4707,6 +4969,42 @@ Cancel очищает значения
                             <tasks/>
                         </tasks>
                     </tasks>
+                </tasks>
+            </tasks>
+        </tasks>
+        <tasks>
+            <id>34714232348338</id>
+            <name>Java SE 9:</name>
+            <comment></comment>
+            <storyPoints>24.0</storyPoints>
+            <progress>0.0</progress>
+            <tasks>
+                <tasks>
+                    <id>34714232348340</id>
+                    <name>JDK 9 REPL: Getting Started</name>
+                    <comment>http://www.javacodegeeks.com/2015/05/jdk-9-repl-getting-started.html
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>34714232348344</id>
+                    <name>How Java 9 And Project Jigsaw May Break Your Code</name>
+                    <comment>http://blog.codefx.org/java/dev/how-java-9-and-project-jigsaw-may-break-your-code/
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>34782056856753</id>
+                    <name>Java 9 – The Ultimate Feature List</name>
+                    <comment>http://www.javacodegeeks.com/2014/09/java-9-the-ultimate-feature-list.html?utm_content=bufferadf5b&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks/>
                 </tasks>
             </tasks>
         </tasks>
