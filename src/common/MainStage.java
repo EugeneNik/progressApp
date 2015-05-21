@@ -118,7 +118,6 @@ public class MainStage extends Application {
                             MenuItem completeItem = new MenuItem("Complete task");
                             completeItem.setOnAction(event -> {
                                 if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf() && !tree.getSelectionModel().getSelectedItem().getValue().getCompleted()) {
-                                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
                                     tree.getSelectionModel().getSelectedItem().getValue().setCompleted(1.0);
                                 }
                             });
@@ -142,7 +141,6 @@ public class MainStage extends Application {
                                 final int parameter = i;
                                 item.setOnAction(event -> {
                                     if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
-                                        tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
                                         tree.getSelectionModel().getSelectedItem().getValue().setCompleted(parameter / 100.0);
                                     }
                                 });
@@ -151,7 +149,7 @@ public class MainStage extends Application {
                             MenuItem resetItem = new MenuItem("Reset progress");
                             resetItem.setOnAction(event -> {
                                 if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
-                                    tree.getSelectionModel().getSelectedItem().getValue().setCompleted(0.0);
+                                    tree.getSelectionModel().getSelectedItem().getValue().reset();
                                 }
                             });
                             rowMenu.getItems().addAll(completeItem, partialCompleteItem, resetItem, changeStoryPoints);

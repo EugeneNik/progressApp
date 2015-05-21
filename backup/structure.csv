@@ -4,14 +4,14 @@
     <name>My Progress</name>
     <comment></comment>
     <storyPoints>0.0</storyPoints>
-    <progress>0.001018062397372739</progress>
+    <progress>0.001277802657113001</progress>
     <tasks>
         <tasks>
             <id>31229264206751</id>
             <name>Java SE 6 (common):</name>
             <comment></comment>
             <storyPoints>0.0</storyPoints>
-            <progress>0.0013605442176870732</progress>
+            <progress>0.002473716759431043</progress>
             <tasks>
                 <tasks>
                     <id>31229264206788</id>
@@ -308,6 +308,15 @@
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>35170733072094</id>
+                            <name>Java MappedByteBuffer Example</name>
+                            <comment>http://examples.javacodegeeks.com/core-java/nio/mappedbytebuffer/java-mappedbytebuffer-example/?utm_content=bufferd4a31&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -461,6 +470,15 @@
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>35170733072098</id>
+                            <name>Apache Camel Log Component Examples</name>
+                            <comment>http://www.javacodegeeks.com/2015/05/apache-camel-log-component-examples.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -542,6 +560,15 @@
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>35037137354633</id>
+                            <name>Java performance tuning tips or everything you want to know about Java performance in 15 minutes</name>
+                            <comment>http://java-performance.com/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -560,6 +587,24 @@
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>35170733072090</id>
+                            <name>Spring data tutorial for beginners</name>
+                            <comment>http://examples.javacodegeeks.com/enterprise-java/spring/spring-data-tutorial-beginners/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35170733072102</id>
+                            <name>Using @ConfigurationProperties in Spring Boot</name>
+                            <comment>http://www.javacodegeeks.com/2014/09/using-configurationproperties-in-spring-boot.html?utm_content=buffere4606&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -573,6 +618,24 @@
                             <id>34593549140935</id>
                             <name>9 Security mistakes every Java Developer must avoid</name>
                             <comment>http://www.javacodegeeks.com/2015/05/9-security-mistakes-every-java-developer-must-avoid.html?utm_content=buffer819d3&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
+                <tasks>
+                    <id>35167387637895</id>
+                    <name>JNI:</name>
+                    <comment></comment>
+                    <storyPoints>0.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>35167387637897</id>
+                            <name>Как подружить Java и C++. Часть первая</name>
+                            <comment>http://habrahabr.ru/post/49660/
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <progress>0.0</progress>

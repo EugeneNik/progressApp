@@ -8,4 +8,6 @@ public interface PropertyNamespace {
     String TIMER_UPDATE_FREQUENCY = "timerUpdateFrequency";
     String LAST_ANALYZATION_MADE = "lastAnalyzationMade";
     String ANALYZER_FREQUENCY = "analyzerFrequency";
+    String SAVE_LAST_PERIODS_COUNT = "numberOfLastPeriods";
+    String DIFFICULTY_ON_LEARNING = "timeToSpendOnLearning";
 }

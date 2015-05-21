@@ -54,7 +54,7 @@ public class AsanaHelper {
                     int i = 0;
                     for (Task task : root.getSubtasks()) {
                         progresses[i++] = task.getProgress();
-                        task.setCompleted(0.0);
+                        task.reset();
                     }
                     root.getSubtasks().add(subTheme);
                     i = 0;
@@ -66,7 +66,6 @@ public class AsanaHelper {
                     }
                 } else {
                     subTheme = root.getSubtasks().get(index);
-                    System.out.println(comment);
                     subTheme.setDescription(comment);
                     subTheme.setTask(theme);
                 }
@@ -79,7 +78,7 @@ public class AsanaHelper {
                     int i = 0;
                     for (Task iter : currentTheme.getSubtasks()) {
                         progresses[i++] = iter.getProgress();
-                        iter.setCompleted(0.0);
+                        iter.reset();
                     }
                     currentTheme.getSubtasks().add(task);
                     i = 0;
@@ -89,6 +88,7 @@ public class AsanaHelper {
                         }
                         iter.setCompleted(progresses[i++]);
                     }
+                    task.addStoryPoints(task.getStoryPoints());
                 } else {
                     currentTheme.getSubtasks().get(currentTheme.getSubtasks().indexOf(task)).setTask(theme);
                     currentTheme.getSubtasks().get(currentTheme.getSubtasks().indexOf(task)).setDescription(comment);

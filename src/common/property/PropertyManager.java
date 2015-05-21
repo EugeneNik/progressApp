@@ -43,6 +43,18 @@ public class PropertyManager {
      */
     private static BaseProperty<Integer> ANALYZER_FREQUENCY;
 
+    /**
+     * number of last periods that should be saved for analyzer
+     */
+    private static BaseProperty<Integer> SAVE_LAST_PERIODS_COUNT;
+
+    /**
+     * hours that should be spent in learning
+     * e.g. period = 7 days, this param = 2 hours, so 14 hours of learning.
+     * use it to calc speed it should influence to dynamic story points border
+     */
+    private static BaseProperty<Integer> DIFFICULTY_ON_LEARNING;
+
 
 
     /**
@@ -59,6 +71,8 @@ public class PropertyManager {
                 TIMER_UPDATE_FREQUENCY = new BaseProperty<>(PropertyNamespace.TIMER_UPDATE_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.TIMER_UPDATE_FREQUENCY, "5")), 5);
                 LAST_ANALYZATION_MADE = new BaseProperty<>(PropertyNamespace.LAST_ANALYZATION_MADE, Long.parseLong(prop.getProperty(PropertyNamespace.LAST_ANALYZATION_MADE, "0")), 0L);
                 ANALYZER_FREQUENCY = new BaseProperty<>(PropertyNamespace.ANALYZER_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.ANALYZER_FREQUENCY, "7")), 7);
+                SAVE_LAST_PERIODS_COUNT = new BaseProperty<>(PropertyNamespace.SAVE_LAST_PERIODS_COUNT, Integer.parseInt(prop.getProperty(PropertyNamespace.SAVE_LAST_PERIODS_COUNT, "3")), 3);
+                DIFFICULTY_ON_LEARNING = new BaseProperty<>(PropertyNamespace.DIFFICULTY_ON_LEARNING, Integer.parseInt(prop.getProperty(PropertyNamespace.DIFFICULTY_ON_LEARNING, "2")), 2);
                 registerApplicationSettings();
             }
         } catch (IOException | NumberFormatException e) {

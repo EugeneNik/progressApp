@@ -14,7 +14,6 @@ public class Task {
     private StringProperty description = new SimpleStringProperty();
     private ObservableList<Task> subtasks = FXCollections.observableArrayList();
     private Task parent = null;
-    //    private
     private DoubleProperty storyPoints;
     private DoubleProperty progress;
     private BooleanProperty completed;
@@ -113,6 +112,9 @@ public class Task {
     }
 
     public void setCompleted(double progress) {
+        if (progress != 0.0) {
+            reset();
+        }
         this.completed.set(progress == 1.0);
         updateParent(progress == 0 ? -this.getProgress() : progress);
         this.setProgress(progress);
@@ -140,6 +142,10 @@ public class Task {
         }
     }
 
+    public void reset() {
+        this.setCompleted(0.0);
+    }
+
     public void updateParent(double percentageToAdd) {
         Task iterator = this;
         while (iterator.parent != null) {
@@ -149,13 +155,8 @@ public class Task {
         }
     }
 
-    public void updateStoryPoints(double newValue) {
+    public void addStoryPoints(double newValue) {
         Task iterator = this;
-        while (iterator.parent != null) {
-            iterator.parent.setStoryPoints(iterator.parent.getStoryPoints() - storyPoints.getValue());
-            iterator = iterator.parent;
-        }
-        iterator = this;
         while (iterator.parent != null) {
             iterator.parent.setStoryPoints(iterator.parent.getStoryPoints() + newValue);
             iterator = iterator.parent;
@@ -163,9 +164,18 @@ public class Task {
         this.setStoryPoints(newValue);
     }
 
+    public void updateStoryPoints(double newValue) {
+        Task iterator = this;
+        while (iterator.parent != null) {
+            iterator.parent.setStoryPoints(iterator.parent.getStoryPoints() - storyPoints.getValue());
+            iterator = iterator.parent;
+        }
+        addStoryPoints(newValue);
+    }
+
     public void anullate() {
         if (this.isLeaf()) {
-            this.setCompleted(0.0);
+            this.reset();
             return;
         }
         for (int i = 0; i < this.getSubtasks().size(); i++) {
