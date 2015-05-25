@@ -1,9 +1,8 @@
 package common;
 
+import common.service.SuggestionService;
 import data.Task;
 import javafx.scene.control.Tab;
-
-import java.util.List;
 
 /**
  * Created by nikiforov on 25.05.2015.

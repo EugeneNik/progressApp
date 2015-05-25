@@ -6,8 +6,8 @@ package common;
 public interface FileNamespace {
 
     String RESOURCES = "files/";
-    String BACKUP = "backup/backup.csv";
-    String STRUCTURE = "backup/structure.csv";
+    String BACKUP = "backup/backup.rsp"; //rsp - root structure pattern
+    String STRUCTURE = "backup/structure.rsp";
     String CSS = "/resources/skin.css";
     String SETTINGS = "resources/settings.properties";
     String REFRESH = "resources/icons/refresh.png";

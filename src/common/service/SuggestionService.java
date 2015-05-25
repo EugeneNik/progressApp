@@ -1,5 +1,6 @@
-package common;
+package common.service;
 
+import common.SystemConstants;
 import common.property.PropertyManager;
 import common.property.PropertyNamespace;
 import data.Task;
@@ -9,11 +10,12 @@ import java.util.*;
 /**
  * Created by Евгений on 18.05.2015.
  */
-public class SuggestionService {
+public class SuggestionService implements Service {
 
     private Task tree;
     private Timer timerToNextStart = null;
     private double maxStoryPoints = 30;
+
 
     public SuggestionService(Task root) {
         //read max story points (will be calculated according last x periods)
