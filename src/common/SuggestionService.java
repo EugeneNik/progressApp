@@ -46,7 +46,7 @@ public class SuggestionService {
             }
         }
         for (Task task : taskToStoryPoint.keySet()) {
-            if (task.getStoryPoints() + currentList <= maxStoryPoints + maxStoryPoints * 0.1) {
+            if (task.getStoryPoints() + currentList <= maxStoryPoints && task.getStoryPoints() + currentList <= maxStoryPoints + maxStoryPoints * 0.1) {
                 currentList += task.getStoryPoints();
                 suggestions.add(task);
             }
