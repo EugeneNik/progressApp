@@ -1,10 +1,10 @@
 package common;
 
+import common.property.PropertyManager;
+import common.property.PropertyNamespace;
 import data.Task;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Евгений on 18.05.2015.
@@ -12,13 +12,24 @@ import java.util.List;
 public class SuggestionService {
 
     private Task tree;
+    private Timer timerToNextStart = null;
     private double maxStoryPoints = 30;
 
     public SuggestionService(Task root) {
-        //read last start
-        //read period duration
         //read max story points (will be calculated according last x periods)
-        //create timer to next
+
+        long lastStart = PropertyManager.getValue(PropertyNamespace.LAST_ANALYZATION_MADE);
+        int frequency = PropertyManager.getValue(PropertyNamespace.ANALYZER_FREQUENCY);
+
+        timerToNextStart = new Timer();
+
+        timerToNextStart.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                suggest();
+            }
+        }, new Date(lastStart + frequency * SystemConstants.MILLIS_IN_DAY));
+
         this.tree = root;
     }
 
@@ -28,9 +39,9 @@ public class SuggestionService {
         double currentList = 0;
         List<Task> suggestions = new ArrayList<>();
         for (Task nominee : nominees) {
-            taskToStoryPoint.put(nominee, nominee.getStoryPoints() - nominee.getStoryPoints()*nominee.getProgress());
+            taskToStoryPoint.put(nominee, nominee.getStoryPoints() - nominee.getStoryPoints() * nominee.getProgress());
             if (nominee.getProgress() > 0.0) {
-                currentList += nominee.getStoryPoints() - nominee.getStoryPoints()*nominee.getProgress();
+                currentList += nominee.getStoryPoints() - nominee.getStoryPoints() * nominee.getProgress();
                 suggestions.add(nominee);
             }
         }
@@ -40,6 +51,8 @@ public class SuggestionService {
                 suggestions.add(task);
             }
         }
+        PropertyManager.setValue(PropertyNamespace.LAST_ANALYZATION_MADE, Calendar.getInstance().getTimeInMillis());
+        System.out.println(suggestions.toString());
         return suggestions;
     }
 

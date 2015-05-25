@@ -380,6 +380,14 @@
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>35258046755679</id>
+                            <name>Hibernate 4: What's new?</name>
+                            <comment></comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -1028,6 +1036,15 @@
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>35312973001057</id>
+                            <name>Java Reflection Tutorial – The ULTIMATE Guide (PDF Download)</name>
+                            <comment>http://www.javacodegeeks.com/2014/11/java-reflection-api-tutorial.html?utm_content=buffer9cc9c&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -1221,6 +1238,15 @@
                             <id>34280748253671</id>
                             <name>Java 8 Optional Example</name>
                             <comment>http://examples.javacodegeeks.com/core-java/util/optional/java-8-optional-example/?utm_content=buffer593c6&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755675</id>
+                            <name>Java 8 Features: A Complete Guide</name>
+                            <comment>http://mrbool.com/java-8-features-a-complete-guide/32550
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <progress>0.0</progress>
@@ -1553,9 +1579,19 @@ Cancel очищает значения
                     <id>31330485413070</id>
                     <name>JTA 1.1:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
-                    <tasks/>
+                    <tasks>
+                        <tasks>
+                            <id>35258046755698</id>
+                            <name>Java Transaction API (JTA)</name>
+                            <comment>http://download.oracle.com/otn-pub/jcp/jta-1.1-spec-oth-JSpec/jta-1_1-spec.pdf?AuthParam=1432236294_604e69c34dc61996fb9d7d8f2e3fe707
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
                 </tasks>
                 <tasks>
                     <id>31330485413068</id>
@@ -1800,17 +1836,244 @@ Cancel очищает значения
                     <id>31330485413050</id>
                     <name>JSP 2.2:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
-                    <tasks/>
+                    <tasks>
+                        <tasks>
+                            <id>35258046755690</id>
+                            <name>JSR 245 JavaServerTMPages JSP 2.1 Maintenance Review 2 Part I</name>
+                            <comment>https://jcp.org/aboutJava/communityprocess/maintenance/jsr245/245-MR2_1.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755694</id>
+                            <name>JSR 245 JavaServerTM Pages JSP 2.1 Maintenance Review 2 Part II</name>
+                            <comment>https://jcp.org/aboutJava/communityprocess/maintenance/jsr245/245-MR2_2.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
                 </tasks>
                 <tasks>
                     <id>31330485413048</id>
                     <name>JSF 2.0:</name>
                     <comment></comment>
-                    <storyPoints>8.0</storyPoints>
+                    <storyPoints>0.0</storyPoints>
                     <progress>0.0</progress>
-                    <tasks/>
+                    <tasks>
+                        <tasks>
+                            <id>35258046755583</id>
+                            <name>JSR 314: JavaServer Faces 2.0</name>
+                            <comment>https://jcp.org/en/jsr/detail?id=314
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755587</id>
+                            <name>JSF Usage and JSF 2.0 Update</name>
+                            <comment>https://weblogs.java.net/blog/edburns/archive/2007/11/jsf_usage_and_j.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755591</id>
+                            <name>What’s New in JSF 2?</name>
+                            <comment>https://andyschwartz.wordpress.com/2009/07/31/whats-new-in-jsf-2/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755595</id>
+                            <name>Dealing Gracefully with ViewExpiredException in JSF2</name>
+                            <comment>https://weblogs.java.net/blog/edburns/archive/2009/09/03/dealing-gracefully-viewexpiredexception-jsf2
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755599</id>
+                            <name>JSF2 Composite Component Metadata</name>
+                            <comment>https://weblogs.java.net/blog/edburns/archive/2009/09/02/jsf2-composite-component-metadata
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755603</id>
+                            <name>JSF2 Facelet Tag Handlers</name>
+                            <comment>https://weblogs.java.net/blog/edburns/archive/2009/10/15/jsf2-facelet-tag-handlers
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755607</id>
+                            <name>JSF 2 - Seam's Other Avenue to Standardization</name>
+                            <comment>http://java.dzone.com/articles/jsf-2-seam-standardization
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755611</id>
+                            <name>JSF 2 GETs Bookmarkable URLs</name>
+                            <comment>http://java.dzone.com/articles/bookmarkability-jsf-2
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755615</id>
+                            <name>Fluent Navigation in JSF 2</name>
+                            <comment>http://java.dzone.com/articles/fluent-navigation-jsf-2
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755619</id>
+                            <name>Ajax and JSF, Joined At Last</name>
+                            <comment>http://java.dzone.com/articles/ajax-jsf-joined
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755623</id>
+                            <name>Introducing JSF 2 Client Behaviors</name>
+                            <comment>http://java.dzone.com/articles/jsf-2-client-behaviors
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755627</id>
+                            <name>JSF 2.0: A Component's Controller</name>
+                            <comment>https://weblogs.java.net/blog/driscoll/archive/2009/01/jsf_20_a_compon.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755631</id>
+                            <name>ICEFaces 2.0 And JSF 2.0 Together</name>
+                            <comment>https://weblogs.java.net/blog/rogerk/archive/2009/05/icefaces_20_and.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755633</id>
+                            <name>JSF 2 fu, Part 1: Streamline Web application development</name>
+                            <comment>http://www.ibm.com/developerworks/java/library/j-jsf2fu1/index.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755635</id>
+                            <name>JSF 2 fu, Part 2: Templating and composite components</name>
+                            <comment>http://www.ibm.com/developerworks/java/library/j-jsf2fu2/index.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755637</id>
+                            <name>JSF 2 fu, Part 3: Event handling, JavaScript, and Ajax</name>
+                            <comment>http://www.ibm.com/developerworks/java/library/j-jsf2fu3/index.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755639</id>
+                            <name>What's cool in Java EE 6 -- JSF 2.0</name>
+                            <comment>http://smokeandice.blogspot.ru/2009/07/whats-cool-in-java-ee-6-jsf-20.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755641</id>
+                            <name>More cool in Java EE 6 -- JSF 2.0, Bean Validation</name>
+                            <comment>http://smokeandice.blogspot.ru/2009/08/more-cool-in-java-ee-6-jsf-20-bean.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755643</id>
+                            <name>Learning JSF2: Navigation</name>
+                            <comment>http://www.nofluffjuststuff.com/blog/max_katz/2009/09/learning_jsf2_navigation
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755659</id>
+                            <name>Is @javax.faces.bean.ManagedBean Dead on Arrival?</name>
+                            <comment>https://weblogs.java.net/blog/cayhorstmann/archive/2009/12/23/javaxfacesbeanmanagedbean-dead-arrival
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755661</id>
+                            <name>The Java EE 6 Web Tier: JSF 2 Gains Facelets, Composite Components, Partial State Saving and Ajax</name>
+                            <comment>http://www.infoq.com/news/2010/01/jsf20
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755663</id>
+                            <name>A Flash in the Pan?</name>
+                            <comment>https://weblogs.java.net/blog/cayhorstmann/archive/2010/01/12/flash-pan
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755665</id>
+                            <name>JSF 2.0: View parameters</name>
+                            <comment>http://www.jakobk.com/2010/04/jsf-2-0-view-parameters/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
                 </tasks>
                 <tasks>
                     <id>31330485413046</id>
@@ -2009,6 +2272,42 @@ Cancel очищает значения
                     <progress>0.0</progress>
                     <tasks/>
                 </tasks>
+                <tasks>
+                    <id>35258046755568</id>
+                    <name>Common:</name>
+                    <comment></comment>
+                    <storyPoints>0.0</storyPoints>
+                    <progress>0.0</progress>
+                    <tasks>
+                        <tasks>
+                            <id>35258046755571</id>
+                            <name>JSR 316: JavaTM Platform, Enterprise Edition 6 (Java EE 6) Specification</name>
+                            <comment>https://jcp.org/en/jsr/detail?id=316
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755575</id>
+                            <name>Java EE 6 Platform Draft Published featuring the Web Profile</name>
+                            <comment>http://www.infoq.com/news/2009/01/java-ee6-draft
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755579</id>
+                            <name>Resin Java EE 6 Web Profile Implementation</name>
+                            <comment>http://blog.caucho.com/2010/02/16/resin-java-ee-6-web-profile-implementation/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                    </tasks>
+                </tasks>
             </tasks>
         </tasks>
         <tasks>
@@ -2187,6 +2486,14 @@ Cancel очищает значения
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>35258046755702</id>
+                            <name>JAX-RS 2.0: A first interim report</name>
+                            <comment></comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -2209,6 +2516,41 @@ Cancel очищает значения
                             <id>34289862247512</id>
                             <name>Narayana is now JTA 1.2 Compliant</name>
                             <comment>http://jbossts.blogspot.ru/2013/09/narayana-is-now-jta-12-compliant.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755705</id>
+                            <name>JTA 1.2 - It's not your Grandfather's Transactions anymore!</name>
+                            <comment></comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755707</id>
+                            <name>Java Transaction API 1.2</name>
+                            <comment>http://www.youtube.com/watch?v=rChkWy2NFyQ
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755715</id>
+                            <name>Java EE CDI TransactionScoped example</name>
+                            <comment>http://www.byteslounge.com/tutorials/java-ee-cdi-transactionscoped-example
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755719</id>
+                            <name>Transactions for managed beans</name>
+                            <comment>http://relation.to/23154.lace
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <progress>0.0</progress>
@@ -4347,6 +4689,15 @@ Cancel очищает значения
                             <id>33521827634430</id>
                             <name>Creating a MongoDB Capped Collection in Java</name>
                             <comment>http://www.javacodegeeks.com/2015/03/creating-a-mongodb-capped-collection-in-java.html
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35258046755681</id>
+                            <name>Saving Geolocation data with Google Maps API and MongoDB</name>
+                            <comment>http://mrbool.com/saving-geolocation-data-with-google-maps-api-and-mongodb/32551
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <progress>0.0</progress>

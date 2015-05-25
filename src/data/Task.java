@@ -189,4 +189,9 @@ public class Task {
         Task task = (Task) obj;
         return task == null ? false : this.id == task.getId();
     }
+
+    @Override
+    public String toString() {
+        return "[" + getTask() + "," + getStoryPoints() + "," + getProgress() + "]\n";
+    }
 }
