@@ -7,5 +7,9 @@ public interface ServiceListener {
 
     void onStart();
 
+    void updateProgress(double progress);
+
+    double getProgress();
+
     void onFinish();
 }

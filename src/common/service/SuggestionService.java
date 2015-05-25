@@ -14,17 +14,28 @@ public class SuggestionService implements Service {
 
     private Task tree;
     private Timer timerToNextStart = null;
+    ServiceListener listener;
     private double maxStoryPoints = 30;
 
 
     public SuggestionService(Task root) {
+        if (!ServiceCache.isInited(getClass())) {
+            ServiceCache.init(getClass());
+            customInitialization(root);
+        } else {
+            throw new UnsupportedOperationException("Suggestion Service is initialized use Services.get");
+        }
+    }
+
+    private void customInitialization(Task root) {
+
         //read max story points (will be calculated according last x periods)
 
         long lastStart = PropertyManager.getValue(PropertyNamespace.LAST_ANALYZATION_MADE);
         int frequency = PropertyManager.getValue(PropertyNamespace.ANALYZER_FREQUENCY);
 
         timerToNextStart = new Timer();
-
+        listener = new SuggestionListener();
         timerToNextStart.schedule(new TimerTask() {
             @Override
             public void run() {
