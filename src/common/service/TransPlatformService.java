@@ -12,6 +12,7 @@ public class TransPlatformService {
 
     public TransPlatformService() {
         this.serviceMap = new HashMap<>();
+
     }
 
     public static TransPlatformService getInstance() {

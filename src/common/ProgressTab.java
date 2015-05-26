@@ -71,8 +71,8 @@ public class ProgressTab extends Tab {
             }
         });
 
-        Task root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.STRUCTURE));
-        Task back = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.BACKUP));
+        Task root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.STRUCTURE, TaskJAXB.class));
+        Task back = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.BACKUP, TaskJAXB.class));
 
         root.mergeTask(back);
 
@@ -291,12 +291,7 @@ public class ProgressTab extends Tab {
             t.start();
         });
 
-        primaryStage.setOnCloseRequest(event -> {
-            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(root), TaskJAXB.class, FileNamespace.BACKUP);
-            root.anullate();
-            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(root), TaskJAXB.class, FileNamespace.STRUCTURE);
-            PropertyManager.save();
-        });
+
 
         VBox parent = new VBox();
         HBox bottom = new HBox();

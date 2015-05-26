@@ -5,7 +5,7 @@ package common.service;
  */
 public class Services {
 
-    public <T extends Service> T get(Class<T> service) {
+    public static <T extends Service> T get(Class<T> service) {
         return TransPlatformService.getInstance().getService(service);
     }
 }
