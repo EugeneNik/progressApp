@@ -1,7 +1,6 @@
 package common;
 
 import common.service.SuggestionService;
-import data.Task;
 import javafx.scene.control.Tab;
 
 /**

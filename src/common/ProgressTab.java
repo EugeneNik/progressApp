@@ -76,7 +76,7 @@ public class ProgressTab extends Tab {
         Task root = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.STRUCTURE, TaskJAXB.class));
         Task back = JaxbConverter.convertToSimple(JaxbUnmarshaller.unmarshall(FileNamespace.BACKUP, TaskJAXB.class));
 
-        root.mergeTask(back);
+        root.getManager().mergeTask(back);
 
         final TreeItem<Task> rootItem = new TreeItem<>(root);
 
@@ -116,7 +116,7 @@ public class ProgressTab extends Tab {
                                 final int parameter = i;
                                 item.setOnAction(event -> {
                                     if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
-                                        tree.getSelectionModel().getSelectedItem().getValue().updateStoryPoints(parameter);
+                                        tree.getSelectionModel().getSelectedItem().getValue().getManager().updateStoryPoints(parameter);
                                         tree.getSelectionModel().getSelectedItem().getValue().setTimeEstimated(Calendar.getInstance().getTimeInMillis());
                                         updateItem(t, bln);
                                     }
@@ -138,7 +138,7 @@ public class ProgressTab extends Tab {
                             MenuItem resetItem = new MenuItem("Reset progress");
                             resetItem.setOnAction(event -> {
                                 if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
-                                    tree.getSelectionModel().getSelectedItem().getValue().reset();
+                                    tree.getSelectionModel().getSelectedItem().getValue().getManager().reset();
                                 }
                             });
                             rowMenu.getItems().addAll(completeItem, partialCompleteItem, resetItem, changeStoryPoints);

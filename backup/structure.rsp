@@ -5,7 +5,7 @@
     <comment></comment>
     <storyPoints>0.0</storyPoints>
     <timeEstimated>0</timeEstimated>
-    <progress>0.0</progress>
+    <progress>3.469446951953614E-18</progress>
     <tasks>
         <tasks>
             <id>31229264206751</id>
@@ -69,7 +69,7 @@
                             <comment>http://java-performance.info/java-collections-overview/
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801538523</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -79,7 +79,7 @@
                             <comment>http://java-performance.info/java-util-identityhashmap/
 </comment>
                             <storyPoints>2.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801540790</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -89,7 +89,7 @@
                             <comment>http://java-performance.info/linkedlist-performance/
 </comment>
                             <storyPoints>4.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801543568</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -99,7 +99,7 @@
                             <comment>http://java-performance.info/arraylist-performance/
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801545617</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -109,7 +109,7 @@
                             <comment>http://java-performance.info/bit-sets/#more-24
 </comment>
                             <storyPoints>4.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801547684</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -129,7 +129,7 @@
                             <comment>http://www.javacodegeeks.com/2015/04/7-things-you-thought-you-knew-about-garbage-collection-and-are-totally-wrong.html
 </comment>
                             <storyPoints>4.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801550639</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -139,7 +139,7 @@
                             <comment>http://habrahabr.ru/post/112676/
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801552545</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -149,7 +149,7 @@
                             <comment>http://java-performance.info/possible-memory-leak-in-multimap/
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801561613</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -159,7 +159,7 @@
                             <comment>http://java-performance.info/java-varargs-performance-issues/
 </comment>
                             <storyPoints>4.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801563710</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -169,7 +169,7 @@
                             <comment>http://java-performance.info/memory-allocation-in-java/
 </comment>
                             <storyPoints>4.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801566626</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -179,7 +179,7 @@
                             <comment>http://www.javacodegeeks.com/2015/05/do-we-really-still-need-a-32-bit-jvm.html
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801568573</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -189,7 +189,7 @@
                             <comment>http://www.javacodegeeks.com/2014/09/garbage-collectors-serial-vs-parallel-vs-cms-vs-g1-and-whats-new-in-java-8.html?utm_content=buffer0249d&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801571343</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -209,7 +209,7 @@
                             <comment>http://www3.ntu.edu.sg/home/ehchua/programming/java/J5a_ExceptionAssert.html
 </comment>
                             <storyPoints>2.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801600931</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -219,7 +219,7 @@
                             <comment>http://www.javacodegeeks.com/2014/08/strategies-to-migrate-from-an-dao-library.html?utm_content=buffer7fe4a&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801603902</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -229,7 +229,7 @@
                             <comment>http://www.javacodegeeks.com/2015/05/what-are-the-bad-features-of-java.html
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801605567</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -238,8 +238,8 @@
                             <name>Abstraction in Java – The ULTIMATE Tutorial (PDF Download)</name>
                             <comment>http://www.javacodegeeks.com/2014/07/abstraction-in-java.html?utm_content=buffer56bae&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
-                            <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <storyPoints>16.0</storyPoints>
+                            <timeEstimated>1432801697777</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -249,7 +249,7 @@
                             <comment>http://www.javacodegeeks.com/2015/05/lessons-learnt-translating-25k-line-of-c-into-java.html
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801694999</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -259,7 +259,7 @@
                             <comment>http://www.javacodegeeks.com/2015/05/c-vs-java-which-one-is-faster-translating-25k-c-into-java-2.html
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801692035</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -268,8 +268,8 @@
                             <name>Implementing a high performance Money class</name>
                             <comment>http://java-performance.info/high-performance-money-class/
 </comment>
-                            <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <storyPoints>4.0</storyPoints>
+                            <timeEstimated>1432801687805</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -278,8 +278,8 @@
                             <name>Primitive types to String conversion and String concatenation</name>
                             <comment>http://java-performance.info/primitive-types-to-string-conversion-and-string-concatenation/
 </comment>
-                            <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <storyPoints>2.0</storyPoints>
+                            <timeEstimated>1432801685395</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -288,8 +288,8 @@
                             <name>String.intern in Java 6, 7 and 8 – string pooling</name>
                             <comment>http://java-performance.info/string-intern-in-java-6-7-8/
 </comment>
-                            <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <storyPoints>2.0</storyPoints>
+                            <timeEstimated>1432801680704</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -298,8 +298,8 @@
                             <name>String.intern in Java 6, 7 and 8 – multithreaded access</name>
                             <comment>http://java-performance.info/string-intern-java-6-7-8-multithreaded-access/
 </comment>
-                            <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <storyPoints>2.0</storyPoints>
+                            <timeEstimated>1432801678100</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -308,8 +308,8 @@
                             <name>String.intern in Java 7 and 8 – part 3</name>
                             <comment>http://java-performance.info/string-intern-java-7-8-part-3/
 </comment>
-                            <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <storyPoints>2.0</storyPoints>
+                            <timeEstimated>1432801676305</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -318,8 +318,8 @@
                             <name>SCJP Sun Certifi ed Programmer for Java 6 Study Guide (Exam 310-065)</name>
                             <comment>https://mega.co.nz/#!J552TJRQ!myes4Ek-GZRmKnnB2au_M0fcMHxjj3EW50FTW2qINVo
 </comment>
-                            <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <storyPoints>32.0</storyPoints>
+                            <timeEstimated>1432801646582</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -329,7 +329,7 @@
                             <comment>http://examples.javacodegeeks.com/core-java/io/java-imageio-write-image-to-file/?utm_content=buffer88f39&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432801640447</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -338,8 +338,8 @@
                             <name>Transient variables in Java</name>
                             <comment>http://examples.javacodegeeks.com/core-java/transient-variables-in-java/?utm_content=buffer8ec1a&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
-                            <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <storyPoints>2.0</storyPoints>
+                            <timeEstimated>1432801669817</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -348,8 +348,8 @@
                             <name>Java MappedByteBuffer Example</name>
                             <comment>http://examples.javacodegeeks.com/core-java/nio/mappedbytebuffer/java-mappedbytebuffer-example/?utm_content=bufferd4a31&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
-                            <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <storyPoints>4.0</storyPoints>
+                            <timeEstimated>1432801673871</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -3695,7 +3695,7 @@ Cancel очищает значения
             <name>iOS:</name>
             <comment></comment>
             <storyPoints>8.0</storyPoints>
-            <timeEstimated>0</timeEstimated>
+            <timeEstimated>1</timeEstimated>
             <progress>0.0</progress>
             <tasks/>
         </tasks>
@@ -4814,7 +4814,7 @@ Cancel очищает значения
             <name>Bootstrap:</name>
             <comment></comment>
             <storyPoints>8.0</storyPoints>
-            <timeEstimated>0</timeEstimated>
+            <timeEstimated>1</timeEstimated>
             <progress>0.0</progress>
             <tasks/>
         </tasks>
@@ -5565,7 +5565,7 @@ Cancel очищает значения
             <comment></comment>
             <storyPoints>0.0</storyPoints>
             <timeEstimated>0</timeEstimated>
-            <progress>0.0</progress>
+            <progress>1.3877787807814457E-17</progress>
             <tasks>
                 <tasks>
                     <id>31330485412966</id>
@@ -5721,7 +5721,7 @@ Cancel очищает значения
                             <comment>http://www.javacodegeeks.com/2015/03/getting-started-with-gradle-creating-a-web-application-project.html
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432803897437</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -5733,7 +5733,7 @@ Cancel очищает значения
                     <comment></comment>
                     <storyPoints>0.0</storyPoints>
                     <timeEstimated>0</timeEstimated>
-                    <progress>0.0</progress>
+                    <progress>5.551115123125783E-17</progress>
                     <tasks>
                         <tasks>
                             <id>31783559839441</id>
@@ -5741,7 +5741,7 @@ Cancel очищает значения
                             <comment>http://habrahabr.ru/post/77333/
 </comment>
                             <storyPoints>2.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432803757079</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -5751,7 +5751,7 @@ Cancel очищает значения
                             <comment>http://habrahabr.ru/post/77382/
 </comment>
                             <storyPoints>4.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432803761768</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -5761,7 +5761,7 @@ Cancel очищает значения
                             <comment>http://www.apache-maven.ru/
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432803903469</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -5771,7 +5771,7 @@ Cancel очищает значения
                             <comment>http://devcolibri.com/742
 </comment>
                             <storyPoints>4.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432804043066</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -5781,7 +5781,7 @@ Cancel очищает значения
                             <comment>http://www.javacodegeeks.com/2015/04/there-is-a-mojo-in-my-dojo-how-to-write-a-maven-plugin.html
 </comment>
                             <storyPoints>8.0</storyPoints>
-                            <timeEstimated>0</timeEstimated>
+                            <timeEstimated>1432804045147</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>

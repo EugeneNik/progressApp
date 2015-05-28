@@ -13,7 +13,8 @@ public class HistoryJAXB {
     private long periodStart;
     private long periodEnd;
     private long difficulty;
-    private double completedStoryPoints;
+    private double startStoryPoints;
+    private double endStoryPoints;
 
     public HistoryJAXB() {}
 
@@ -41,11 +42,19 @@ public class HistoryJAXB {
         this.periodEnd = periodEnd;
     }
 
-    public double getCompletedStoryPoints() {
-        return completedStoryPoints;
+    public double getStartStoryPoints() {
+        return startStoryPoints;
     }
 
-    public void setCompletedStoryPoints(double completedStoryPoints) {
-        this.completedStoryPoints = completedStoryPoints;
+    public void setStartStoryPoints(double startStoryPoints) {
+        this.startStoryPoints = startStoryPoints;
+    }
+
+    public double getEndStoryPoints() {
+        return endStoryPoints;
+    }
+
+    public void setEndStoryPoints(double endStoryPoints) {
+        this.endStoryPoints = endStoryPoints;
     }
 }

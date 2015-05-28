@@ -18,6 +18,7 @@ public class Task {
     private LongProperty timeEstimated;
     private DoubleProperty progress;
     private BooleanProperty completed;
+    private TaskManager manager;
 
     public Task(long id, String task, Long timeEstimated, Double storyPoints, Double progress, Boolean completed, Task parent) {
         this.id = id;
@@ -27,6 +28,7 @@ public class Task {
         this.storyPoints = new SimpleDoubleProperty(storyPoints);
         this.timeEstimated = new SimpleLongProperty(timeEstimated);
         this.parent = parent;
+        this.manager = new TaskManager(this);
     }
 
     public long getId() {
@@ -127,10 +129,10 @@ public class Task {
 
     public void setCompleted(double progress) {
         if (progress != 0.0) {
-            reset();
+            manager.reset();
         }
         this.completed.set(progress == 1.0);
-        updateParent(progress == 0 ? -this.getProgress() : progress);
+        manager.updateParent(progress == 0 ? -this.getProgress() : progress);
         this.setProgress(progress);
     }
 
@@ -138,70 +140,8 @@ public class Task {
         return subtasks.isEmpty();
     }
 
-    public void mergeTask(Task task) {
-        if (task == null) {
-            return;
-        }
-        if (this.isLeaf()) {
-            this.setCompleted(task.getProgress());
-            this.updateStoryPoints(task.getStoryPoints() == 0.0 ? 8.0 : task.getStoryPoints());
-            this.setTimeEstimated(task.getTimeEstimated());
-            return;
-        }
-        for (int i = 0; i < this.getSubtasks().size(); i++) {
-            Task taskWithId = null;
-            for (int j = 0; j < task.getSubtasks().size(); j++) {
-                if (task.getSubtasks().get(j).equals(this.getSubtasks().get(i))) {
-                    taskWithId = task.getSubtasks().get(j);
-                }
-            }
-            this.getSubtasks().get(i).setStoryPoints(0.0);
-            this.getSubtasks().get(i).setTimeEstimated(1L);
-            this.getSubtasks().get(i).mergeTask(taskWithId);
-        }
-    }
-
-    public void reset() {
-        this.setCompleted(0.0);
-    }
-
-    public void updateParent(double percentageToAdd) {
-        Task iterator = this;
-        while (iterator.parent != null) {
-            double percentage = 1.0 / iterator.parent.getSubtasks().size() * (iterator.getSubtasks().isEmpty() ? percentageToAdd : percentageToAdd / iterator.getSubtasks().size());
-            iterator.parent.setProgress(iterator.getParent().getProgress() + percentage);
-            iterator = iterator.parent;
-        }
-    }
-
-    public void addStoryPoints(double newValue) {
-        Task iterator = this;
-        while (iterator.parent != null) {
-            iterator.parent.setStoryPoints(iterator.parent.getStoryPoints() + newValue);
-            iterator = iterator.parent;
-        }
-        this.setStoryPoints(newValue);
-    }
-
-    public void updateStoryPoints(double newValue) {
-        Task iterator = this;
-        while (iterator.parent != null) {
-            iterator.parent.setStoryPoints(iterator.parent.getStoryPoints() - storyPoints.getValue());
-            iterator = iterator.parent;
-        }
-        addStoryPoints(newValue);
-    }
-
-    public void anullate() {
-        if (this.isLeaf()) {
-            this.reset();
-            return;
-        }
-        for (int i = 0; i < this.getSubtasks().size(); i++) {
-            this.setStoryPoints(0.0);
-            this.setTimeEstimated(0L);
-            this.getSubtasks().get(i).anullate();
-        }
+    public TaskManager getManager() {
+        return manager;
     }
 
     @Override

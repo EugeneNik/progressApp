@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<historiesJAXB>
+    <histories>
+        <histories>
+            <periodStart>1432804035056</periodStart>
+            <periodEnd>1432804370317</periodEnd>
+            <difficulty>2</difficulty>
+            <startStoryPoints>4.0</startStoryPoints>
+            <endStoryPoints>16.0</endStoryPoints>
+        </histories>
+        <histories>
+            <periodStart>1432804370352</periodStart>
+            <periodEnd>1432804410464</periodEnd>
+            <difficulty>2</difficulty>
+            <startStoryPoints>16.0</startStoryPoints>
+            <endStoryPoints>18.0</endStoryPoints>
+        </histories>
+        <histories>
+            <periodStart>1432804410569</periodStart>
+            <periodEnd>1432804410569</periodEnd>
+            <difficulty>2</difficulty>
+            <startStoryPoints>18.0</startStoryPoints>
+            <endStoryPoints>18.0</endStoryPoints>
+        </histories>
+    </histories>
+</historiesJAXB>

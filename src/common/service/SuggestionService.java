@@ -42,8 +42,10 @@ public class SuggestionService implements Service {
     }
 
     public List<Task> suggest() {
-        List<Task> nominees = calcNominees(TransPlatformService.getInstance().getRoot(), new ArrayList<>());
         PredictionService predictionService = new PredictionService();
+        predictionService.updateHistory();
+
+        List<Task> nominees = calcNominees(TransPlatformService.getInstance().getRoot(), new ArrayList<>());
         HashMap<Task, Double> taskToStoryPoint = new HashMap<>();
         double currentList = 0;
         List<Task> suggestions = new ArrayList<>();
@@ -62,6 +64,7 @@ public class SuggestionService implements Service {
             }
         }
         PropertyManager.setValue(PropertyNamespace.LAST_ANALYZATION_MADE, Calendar.getInstance().getTimeInMillis());
+        predictionService.savePredictions();
         System.out.println(suggestions.toString());
         return suggestions;
     }

@@ -39,7 +39,7 @@ public class MainStage extends Application {
 
         primaryStage.setOnCloseRequest(event -> {
             JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.BACKUP);
-            TransPlatformService.getInstance().getRoot().anullate();
+            TransPlatformService.getInstance().getRoot().getManager().anullate();
             JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.STRUCTURE);
             PropertyManager.save();
             System.exit(0);
