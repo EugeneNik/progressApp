@@ -63,6 +63,7 @@ public class SuggestionService implements Service {
                 suggestions.add(task);
             }
         }
+        System.out.println("Predicted story points:" + maxStoryPoints);
         PropertyManager.setValue(PropertyNamespace.LAST_ANALYZATION_MADE, Calendar.getInstance().getTimeInMillis());
         predictionService.savePredictions();
         System.out.println(suggestions.toString());
