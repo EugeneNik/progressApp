@@ -18,6 +18,7 @@ public class TaskJAXB {
     private String name;
     private String comment;
     private double storyPoints;
+    private long timeEstimated;
     private double progress;
 
     @XmlElementWrapper
@@ -25,6 +26,14 @@ public class TaskJAXB {
 
     public TaskJAXB() {
         this.tasks = new ArrayList<>();
+    }
+
+    public long getTimeEstimated() {
+        return timeEstimated;
+    }
+
+    public void setTimeEstimated(long timeEstimated) {
+        this.timeEstimated = timeEstimated;
     }
 
     public double getStoryPoints() {

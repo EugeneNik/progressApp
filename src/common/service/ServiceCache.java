@@ -8,8 +8,9 @@ import java.util.HashSet;
 public class ServiceCache {
     private static HashSet<Class> cache = new HashSet<>();
 
-    public static void init(Class clazz) {
+    public static void init(Class clazz, Service service) {
         cache.add(clazz);
+        TransPlatformService.getInstance().initService(service);
     }
 
     public static boolean isInited(Class clazz) {

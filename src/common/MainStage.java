@@ -2,6 +2,8 @@ package common;
 
 import common.property.PropertyManager;
 import common.service.PredictionService;
+import common.service.Services;
+import common.service.TransPlatformService;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TabPane;
@@ -24,7 +26,8 @@ public class MainStage extends Application {
         PropertyManager.getApplicationSettings();
 
         ProgressTab progressTab = new ProgressTab(primaryStage);
-        SuggestionTab suggestionTab = new SuggestionTab(progressTab.getRoot());
+
+        SuggestionTab suggestionTab = new SuggestionTab();
 
         TabPane parent = new TabPane();
 
@@ -35,14 +38,14 @@ public class MainStage extends Application {
         scene.getStylesheets().add(cssPath);
 
         primaryStage.setOnCloseRequest(event -> {
-            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(progressTab.getRoot()), TaskJAXB.class, FileNamespace.BACKUP);
-            progressTab.getRoot().anullate();
-            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(progressTab.getRoot()), TaskJAXB.class, FileNamespace.STRUCTURE);
+            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.BACKUP);
+            TransPlatformService.getInstance().getRoot().anullate();
+            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.STRUCTURE);
             PropertyManager.save();
             System.exit(0);
         });
 
-        System.out.println(new PredictionService().predict());
+        //System.out.println(Services.get(PredictionService.class).predict());
 
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);

@@ -15,15 +15,17 @@ public class Task {
     private ObservableList<Task> subtasks = FXCollections.observableArrayList();
     private Task parent = null;
     private DoubleProperty storyPoints;
+    private LongProperty timeEstimated;
     private DoubleProperty progress;
     private BooleanProperty completed;
 
-    public Task(long id, String task, Double storyPoints, Double progress, Boolean completed, Task parent) {
+    public Task(long id, String task, Long timeEstimated, Double storyPoints, Double progress, Boolean completed, Task parent) {
         this.id = id;
         this.task = new SimpleStringProperty(task);
         this.progress = new SimpleDoubleProperty(progress);
         this.completed = new SimpleBooleanProperty(completed);
         this.storyPoints = new SimpleDoubleProperty(storyPoints);
+        this.timeEstimated = new SimpleLongProperty(timeEstimated);
         this.parent = parent;
     }
 
@@ -45,6 +47,18 @@ public class Task {
 
     public String getDescription() {
         return description.get() == null || description.get().equals("null") ? "" : description.get();
+    }
+
+    public long getTimeEstimated() {
+        return timeEstimated.get();
+    }
+
+    public LongProperty timeEstimatedProperty() {
+        return timeEstimated;
+    }
+
+    public void setTimeEstimated(long timeEstimated) {
+        this.timeEstimated.set(timeEstimated);
     }
 
     public StringProperty descriptionProperty() {
@@ -125,9 +139,13 @@ public class Task {
     }
 
     public void mergeTask(Task task) {
+        if (task == null) {
+            return;
+        }
         if (this.isLeaf()) {
             this.setCompleted(task.getProgress());
             this.updateStoryPoints(task.getStoryPoints() == 0.0 ? 8.0 : task.getStoryPoints());
+            this.setTimeEstimated(task.getTimeEstimated());
             return;
         }
         for (int i = 0; i < this.getSubtasks().size(); i++) {
@@ -138,6 +156,7 @@ public class Task {
                 }
             }
             this.getSubtasks().get(i).setStoryPoints(0.0);
+            this.getSubtasks().get(i).setTimeEstimated(1L);
             this.getSubtasks().get(i).mergeTask(taskWithId);
         }
     }
@@ -180,6 +199,7 @@ public class Task {
         }
         for (int i = 0; i < this.getSubtasks().size(); i++) {
             this.setStoryPoints(0.0);
+            this.setTimeEstimated(0L);
             this.getSubtasks().get(i).anullate();
         }
     }

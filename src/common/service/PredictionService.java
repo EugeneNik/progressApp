@@ -16,13 +16,14 @@ public class PredictionService implements Service {
     private int lastUsedPeriods;
     private int difficultyOfLearning;
     private int periodOfLearning;
+    ServiceListener listener;
 
     public PredictionService() {
         if (!ServiceCache.isInited(getClass())) {
-            ServiceCache.init(getClass());
+            ServiceCache.init(getClass(), this);
             customInitialization();
         } else {
-            throw new UnsupportedOperationException("Suggestion Service is initialized use Services.get");
+            throw new UnsupportedOperationException("Prediction Service is initialized use Services.get");
         }
     }
 
@@ -37,6 +38,7 @@ public class PredictionService implements Service {
      */
     public double predict() {
         HistoriesJAXB histories = JaxbUnmarshaller.unmarshall(FileNamespace.HISTORY, HistoriesJAXB.class);
+        TransPlatformService.getInstance().setHistory(histories);
         double estimate = 0.0;
         if (histories != null) {
             for (int i = 0; i < Math.min(lastUsedPeriods, histories.getHistories().size()); i++) {

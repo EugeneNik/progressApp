@@ -2,6 +2,7 @@ package common;
 
 import asana.AsanaHelper;
 import common.property.PropertyManager;
+import common.service.TransPlatformService;
 import data.Task;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
@@ -32,6 +33,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.DecimalFormat;
+import java.util.Calendar;
 
 /**
  * Created by nikiforov on 25.05.2015.
@@ -77,6 +79,9 @@ public class ProgressTab extends Tab {
         root.mergeTask(back);
 
         final TreeItem<Task> rootItem = new TreeItem<>(root);
+
+        TransPlatformService.getInstance().setRoot(root);
+
         tree.setRoot(rootItem);
         tree.setShowRoot(false);
 
@@ -112,6 +117,8 @@ public class ProgressTab extends Tab {
                                 item.setOnAction(event -> {
                                     if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
                                         tree.getSelectionModel().getSelectedItem().getValue().updateStoryPoints(parameter);
+                                        tree.getSelectionModel().getSelectedItem().getValue().setTimeEstimated(Calendar.getInstance().getTimeInMillis());
+                                        updateItem(t, bln);
                                     }
                                 });
                             }
@@ -141,7 +148,7 @@ public class ProgressTab extends Tab {
                         }
                         if (getTreeTableRow() != null && getTreeTableRow().getTreeItem() != null) {
                             StackPane storyPoints = new StackPane();
-                            Circle circle = new Circle(12, Color.CORAL);
+                            Circle circle = new Circle(12, getTreeTableRow().getTreeItem().getValue().getTimeEstimated() == 0L ? Color.CORAL : Color.LIGHTBLUE);
                             Text text = new Text("");
                             text.textProperty().bind(Bindings.format("%.0f", getTreeTableRow().getTreeItem().getValue().storyPointsProperty()));
                             storyPoints.getChildren().addAll(circle, text);
@@ -249,7 +256,7 @@ public class ProgressTab extends Tab {
                             String themeName = project.getString("name");
                             Long id = project.getLong("id");
                             themeName += ":";
-                            Task currentTask = new Task(id, themeName, 0.0, 0.0, false, root);
+                            Task currentTask = new Task(id, themeName, 0L, 0.0, 0.0, false, root);
                             int index = root.getSubtasks().indexOf(currentTask);
                             if (index < 0) {
                                 root.getSubtasks().add(currentTask);
@@ -291,8 +298,6 @@ public class ProgressTab extends Tab {
             t.start();
         });
 
-
-
         VBox parent = new VBox();
         HBox bottom = new HBox();
         FlowPane rightBottom = new FlowPane(Orientation.VERTICAL);
@@ -332,9 +337,5 @@ public class ProgressTab extends Tab {
 
             addTreeItemsRecursive(subtask, subTaskItem);
         }
-    }
-
-    public Task getRoot() {
-        return tree.getRoot().getValue();
     }
 }

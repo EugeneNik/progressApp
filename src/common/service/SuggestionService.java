@@ -12,22 +12,19 @@ import java.util.*;
  */
 public class SuggestionService implements Service {
 
-    private Task tree;
     private Timer timerToNextStart = null;
     ServiceListener listener;
-    private double maxStoryPoints = 30;
 
-
-    public SuggestionService(Task root) {
+    public SuggestionService() {
         if (!ServiceCache.isInited(getClass())) {
-            ServiceCache.init(getClass());
-            customInitialization(root);
+            ServiceCache.init(getClass(), this);
+            customInitialization();
         } else {
             throw new UnsupportedOperationException("Suggestion Service is initialized use Services.get");
         }
     }
 
-    private void customInitialization(Task root) {
+    private void customInitialization() {
 
         //read max story points (will be calculated according last x periods)
 
@@ -42,12 +39,11 @@ public class SuggestionService implements Service {
                 suggest();
             }
         }, new Date(lastStart + frequency * SystemConstants.MILLIS_IN_DAY));
-
-        this.tree = root;
     }
 
     public List<Task> suggest() {
-        List<Task> nominees = calcNominees(tree, new ArrayList<>());
+        List<Task> nominees = calcNominees(TransPlatformService.getInstance().getRoot(), new ArrayList<>());
+        PredictionService predictionService = new PredictionService();
         HashMap<Task, Double> taskToStoryPoint = new HashMap<>();
         double currentList = 0;
         List<Task> suggestions = new ArrayList<>();
@@ -58,8 +54,9 @@ public class SuggestionService implements Service {
                 suggestions.add(nominee);
             }
         }
+        double maxStoryPoints = predictionService.predict();
         for (Task task : taskToStoryPoint.keySet()) {
-            if (task.getStoryPoints() + currentList <= maxStoryPoints && task.getStoryPoints() + currentList <= maxStoryPoints + maxStoryPoints * 0.1) {
+            if (currentList <= maxStoryPoints && task.getStoryPoints() + currentList <= maxStoryPoints + maxStoryPoints * 0.1) {
                 currentList += task.getStoryPoints();
                 suggestions.add(task);
             }

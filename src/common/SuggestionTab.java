@@ -9,9 +9,9 @@ import javafx.scene.control.Tab;
  */
 public class SuggestionTab extends Tab {
 
-    public SuggestionTab(Task root) {
+    public SuggestionTab() {
 
-        SuggestionService suggestionService = new SuggestionService(root);
+        SuggestionService suggestionService = new SuggestionService();
 //        List<Task> tasks = suggestionService.suggest();
 
         this.setText("Suggestions");
