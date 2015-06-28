@@ -5,7 +5,7 @@
     <comment></comment>
     <storyPoints>0.0</storyPoints>
     <timeEstimated>0</timeEstimated>
-    <progress>-3.642919299551295E-16</progress>
+    <progress>-6.418476861114186E-16</progress>
     <tasks>
         <tasks>
             <id>31229264206751</id>
@@ -380,6 +380,16 @@
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <timeEstimated>1</timeEstimated>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>35962280465357</id>
+                            <name>Java Annotations Tutorial – The ULTIMATE Guide (PDF Download)</name>
+                            <comment>http://www.javacodegeeks.com/2014/11/java-annotations-tutorial.html?utm_content=bufferf6fb8&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <timeEstimated>0</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
@@ -838,6 +848,16 @@
                             <comment>http://java-performance.info/charset-encoding-decoding-java-78/
 </comment>
                             <storyPoints>4.0</storyPoints>
+                            <timeEstimated>0</timeEstimated>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>39451625696123</id>
+                            <name>Java 7: How to write really fast Java code</name>
+                            <comment>http://www.javacodegeeks.com/2012/01/java-7-how-to-write-really-fast-java.html?utm_content=bufferafc72&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                            <storyPoints>8.0</storyPoints>
                             <timeEstimated>0</timeEstimated>
                             <progress>0.0</progress>
                             <tasks/>
@@ -1471,6 +1491,26 @@
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>38763007871122</id>
+                            <name>Garbage Collectors – Serial vs. Parallel vs. CMS vs. G1 (and what’s new in Java 8)</name>
+                            <comment>http://blog.takipi.com/garbage-collectors-serial-vs-parallel-vs-cms-vs-the-g1-and-whats-new-in-java-8/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <timeEstimated>0</timeEstimated>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>38763007871126</id>
+                            <name>Java Performance Tuning: Getting the Most Out of Your Garbage Collector</name>
+                            <comment>http://blog.takipi.com/java-performance-tuning-how-to-get-the-most-out-of-your-garbage-collector/?utm_source=blog&amp;utm_medium=in-post&amp;utm_content=java9top&amp;utm_campaign=java
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <timeEstimated>0</timeEstimated>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
             </tasks>
@@ -1481,7 +1521,7 @@
             <comment></comment>
             <storyPoints>0.0</storyPoints>
             <timeEstimated>0</timeEstimated>
-            <progress>0.0</progress>
+            <progress>1.3877787807814457E-17</progress>
             <tasks>
                 <tasks>
                     <id>31330485412958</id>
@@ -1489,7 +1529,7 @@
                     <comment></comment>
                     <storyPoints>0.0</storyPoints>
                     <timeEstimated>0</timeEstimated>
-                    <progress>0.0</progress>
+                    <progress>2.7755575615628914E-17</progress>
                     <tasks>
                         <tasks>
                             <id>31330485413020</id>
@@ -1588,6 +1628,16 @@ Cancel очищает значения
                             <id>33617792507826</id>
                             <name>JavaFX Table and Tree lazy loading</name>
                             <comment>http://blog.sibvisions.com/2015/05/08/javafx-table-and-tree-lazy-loading/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <timeEstimated>0</timeEstimated>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
+                        <tasks>
+                            <id>39460887684380</id>
+                            <name>Worker Threading in JavaFX 2.0</name>
+                            <comment>http://fxexperience.com/2011/07/worker-threading-in-javafx-2-0/
 </comment>
                             <storyPoints>8.0</storyPoints>
                             <timeEstimated>0</timeEstimated>
@@ -5496,6 +5546,16 @@ Cancel очищает значения
                             <progress>0.0</progress>
                             <tasks/>
                         </tasks>
+                        <tasks>
+                            <id>36127252020361</id>
+                            <name>Получение списка файлов в удалённом репозитории</name>
+                            <comment>http://habrahabr.ru/post/197312/
+</comment>
+                            <storyPoints>8.0</storyPoints>
+                            <timeEstimated>0</timeEstimated>
+                            <progress>0.0</progress>
+                            <tasks/>
+                        </tasks>
                     </tasks>
                 </tasks>
                 <tasks>
@@ -6118,6 +6178,16 @@ Cancel очищает значения
                     <id>34782056856753</id>
                     <name>Java 9 – The Ultimate Feature List</name>
                     <comment>http://www.javacodegeeks.com/2014/09/java-9-the-ultimate-feature-list.html?utm_content=bufferadf5b&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
+</comment>
+                    <storyPoints>8.0</storyPoints>
+                    <timeEstimated>0</timeEstimated>
+                    <progress>0.0</progress>
+                    <tasks/>
+                </tasks>
+                <tasks>
+                    <id>38763007871118</id>
+                    <name>5 Features in Java 9 that WILL Change How You Develop Software (and 2 That Won’t)</name>
+                    <comment>http://www.javacodegeeks.com/2015/06/5-features-in-java-9-that-will-change-how-you-develop-software-and-2-that-wont.html?utm_content=buffer20555&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer
 </comment>
                     <storyPoints>8.0</storyPoints>
                     <timeEstimated>0</timeEstimated>

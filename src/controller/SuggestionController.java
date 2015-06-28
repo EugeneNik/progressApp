@@ -42,16 +42,6 @@ public class SuggestionController {
             }
 
             @Override
-            public void updateProgress(double progress) {
-
-            }
-
-            @Override
-            public double getProgress() {
-                return 0;
-            }
-
-            @Override
             public void onFinish() {
                 long time = PropertyManager.getValue(PropertyNamespace.LAST_ANALYZATION_MADE);
                 ui.getLastSuggestionMadeDate().setValue(new Date(time).toString());

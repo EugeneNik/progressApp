@@ -1,8 +1,10 @@
 package common;
 
 import asana.AsanaHelper;
-import common.property.PropertyManager;
+import common.service.AsanaService;
+import common.service.Services;
 import common.service.TransPlatformService;
+import controller.ProgressTabController;
 import data.Task;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
@@ -22,7 +24,6 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import jaxb.TaskJAXB;
 import jaxb.utils.JaxbConverter;
-import jaxb.utils.JaxbMarshaller;
 import jaxb.utils.JaxbUnmarshaller;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -42,9 +43,13 @@ import java.util.Calendar;
 public class ProgressTab extends Tab {
     private TreeTableView<Task> tree;
     private TreeItem<Task> foundElement;
+    private final StatusBar statusBar;
+    ProgressTabController controller;
 
     public ProgressTab(Stage primaryStage) {
         TextArea commentArea = new TextArea();
+
+        controller = new ProgressTabController(this);
 
         TextField searchField = new TextField();
         searchField.setMaxWidth(80);
@@ -55,7 +60,7 @@ public class ProgressTab extends Tab {
         Button syncButton = new Button("Sync");
         syncButton.setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.REFRESH)));
 
-        final StatusBar statusBar = new StatusBar();
+        statusBar = new StatusBar();
         tree = new TreeTableView<>();
         tree.setColumnResizePolicy(TreeTableView.CONSTRAINED_RESIZE_POLICY);
 
@@ -88,7 +93,7 @@ public class ProgressTab extends Tab {
 
         primaryStage.titleProperty().bind(root.taskProperty().concat(Bindings.format(" ("+ FormatUtils.getProperDoubleFormat(true)+")", root.progressProperty().multiply(100.0))));
 
-        addTreeItemsRecursive(root, rootItem);
+        controller.addTreeItemsRecursive(root, rootItem);
 
         descriptionColumn.setCellValueFactory(param -> param.getValue().getValue().taskProperty());
         descriptionColumn.setCellFactory(param -> {
@@ -247,52 +252,11 @@ public class ProgressTab extends Tab {
             javafx.concurrent.Task<Void> task = new javafx.concurrent.Task() {
                 @Override
                 protected Void call() throws Exception {
-                    updateMessage("Wait for data loading...");
-
-                    try {
-                        JSONArray array = AsanaHelper.connector.getProjects().getJSONArray("data");
-                        updateProgress(0, array.length());
-                        for (int i = 0; i < array.length(); i++) {
-                            JSONObject project = array.getJSONObject(i);
-                            String themeName = project.getString("name");
-                            Long id = project.getLong("id");
-                            themeName += ":";
-                            Task currentTask = new Task(id, themeName, 0L, 0.0, 0.0, false, root);
-                            int index = root.getSubtasks().indexOf(currentTask);
-                            if (index < 0) {
-                                root.getSubtasks().add(currentTask);
-                            } else {
-                                currentTask = root.getSubtasks().get(index);
-                                currentTask.setTask(themeName);
-                            }
-                            AsanaHelper.parseAndFill(currentTask);
-                            updateProgress(i + 1, array.length());
-                        }
-                        Platform.runLater(() -> {
-                            final TreeItem<Task> rootItem = new TreeItem<>(root);
-                            tree.setRoot(rootItem);
-                            tree.setShowRoot(false);
-
-                            addTreeItemsRecursive(root, rootItem);
-                            updateMessage("Loaded");
-                        });
-                    } catch (Exception e) {
-                        updateMessage("Asana Sync failed");
-                        e.printStackTrace();
-                    }
-
-                    updateProgress(1, 1);
+                    controller.sync();
                     done();
                     return null;
                 }
             };
-            statusBar.textProperty().bind(task.messageProperty());
-            statusBar.progressProperty().bind(task.progressProperty());
-
-            task.setOnSucceeded(event1 -> {
-                statusBar.textProperty().unbind();
-                statusBar.progressProperty().unbind();
-            });
 
             Thread t = new Thread(task);
             t.setDaemon(true);
@@ -331,12 +295,11 @@ public class ProgressTab extends Tab {
         return false;
     }
 
-    private void addTreeItemsRecursive(Task task, TreeItem<Task> item) {
-        for (Task subtask : task.getSubtasks()) {
-            TreeItem<Task> subTaskItem = new TreeItem<>(subtask);
-            item.getChildren().add(subTaskItem);
+    public TreeTableView<Task> getTree() {
+        return tree;
+    }
 
-            addTreeItemsRecursive(subtask, subTaskItem);
-        }
+    public StatusBar getStatusBar() {
+        return statusBar;
     }
 }

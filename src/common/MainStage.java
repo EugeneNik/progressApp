@@ -4,6 +4,7 @@ import common.property.PropertyManager;
 import common.service.PredictionService;
 import common.service.Services;
 import common.service.TransPlatformService;
+import controller.MainStageController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TabPane;
@@ -17,6 +18,8 @@ import jaxb.utils.JaxbMarshaller;
  */
 public class MainStage extends Application {
 
+    MainStageController controller;
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -24,6 +27,8 @@ public class MainStage extends Application {
     @Override
     public void start(Stage primaryStage) {
         PropertyManager.getApplicationSettings();
+
+        controller = new MainStageController(this);
 
         ProgressTab progressTab = new ProgressTab(primaryStage);
 

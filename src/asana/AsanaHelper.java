@@ -12,28 +12,6 @@ import org.json.JSONObject;
 public class AsanaHelper {
     public static AsanaConnector connector = new AsanaConnector(PropertyManager.getValue(PropertyNamespace.APP_KEY));
 
-    @Deprecated
-    public static Task parseAsana(Task root, javafx.concurrent.Task process) {
-        JSONArray array = connector.getProjects().getJSONArray("data");
-        for (int i = 0; i < array.length(); i++) {
-            JSONObject project = array.getJSONObject(i);
-            String themeName = project.getString("name");
-            Long id = project.getLong("id");
-            themeName += ":";
-            Task currentTask = new Task(id, themeName, 0L, 0.0, 0.0, false, root);
-            int index = root.getSubtasks().indexOf(currentTask);
-            if (index < 0) {
-                root.getSubtasks().add(currentTask);
-            } else {
-                currentTask = root.getSubtasks().get(index);
-                currentTask.setTask(themeName);
-            }
-            parseAndFill(currentTask);
-
-        }
-        return root;
-    }
-
     public static void parseAndFill(Task root) {
         Task currentTheme = root;
         JSONArray array = connector.getProjectTasks(Long.toString(root.getId())).getJSONArray("data");

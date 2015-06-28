@@ -13,4 +13,5 @@ public interface PropertyNamespace {
     String EXPERT_LEVEL = "expertLevel";
     String ANALYZER_FREQUENCY_UOM = "analyzerFrequencyUom";
     String DIGITS_AFTER_POINTS = "digitsAfterPoints";
+    String AUTO_SYNC_PROPERTY = "autoSyncProperty";
 }

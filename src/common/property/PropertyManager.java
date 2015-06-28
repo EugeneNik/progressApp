@@ -76,6 +76,10 @@ public class PropertyManager {
      */
     private static BaseProperty<Integer> DIGITS_AFTER_POINTS;
 
+    /**
+     * property to make auto syncs
+     */
+    private static BaseProperty<String> AUTO_SYNC_PROPERTY;
 
     /**
      * map to collect setting name and setting
@@ -96,6 +100,7 @@ public class PropertyManager {
                 EXPERT_LEVEL = new BaseProperty<>(PropertyNamespace.EXPERT_LEVEL, ExpertLevel.getByName(prop.getProperty(PropertyNamespace.EXPERT_LEVEL, "Base")), ExpertLevel.BASE);
                 ANALYZER_FREQUENCY_UOM = new BaseProperty<>(PropertyNamespace.ANALYZER_FREQUENCY_UOM, Long.parseLong(prop.getProperty(PropertyNamespace.ANALYZER_FREQUENCY_UOM, Long.toString(TimeUnit.DAYS.toMillis(1)))), TimeUnit.DAYS.toMillis(1));
                 DIGITS_AFTER_POINTS = new BaseProperty<>(PropertyNamespace.DIGITS_AFTER_POINTS, Integer.parseInt(prop.getProperty(PropertyNamespace.DIGITS_AFTER_POINTS, "2")), 2);
+                AUTO_SYNC_PROPERTY = new BaseProperty<>(PropertyNamespace.AUTO_SYNC_PROPERTY, prop.getProperty(PropertyNamespace.AUTO_SYNC_PROPERTY, "03:00:00"), "03:00:00");
                 registerApplicationSettings();
             }
         } catch (IOException | NumberFormatException e) {
