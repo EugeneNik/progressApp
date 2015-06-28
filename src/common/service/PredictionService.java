@@ -4,11 +4,14 @@ import common.FileNamespace;
 import common.SystemConstants;
 import common.property.PropertyManager;
 import common.property.PropertyNamespace;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import jaxb.HistoriesJAXB;
 import jaxb.HistoryJAXB;
 import jaxb.utils.JaxbMarshaller;
 import jaxb.utils.JaxbUnmarshaller;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,12 +19,12 @@ import java.util.List;
 /**
  * Created by Евгений on 25.05.2015.
  */
-public class PredictionService implements Service {
+public class PredictionService extends AbstractService {
 
     private int lastUsedPeriods;
     private int difficultyOfLearning;
     private int periodOfLearning;
-    ServiceListener listener;
+    private DoubleProperty prediction;
 
     public PredictionService() {
         if (!ServiceCache.isInited(getClass())) {
@@ -33,7 +36,10 @@ public class PredictionService implements Service {
     }
 
     private void customInitialization() {
+        listeners = new ArrayList<>();
         this.lastUsedPeriods = PropertyManager.getValue(PropertyNamespace.SAVE_LAST_PERIODS_COUNT);
+        // if last used periods = 3 it means that we should use 3 last periods and skip fourth (current one)
+        lastUsedPeriods++;
         this.difficultyOfLearning = PropertyManager.getValue(PropertyNamespace.DIFFICULTY_ON_LEARNING);
         this.periodOfLearning = PropertyManager.getValue(PropertyNamespace.ANALYZER_FREQUENCY);
     }
@@ -42,23 +48,30 @@ public class PredictionService implements Service {
      * @return storyPoints
      */
     public double predict() {
-        HistoriesJAXB histories = JaxbUnmarshaller.unmarshall(FileNamespace.HISTORY, HistoriesJAXB.class);
-        TransPlatformService.getInstance().setHistory(histories);
+
+        HistoriesJAXB histories = TransPlatformService.getInstance().getHistory();
+        if (histories == null) {
+            histories = JaxbUnmarshaller.unmarshall(FileNamespace.HISTORY, HistoriesJAXB.class);
+            TransPlatformService.getInstance().setHistory(histories);
+        }
+        long analyzerUOM = PropertyManager.getValue(PropertyNamespace.ANALYZER_FREQUENCY_UOM);
         double estimate = 0.0;
         if (histories != null) {
-            for (int i = 0; i < Math.min(lastUsedPeriods, histories.getHistories().size()); i++) {
+            for (int i = 0; i < Math.min(lastUsedPeriods - 1, histories.getHistories().size() - 1); i++) {
                 HistoryJAXB history = histories.getHistories().get(i);
-                double daysInPeriod = (double) (history.getPeriodEnd() - history.getPeriodStart()) / SystemConstants.MILLIS_IN_DAY;
-                double totalLearnedHours = daysInPeriod * difficultyOfLearning;
-                double storyPointsPerHour = (history.getEndStoryPoints() - history.getStartStoryPoints()) / totalLearnedHours;
-                estimate += storyPointsPerHour;
+                double unitsInPeriod = (double) (history.getPeriodEnd() - history.getPeriodStart()) / analyzerUOM;
+                double totalLearnedUnits = unitsInPeriod * difficultyOfLearning;
+                double storyPointsPerUnit = (history.getEndStoryPoints() - history.getStartStoryPoints()) / totalLearnedUnits;
+                estimate += storyPointsPerUnit;
             }
-
-            estimate /= Math.min(lastUsedPeriods, histories.getHistories().size());
+            if (Math.min(lastUsedPeriods - 1, histories.getHistories().size() - 1) != 0) {
+                estimate /= Math.min(lastUsedPeriods - 1, histories.getHistories().size() - 1);
+            }
         } else {
             estimate = 1.0;
         }
         estimate *= periodOfLearning * difficultyOfLearning;
+        prediction.set(estimate);
         return estimate;
     }
 
@@ -81,7 +94,7 @@ public class PredictionService implements Service {
     }
 
     public void updateHistory() {
-        HistoriesJAXB histories = JaxbUnmarshaller.unmarshall(FileNamespace.HISTORY, HistoriesJAXB.class);
+        HistoriesJAXB histories = TransPlatformService.getInstance().getHistory();
         if (histories != null) {
             LinkedList<HistoryJAXB> historyList = new LinkedList<>(histories.getHistories());
             if (!historyList.isEmpty()) {
@@ -91,5 +104,13 @@ public class PredictionService implements Service {
                 JaxbMarshaller.marshall(histories, HistoriesJAXB.class, FileNamespace.HISTORY);
             }
         }
+    }
+
+    public DoubleProperty getPrediction() {
+        if (prediction == null) {
+            prediction = new SimpleDoubleProperty();
+            predict();
+        }
+        return prediction;
     }
 }

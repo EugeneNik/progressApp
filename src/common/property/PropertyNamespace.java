@@ -10,4 +10,7 @@ public interface PropertyNamespace {
     String ANALYZER_FREQUENCY = "analyzerFrequency";
     String SAVE_LAST_PERIODS_COUNT = "numberOfLastPeriods";
     String DIFFICULTY_ON_LEARNING = "timeToSpendOnLearning";
+    String EXPERT_LEVEL = "expertLevel";
+    String ANALYZER_FREQUENCY_UOM = "analyzerFrequencyUom";
+    String DIGITS_AFTER_POINTS = "digitsAfterPoints";
 }

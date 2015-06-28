@@ -1,5 +1,6 @@
 package data;
 
+import controller.TaskManager;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

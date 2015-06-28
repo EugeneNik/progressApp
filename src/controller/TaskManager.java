@@ -1,4 +1,7 @@
-package data;
+package controller;
+
+import data.SuggestedTaskData;
+import data.Task;
 
 /**
  * Created by nikiforov on 28.05.2015.
@@ -32,6 +35,19 @@ public class TaskManager {
             parent.getSubtasks().get(i).setTimeEstimated(1L);
             parent.getSubtasks().get(i).getManager().mergeTask(taskWithId);
         }
+    }
+
+    public Task find(long id) {
+        if (parent.getId() == id) {
+            return parent;
+        }
+        for (Task task : parent.getSubtasks()) {
+            Task returned = task.getManager().find(id);
+            if (returned != null) {
+                return returned;
+            }
+        }
+        return null;
     }
 
     public void reset() {
@@ -80,8 +96,8 @@ public class TaskManager {
     public double getCompletedStoryPoints() {
         double completedStoryPoints = 0.0;
         for (Task task : parent.getSubtasks()) {
-            if (task.isLeaf() && task.getCompleted()) {
-                completedStoryPoints += task.getStoryPoints();
+            if (task.isLeaf()) {
+                completedStoryPoints += task.getStoryPoints() * task.getProgress();
             }
             completedStoryPoints += task.getManager().getCompletedStoryPoints();
         }

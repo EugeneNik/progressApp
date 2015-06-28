@@ -1,19 +1,21 @@
 package common.service;
 
-import common.SystemConstants;
+import common.FileNamespace;
+import common.custom.property.ExpertLevel;
 import common.property.PropertyManager;
 import common.property.PropertyNamespace;
 import data.Task;
+import jaxb.SuggestedTaskJAXB;
+import jaxb.SuggestionsJAXB;
+import jaxb.utils.JaxbMarshaller;
+import jaxb.utils.JaxbUnmarshaller;
 
 import java.util.*;
 
 /**
  * Created by Евгений on 18.05.2015.
  */
-public class SuggestionService implements Service {
-
-    private Timer timerToNextStart = null;
-    ServiceListener listener;
+public class SuggestionService extends AbstractService {
 
     public SuggestionService() {
         if (!ServiceCache.isInited(getClass())) {
@@ -25,49 +27,83 @@ public class SuggestionService implements Service {
     }
 
     private void customInitialization() {
-
-        //read max story points (will be calculated according last x periods)
-
-        long lastStart = PropertyManager.getValue(PropertyNamespace.LAST_ANALYZATION_MADE);
-        int frequency = PropertyManager.getValue(PropertyNamespace.ANALYZER_FREQUENCY);
-
-        timerToNextStart = new Timer();
-        listener = new SuggestionListener();
-        timerToNextStart.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                suggest();
-            }
-        }, new Date(lastStart + frequency * SystemConstants.MILLIS_IN_DAY));
+        listeners = new ArrayList<>();
+        PredictionService predictionService = new PredictionService();
     }
 
     public List<Task> suggest() {
-        PredictionService predictionService = new PredictionService();
+        onStart();
+        PredictionService predictionService = Services.get(PredictionService.class);
         predictionService.updateHistory();
+        predictionService.savePredictions();
 
+        double maxStoryPoints = predictionService.predict();
+
+        List<Task> suggestions = suggest(maxStoryPoints, new ArrayList<>(), new ArrayList<>());
+
+        System.out.println("Predicted story points:" + maxStoryPoints);
+        PropertyManager.setValue(PropertyNamespace.LAST_ANALYZATION_MADE, Calendar.getInstance().getTimeInMillis());
+        System.out.println(suggestions.toString());
+        onFinish();
+        return suggestions;
+    }
+
+    public List<Task> suggest(double maxStoryPoints, List<Task> toIgnoreList, List<Task> toForbidden) {
+        List<Task> suggestions = new ArrayList<>();
         List<Task> nominees = calcNominees(TransPlatformService.getInstance().getRoot(), new ArrayList<>());
+        Collections.shuffle(nominees);
         HashMap<Task, Double> taskToStoryPoint = new HashMap<>();
         double currentList = 0;
-        List<Task> suggestions = new ArrayList<>();
         for (Task nominee : nominees) {
             taskToStoryPoint.put(nominee, nominee.getStoryPoints() - nominee.getStoryPoints() * nominee.getProgress());
             if (nominee.getProgress() > 0.0) {
+                if (toIgnoreList.contains(nominee) || toForbidden.contains(nominee)) {
+                    continue;
+                }
                 currentList += nominee.getStoryPoints() - nominee.getStoryPoints() * nominee.getProgress();
                 suggestions.add(nominee);
             }
         }
-        double maxStoryPoints = predictionService.predict();
+        ExpertLevel level = PropertyManager.getValue(PropertyNamespace.EXPERT_LEVEL);
         for (Task task : taskToStoryPoint.keySet()) {
-            if (currentList <= maxStoryPoints && task.getStoryPoints() + currentList <= maxStoryPoints + maxStoryPoints * 0.1) {
-                currentList += task.getStoryPoints();
+            if (toIgnoreList.contains(task) || toForbidden.contains(task)) {
+                continue;
+            }
+            if (currentList <= maxStoryPoints && taskToStoryPoint.get(task) + currentList <= maxStoryPoints + maxStoryPoints * level.getExpertIntensity()) {
+                currentList += taskToStoryPoint.get(task);
                 suggestions.add(task);
             }
         }
-        System.out.println("Predicted story points:" + maxStoryPoints);
-        PropertyManager.setValue(PropertyNamespace.LAST_ANALYZATION_MADE, Calendar.getInstance().getTimeInMillis());
-        predictionService.savePredictions();
-        System.out.println(suggestions.toString());
+        for (Task ignored : toIgnoreList) {
+            if (currentList <= maxStoryPoints && taskToStoryPoint.get(ignored) + currentList <= maxStoryPoints + maxStoryPoints * level.getExpertIntensity()) {
+                currentList += taskToStoryPoint.get(ignored);
+                suggestions.add(ignored);
+            }
+        }
+        if (toIgnoreList.size() != 0 || toForbidden.size() != 0) {
+            System.out.println("Replaned story points:" + maxStoryPoints);
+            System.out.println(suggestions.toString());
+        }
+        saveSuggestions(suggestions);
         return suggestions;
+    }
+
+    public SuggestionsJAXB loadSuggestions() {
+        SuggestionsJAXB suggestions = JaxbUnmarshaller.unmarshall(FileNamespace.SUGGESTIONS, SuggestionsJAXB.class);
+        if (suggestions == null) {
+            suggestions = new SuggestionsJAXB();
+        }
+        return suggestions;
+    }
+
+    private void saveSuggestions(List<Task> suggestions) {
+        SuggestionsJAXB suggestionsJAXB = new SuggestionsJAXB();
+        for (Task task : suggestions) {
+            SuggestedTaskJAXB suggestedTaskJAXB = new SuggestedTaskJAXB();
+            suggestedTaskJAXB.setId(task.getId());
+            suggestionsJAXB.getSuggestions().add(suggestedTaskJAXB);
+        }
+        JaxbMarshaller.marshall(suggestionsJAXB, SuggestionsJAXB.class, FileNamespace.SUGGESTIONS);
     }
 
     private List<Task> calcNominees(Task task, List<Task> list) {

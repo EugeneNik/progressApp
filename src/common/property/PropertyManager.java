@@ -5,6 +5,8 @@ package common.property;
  */
 
 import common.FileNamespace;
+import common.custom.property.ExpertLevel;
+import javafx.beans.property.IntegerProperty;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,7 +14,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.HashMap;
+import java.util.Observable;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Eugene_nik
@@ -28,7 +32,6 @@ public class PropertyManager {
      * timer on sync update
      */
     private static BaseProperty<Integer> TIMER_UPDATE_FREQUENCY;
-
 
 
     //suggestion properties
@@ -55,6 +58,23 @@ public class PropertyManager {
      */
     private static BaseProperty<Integer> DIFFICULTY_ON_LEARNING;
 
+    /**
+     * parameter for user, how much overwork he can do
+     *
+     * @see ExpertLevel
+     */
+    private static BaseProperty<ExpertLevel> EXPERT_LEVEL;
+
+    /**
+     * unit of time when update
+     */
+    private static BaseProperty<Long> ANALYZER_FREQUENCY_UOM;
+
+
+    /**
+     * parameter for user, set number of digits that will be printed after point
+     */
+    private static BaseProperty<Integer> DIGITS_AFTER_POINTS;
 
 
     /**
@@ -73,6 +93,9 @@ public class PropertyManager {
                 ANALYZER_FREQUENCY = new BaseProperty<>(PropertyNamespace.ANALYZER_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.ANALYZER_FREQUENCY, "7")), 7);
                 SAVE_LAST_PERIODS_COUNT = new BaseProperty<>(PropertyNamespace.SAVE_LAST_PERIODS_COUNT, Integer.parseInt(prop.getProperty(PropertyNamespace.SAVE_LAST_PERIODS_COUNT, "3")), 3);
                 DIFFICULTY_ON_LEARNING = new BaseProperty<>(PropertyNamespace.DIFFICULTY_ON_LEARNING, Integer.parseInt(prop.getProperty(PropertyNamespace.DIFFICULTY_ON_LEARNING, "2")), 2);
+                EXPERT_LEVEL = new BaseProperty<>(PropertyNamespace.EXPERT_LEVEL, ExpertLevel.getByName(prop.getProperty(PropertyNamespace.EXPERT_LEVEL, "Base")), ExpertLevel.BASE);
+                ANALYZER_FREQUENCY_UOM = new BaseProperty<>(PropertyNamespace.ANALYZER_FREQUENCY_UOM, Long.parseLong(prop.getProperty(PropertyNamespace.ANALYZER_FREQUENCY_UOM, Long.toString(TimeUnit.DAYS.toMillis(1)))), TimeUnit.DAYS.toMillis(1));
+                DIGITS_AFTER_POINTS = new BaseProperty<>(PropertyNamespace.DIGITS_AFTER_POINTS, Integer.parseInt(prop.getProperty(PropertyNamespace.DIGITS_AFTER_POINTS, "2")), 2);
                 registerApplicationSettings();
             }
         } catch (IOException | NumberFormatException e) {
@@ -97,9 +120,9 @@ public class PropertyManager {
             if (field.getType() == BaseProperty.class) {
                 try {
                     String propertyName = PropertyNamespace.class.getField(field.getName()).get(PropertyNamespace.class.getField(field.getName())).toString();
-                    settingsList.put(propertyName, (BaseProperty)field.get(null));
+                    settingsList.put(propertyName, (BaseProperty) field.get(null));
                 } catch (NoSuchFieldException exception) {
-                    System.err.println("Add " + field.getName()+" to PropertyNamespace");
+                    System.err.println("Add " + field.getName() + " to PropertyNamespace");
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }

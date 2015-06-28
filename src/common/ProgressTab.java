@@ -27,6 +27,7 @@ import jaxb.utils.JaxbUnmarshaller;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import ui.StatusBar;
+import utils.FormatUtils;
 import utils.ImageUtils;
 
 import java.io.IOException;
@@ -85,7 +86,7 @@ public class ProgressTab extends Tab {
         tree.setRoot(rootItem);
         tree.setShowRoot(false);
 
-        primaryStage.titleProperty().bind(root.taskProperty().concat(Bindings.format(" (%.2f%%)", root.progressProperty().multiply(100.0))));
+        primaryStage.titleProperty().bind(root.taskProperty().concat(Bindings.format(" ("+ FormatUtils.getProperDoubleFormat(true)+")", root.progressProperty().multiply(100.0))));
 
         addTreeItemsRecursive(root, rootItem);
 
@@ -185,7 +186,7 @@ public class ProgressTab extends Tab {
                                 }
                             });
                             progressBar.setProgress(t);
-                            DecimalFormat format = new DecimalFormat("#0.00");
+                            DecimalFormat format = new DecimalFormat(FormatUtils.getProperDoubleFormatForProgressBars());
                             Label label = new Label(format.format(t * 100) + "%");
                             label.getStyleClass().addAll("progress-text");
                             box.getChildren().addAll(progressBar, label);

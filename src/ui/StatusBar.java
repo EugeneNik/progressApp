@@ -9,8 +9,10 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import utils.FormatUtils;
 
 import java.text.DecimalFormat;
+import java.util.Locale;
 
 /**
  * Created by Acer on 23.02.2015.
@@ -45,7 +47,7 @@ public class StatusBar extends BorderPane {
                     progressBar.getStyleClass().remove("green-bar");
                 }
                 progressBar.setVisible(newValue != null && newValue.longValue() >= 0);
-                DecimalFormat format = new DecimalFormat("#0.00");
+                DecimalFormat format = new DecimalFormat(FormatUtils.getProperDoubleFormatForProgressBars());
                 System.out.println(progressBar.getProgress() * 100.0);
                 if (!Double.isNaN(progressBar.progressProperty().doubleValue())) {
                     progressText.setText(format.format(progressBar.getProgress() * 100.0) + "%");
