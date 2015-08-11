@@ -1,5 +1,7 @@
 package jaxb.utils;
 
+import utils.FileUtils;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -14,6 +16,7 @@ public class JaxbMarshaller {
 
     public static <T> Object marshall(T object, Class<T> clazz, String fileName) {
         try {
+            FileUtils.createDirectoryChain(fileName);
             JAXBContext jc = JAXBContext.newInstance(clazz);
             Marshaller marshaller = jc.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

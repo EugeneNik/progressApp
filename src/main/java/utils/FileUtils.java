@@ -23,4 +23,14 @@ public class FileUtils {
         }
         return true;
     }
+
+    public static void createDirectoryChain(String fileName) {
+        String [] fileNameDirectories = fileName.split("/");
+        StringBuilder pathBuilder = new StringBuilder("");
+        for (String file : fileNameDirectories) {
+            pathBuilder.append(file);
+            createIfNotExist(pathBuilder.toString(), !pathBuilder.toString().contains("."));
+            pathBuilder.append("/");
+        }
+    }
 }
