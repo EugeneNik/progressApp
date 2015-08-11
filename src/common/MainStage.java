@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 import jaxb.TaskJAXB;
 import jaxb.utils.JaxbConverter;
 import jaxb.utils.JaxbMarshaller;
+import utils.FileUtils;
+
+import java.io.File;
 
 /**
  * Created by DARIA on 12.04.2015.
@@ -43,6 +46,7 @@ public class MainStage extends Application {
         scene.getStylesheets().add(cssPath);
 
         primaryStage.setOnCloseRequest(event -> {
+            FileUtils.createIfNotExist(FileNamespace.BACKUP_DIRECTORY, true);
             JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.BACKUP);
             TransPlatformService.getInstance().getRoot().getManager().anullate();
             JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.STRUCTURE);

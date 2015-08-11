@@ -7,6 +7,7 @@ public interface FileNamespace {
 
     String RESOURCES = "files/";
 
+    String BACKUP_DIRECTORY = "backup";
     String HISTORY = "backup/history.rsp";
     String BACKUP = "backup/backup.rsp"; //rsp - root structure pattern
     String STRUCTURE = "backup/structure.rsp";
