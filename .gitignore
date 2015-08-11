@@ -14,3 +14,4 @@ hs_err_pid*
 *.iml
 resources/settings.properties
 backup/backup.csv
+out
