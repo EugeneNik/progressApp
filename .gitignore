@@ -13,5 +13,5 @@ hs_err_pid*
 *.xml
 *.iml
 resources/settings.properties
-backup/backup.csv
+backup
 out
