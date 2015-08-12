@@ -50,6 +50,8 @@ public class MainStage extends Application {
 
         //System.out.println(Services.get(PredictionService.class).predict());
 
+
+
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
 

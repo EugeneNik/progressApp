@@ -1,7 +1,10 @@
 package controller;
 
+import common.achievements.TaskAchievement;
 import data.SuggestedTaskData;
 import data.Task;
+
+import java.util.List;
 
 /**
  * Created by nikiforov on 28.05.2015.
@@ -102,5 +105,24 @@ public class TaskManager {
             completedStoryPoints += task.getManager().getCompletedStoryPoints();
         }
         return completedStoryPoints;
+    }
+
+    public List<Task> getLeafList(Task currentTask, List<Task> list) {
+        if (currentTask.isLeaf()) {
+            list.add(currentTask);
+            return list;
+        }
+        for (Task subTask : currentTask.getSubtasks()) {
+            list = getLeafList(subTask, list);
+        }
+        return list;
+    }
+
+    public void onCompleted() {
+        parent.getListeners().forEach(common.achievements.TaskAchievement::retest);
+    }
+
+    public void onReset() {
+        parent.getListeners().forEach(common.achievements.TaskAchievement::retest);
     }
 }

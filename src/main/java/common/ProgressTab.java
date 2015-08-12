@@ -1,12 +1,9 @@
 package common;
 
-import asana.AsanaHelper;
-import common.service.AsanaService;
-import common.service.Services;
+import common.achievements.*;
 import common.service.TransPlatformService;
 import controller.ProgressTabController;
 import data.Task;
-import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.geometry.*;
 import javafx.scene.control.*;
@@ -25,8 +22,6 @@ import javafx.util.Callback;
 import jaxb.TaskJAXB;
 import jaxb.utils.JaxbConverter;
 import jaxb.utils.JaxbUnmarshaller;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import ui.StatusBar;
 import utils.FormatUtils;
 import utils.ImageUtils;
@@ -86,6 +81,8 @@ public class ProgressTab extends Tab {
 
         final TreeItem<Task> rootItem = new TreeItem<>(root);
 
+        registerAchivements(root);
+
         TransPlatformService.getInstance().setRoot(root);
 
         tree.setRoot(rootItem);
@@ -112,6 +109,7 @@ public class ProgressTab extends Tab {
                             completeItem.setOnAction(event -> {
                                 if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf() && !tree.getSelectionModel().getSelectedItem().getValue().getCompleted()) {
                                     tree.getSelectionModel().getSelectedItem().getValue().setCompleted(1.0);
+                                    root.getManager().onCompleted();
                                 }
                             });
 
@@ -145,6 +143,7 @@ public class ProgressTab extends Tab {
                             resetItem.setOnAction(event -> {
                                 if (tree.getSelectionModel().getSelectedItem().getValue().isLeaf()) {
                                     tree.getSelectionModel().getSelectedItem().getValue().getManager().reset();
+                                    root.getManager().onReset();
                                 }
                             });
                             rowMenu.getItems().addAll(completeItem, partialCompleteItem, resetItem, changeStoryPoints);
@@ -277,6 +276,14 @@ public class ProgressTab extends Tab {
         this.setContent(parent);
         this.setText("Progress");
         this.setClosable(false);
+    }
+
+    private void registerAchivements(Task root) {
+        root.addListener(new CompletedTask1Achievement(root));
+        root.addListener(new CompletedTask10Achievement(root));
+        root.addListener(new CompletedTask20Achievement(root));
+        root.addListener(new CompletedTask50Achievement(root));
+        root.addListener(new CompletedTask100Achievement(root));
     }
 
     private boolean recursiveSearch(TreeItem<Task> task, String name) {

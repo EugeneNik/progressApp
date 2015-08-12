@@ -6,5 +6,7 @@ package common.achievements;
 public interface Achievement {
     boolean isCompleted();
 
+    AchievementStatus retest();
+
     AchievementStatus getStatus();
 }
