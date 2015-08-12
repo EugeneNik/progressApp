@@ -13,7 +13,7 @@ public interface FileNamespace {
     String STRUCTURE = "backup/structure.rsp";
     String SUGGESTIONS = "backup/suggestions.rsp";
 
-    String CSS = "/resources/skin.css";
+    String CSS = "/skin.css";
     String SETTINGS = "resources/settings.properties";
     String REFRESH = "resources/icons/refresh.png";
     String GLOBAL_SEARCH = "resources/icons/global.png";
