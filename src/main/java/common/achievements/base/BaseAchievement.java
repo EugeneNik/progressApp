@@ -20,7 +20,7 @@ public class BaseAchievement implements Achievement {
         return null;
     }
 
-    protected void printSuccessfullMessage() {
+    protected void printSuccessMessage() {
         System.out.println("Achievement " + getClass().getSimpleName() + " completed!");
     }
 
@@ -36,7 +36,7 @@ public class BaseAchievement implements Achievement {
     public boolean isCompleted() {
         boolean result = calcResult();
         if (!wasCompleted && result) {
-            printSuccessfullMessage();
+            printSuccessMessage();
         } else if (wasCompleted && !result) {
             printFailMessage();
         }

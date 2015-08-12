@@ -89,7 +89,7 @@ public class ProgressTab extends Tab {
         tree.setRoot(rootItem);
         tree.setShowRoot(false);
 
-        primaryStage.titleProperty().bind(root.taskProperty().concat(Bindings.format(" ("+ FormatUtils.getProperDoubleFormat(true)+")", root.progressProperty().multiply(100.0))));
+        primaryStage.titleProperty().bind(root.taskProperty().concat(Bindings.format(" (" + FormatUtils.getProperDoubleFormat(true) + ")", root.progressProperty().multiply(100.0))));
 
         controller.onRootCreated();
         controller.addTreeItemsRecursive(root, rootItem);
@@ -125,6 +125,7 @@ public class ProgressTab extends Tab {
                                         tree.getSelectionModel().getSelectedItem().getValue().getManager().updateStoryPoints(parameter);
                                         tree.getSelectionModel().getSelectedItem().getValue().setTimeEstimated(Calendar.getInstance().getTimeInMillis());
                                         updateItem(t, bln);
+                                        Services.get(AchievementService.class).retest(CompletedStoryPointsAchievement.class);
                                     }
                                 });
                             }

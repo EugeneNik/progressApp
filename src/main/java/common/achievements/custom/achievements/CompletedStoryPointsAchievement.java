@@ -11,23 +11,22 @@ import java.util.List;
 /**
  * Created by nikiforov on 12.08.2015.
  */
-public abstract class CompletedTaskAchievement extends TaskAchievement {
-
-    protected int countOfCompleted = 0;
-
-    public CompletedTaskAchievement(Task task) {
+public class CompletedStoryPointsAchievement extends TaskAchievement {
+    protected CompletedStoryPointsAchievement(Task task) {
         super(task);
     }
+
+    protected double countOfCompleted = 0.0;
 
     @Override
     public AchievementStatus retest() {
         //calcResult - incorrect practice on start should be restored from file
         wasCompleted = calcResult();
-        countOfCompleted = 0;
-        List<Task> list= task.getManager().getLeafList(task, new ArrayList<>());
+        countOfCompleted = 0.0;
+        List<Task> list = task.getManager().getLeafList(task, new ArrayList<>());
         for (Task currentTask : list) {
             if (currentTask.getCompleted()) {
-                countOfCompleted++;
+                countOfCompleted += currentTask.getStoryPoints();
             }
         }
         return new BooleanAchievementStatus(isCompleted());

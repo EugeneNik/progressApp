@@ -24,6 +24,8 @@ public class AchievementService extends AbstractService {
         achievementAnalyzers.add(new CompletedTask20Achievement(TransPlatformService.getInstance().getRoot()));
         achievementAnalyzers.add(new CompletedTask50Achievement(TransPlatformService.getInstance().getRoot()));
         achievementAnalyzers.add(new CompletedTask100Achievement(TransPlatformService.getInstance().getRoot()));
+        achievementAnalyzers.add(new CompletedStoryPoints500Achievement(TransPlatformService.getInstance().getRoot()));
+        achievementAnalyzers.add(new CompletedStoryPoints1000Achievement(TransPlatformService.getInstance().getRoot()));
     }
 
     public void retest() {
