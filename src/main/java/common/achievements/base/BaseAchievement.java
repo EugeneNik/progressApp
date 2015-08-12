@@ -40,6 +40,7 @@ public class BaseAchievement implements Achievement {
         } else if (wasCompleted && !result) {
             printFailMessage();
         }
+        wasCompleted = result;
         return result;
     }
 }
