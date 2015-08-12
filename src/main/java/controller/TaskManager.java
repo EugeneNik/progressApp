@@ -116,12 +116,4 @@ public class TaskManager {
         }
         return list;
     }
-
-    public void onCompleted() {
-        parent.getListeners().forEach(TaskAchievement::retest);
-    }
-
-    public void onReset() {
-        parent.getListeners().forEach(TaskAchievement::retest);
-    }
 }

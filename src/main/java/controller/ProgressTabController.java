@@ -6,6 +6,7 @@ import common.property.PropertyNamespace;
 import common.service.base.ServiceListener;
 import common.service.base.Services;
 import common.service.base.TransPlatformService;
+import common.service.custom.AchievementService;
 import common.service.custom.AsanaService;
 import data.Task;
 import javafx.application.Platform;
@@ -84,5 +85,20 @@ public class ProgressTabController {
 
             addTreeItemsRecursive(subtask, subTaskItem);
         }
+    }
+
+    public void onRootCreated() {
+        AchievementService achievementService = new AchievementService();
+        achievementService.addServiceListener(new ServiceListener() {
+            @Override
+            public void onStart() {
+
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        });
     }
 }

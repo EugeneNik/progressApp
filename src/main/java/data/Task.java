@@ -15,7 +15,6 @@ import java.util.List;
 public class Task {
 
     private long id;
-    private List<TaskAchievement> listeners;
     private StringProperty task;
     private StringProperty description = new SimpleStringProperty();
     private ObservableList<Task> subtasks = FXCollections.observableArrayList();
@@ -28,7 +27,6 @@ public class Task {
 
     public Task(long id, String task, Long timeEstimated, Double storyPoints, Double progress, Boolean completed, Task parent) {
         this.id = id;
-        this.listeners = new ArrayList<>();
         this.task = new SimpleStringProperty(task);
         this.progress = new SimpleDoubleProperty(progress);
         this.completed = new SimpleBooleanProperty(completed);
@@ -141,18 +139,6 @@ public class Task {
         this.completed.set(progress == 1.0);
         manager.updateParent(progress == 0 ? -this.getProgress() : progress);
         this.setProgress(progress);
-    }
-
-    public List<TaskAchievement> getListeners() {
-        return listeners;
-    }
-
-    public void addListener(TaskAchievement listener) {
-        listeners.add(listener);
-    }
-
-    public void removeListener(TaskAchievement listener) {
-        listeners.remove(listener);
     }
 
     public boolean isLeaf() {
