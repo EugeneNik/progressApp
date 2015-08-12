@@ -1,7 +1,6 @@
 package controller;
 
-import common.achievements.TaskAchievement;
-import data.SuggestedTaskData;
+import common.achievements.base.TaskAchievement;
 import data.Task;
 
 import java.util.List;
@@ -119,10 +118,10 @@ public class TaskManager {
     }
 
     public void onCompleted() {
-        parent.getListeners().forEach(common.achievements.TaskAchievement::retest);
+        parent.getListeners().forEach(TaskAchievement::retest);
     }
 
     public void onReset() {
-        parent.getListeners().forEach(common.achievements.TaskAchievement::retest);
+        parent.getListeners().forEach(TaskAchievement::retest);
     }
 }

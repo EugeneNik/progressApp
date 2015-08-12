@@ -1,4 +1,4 @@
-package common.service;
+package common.service.base;
 
 import java.util.HashSet;
 

@@ -1,8 +1,7 @@
-package common.service;
+package common.service.base;
 
 import data.Task;
 import jaxb.HistoriesJAXB;
-import jaxb.HistoryJAXB;
 
 import java.util.HashMap;
 import java.util.Map;

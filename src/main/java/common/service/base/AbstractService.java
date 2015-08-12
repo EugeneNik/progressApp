@@ -1,4 +1,4 @@
-package common.service;
+package common.service.base;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -14,6 +14,17 @@ public abstract class AbstractService implements Service {
     protected List<ServiceListener> listeners;
     protected DoubleProperty progress = new SimpleDoubleProperty();
     protected StringProperty status = new SimpleStringProperty();
+
+    public AbstractService() {
+        if (!ServiceCache.isInited(getClass())) {
+            ServiceCache.init(getClass(), this);
+            customInitialization();
+        } else {
+            throw new UnsupportedOperationException(getClass().getSimpleName() + " is initialized use Services.get");
+        }
+    }
+
+    protected abstract void customInitialization();
 
     @Override
     public void addServiceListener(ServiceListener listener) {

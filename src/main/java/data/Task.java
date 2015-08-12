@@ -1,6 +1,6 @@
 package data;
 
-import common.achievements.TaskAchievement;
+import common.achievements.base.TaskAchievement;
 import controller.TaskManager;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;

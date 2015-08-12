@@ -1,7 +1,7 @@
 package common;
 
-import common.achievements.*;
-import common.service.TransPlatformService;
+import common.achievements.custom.achievements.*;
+import common.service.base.TransPlatformService;
 import controller.ProgressTabController;
 import data.Task;
 import javafx.beans.binding.Bindings;

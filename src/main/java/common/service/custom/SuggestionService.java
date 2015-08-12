@@ -1,9 +1,12 @@
-package common.service;
+package common.service.custom;
 
 import common.FileNamespace;
 import common.custom.property.ExpertLevel;
 import common.property.PropertyManager;
 import common.property.PropertyNamespace;
+import common.service.base.AbstractService;
+import common.service.base.Services;
+import common.service.base.TransPlatformService;
 import data.Task;
 import jaxb.SuggestedTaskJAXB;
 import jaxb.SuggestionsJAXB;
@@ -16,17 +19,7 @@ import java.util.*;
  * Created by Евгений on 18.05.2015.
  */
 public class SuggestionService extends AbstractService {
-
-    public SuggestionService() {
-        if (!ServiceCache.isInited(getClass())) {
-            ServiceCache.init(getClass(), this);
-            customInitialization();
-        } else {
-            throw new UnsupportedOperationException("Suggestion Service is initialized use Services.get");
-        }
-    }
-
-    private void customInitialization() {
+    protected void customInitialization() {
         listeners = new ArrayList<>();
         PredictionService predictionService = new PredictionService();
     }

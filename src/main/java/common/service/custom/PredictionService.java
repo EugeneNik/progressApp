@@ -1,9 +1,10 @@
-package common.service;
+package common.service.custom;
 
 import common.FileNamespace;
-import common.SystemConstants;
 import common.property.PropertyManager;
 import common.property.PropertyNamespace;
+import common.service.base.AbstractService;
+import common.service.base.TransPlatformService;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import jaxb.HistoriesJAXB;
@@ -14,7 +15,6 @@ import jaxb.utils.JaxbUnmarshaller;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by Евгений on 25.05.2015.
@@ -26,16 +26,8 @@ public class PredictionService extends AbstractService {
     private int periodOfLearning;
     private DoubleProperty prediction;
 
-    public PredictionService() {
-        if (!ServiceCache.isInited(getClass())) {
-            ServiceCache.init(getClass(), this);
-            customInitialization();
-        } else {
-            throw new UnsupportedOperationException("Prediction Service is initialized use Services.get");
-        }
-    }
-
-    private void customInitialization() {
+    @Override
+    protected void customInitialization() {
         listeners = new ArrayList<>();
         this.lastUsedPeriods = PropertyManager.getValue(PropertyNamespace.SAVE_LAST_PERIODS_COUNT);
         // if last used periods = 3 it means that we should use 3 last periods and skip fourth (current one)

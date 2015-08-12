@@ -1,4 +1,4 @@
-package common.achievements;
+package common.achievements.custom.achievements;
 
 import data.Task;
 

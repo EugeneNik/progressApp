@@ -1,11 +1,11 @@
-package common.achievements;
+package common.achievements.base;
 
 import data.Task;
 
 /**
  * Created by nikiforov on 12.08.2015.
  */
-public class TaskAchievement extends BaseAchievement {
+public abstract class TaskAchievement extends BaseAchievement {
     protected Task task;
 
     protected TaskAchievement(Task task) {

@@ -1,5 +1,8 @@
-package common.achievements;
+package common.achievements.custom.achievements;
 
+import common.achievements.AchievementStatus;
+import common.achievements.base.TaskAchievement;
+import common.achievements.custom.BooleanAchievementStatus;
 import data.Task;
 
 import java.util.ArrayList;

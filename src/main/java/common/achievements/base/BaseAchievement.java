@@ -1,4 +1,7 @@
-package common.achievements;
+package common.achievements.base;
+
+import common.achievements.Achievement;
+import common.achievements.AchievementStatus;
 
 /**
  * Created by nikiforov on 12.08.2015.

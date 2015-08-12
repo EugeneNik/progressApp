@@ -1,7 +1,7 @@
 package common;
 
 import common.property.PropertyManager;
-import common.service.TransPlatformService;
+import common.service.base.TransPlatformService;
 import controller.MainStageController;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -49,8 +49,6 @@ public class MainStage extends Application {
         });
 
         //System.out.println(Services.get(PredictionService.class).predict());
-
-
 
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);

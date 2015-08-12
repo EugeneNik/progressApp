@@ -1,4 +1,4 @@
-package common.service;
+package common.service.base;
 
 /**
  * Created by nikiforov on 25.05.2015.

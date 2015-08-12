@@ -1,6 +1,8 @@
-package common.service;
+package common.service.custom;
 
 import asana.AsanaHelper;
+import common.service.base.AbstractService;
+import common.service.base.TransPlatformService;
 import data.Task;
 import javafx.application.Platform;
 import org.json.JSONArray;
@@ -13,16 +15,7 @@ import java.util.ArrayList;
  */
 public class AsanaService extends AbstractService {
 
-    public AsanaService() {
-        if (!ServiceCache.isInited(getClass())) {
-            ServiceCache.init(getClass(), this);
-            customInitialization();
-        } else {
-            throw new UnsupportedOperationException("Asana Service is initialized use Services.get");
-        }
-    }
-
-    private void customInitialization() {
+    protected void customInitialization() {
         listeners = new ArrayList<>();
     }
 
