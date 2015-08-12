@@ -1,5 +1,6 @@
 package common.achievements.base;
 
+import common.FileNamespace;
 import common.achievements.Achievement;
 import common.achievements.AchievementStatus;
 
@@ -9,6 +10,8 @@ import common.achievements.AchievementStatus;
 public class BaseAchievement implements Achievement {
 
     protected boolean wasCompleted = false;
+    private String tooltip = "This achievement is currently unavailable";
+    private String imagePath = FileNamespace.DEFAULT_ACHIEVEMENT_IMAGE;
 
     @Override
     public AchievementStatus retest() {
@@ -42,5 +45,25 @@ public class BaseAchievement implements Achievement {
         }
         wasCompleted = result;
         return result;
+    }
+
+    @Override
+    public String getTooltip() {
+        return tooltip;
+    }
+
+    @Override
+    public void setTooltip(String tooltip) {
+        this.tooltip = tooltip;
+    }
+
+    @Override
+    public void setImagePath(String path) {
+        this.imagePath = path;
+    }
+
+    @Override
+    public String getImagePath() {
+        return imagePath;
     }
 }

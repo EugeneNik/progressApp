@@ -86,19 +86,4 @@ public class ProgressTabController {
             addTreeItemsRecursive(subtask, subTaskItem);
         }
     }
-
-    public void onRootCreated() {
-        AchievementService achievementService = new AchievementService();
-        achievementService.addServiceListener(new ServiceListener() {
-            @Override
-            public void onStart() {
-
-            }
-
-            @Override
-            public void onFinish() {
-
-            }
-        });
-    }
 }

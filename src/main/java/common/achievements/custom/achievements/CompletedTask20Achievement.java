@@ -1,5 +1,6 @@
 package common.achievements.custom.achievements;
 
+import common.FileNamespace;
 import data.Task;
 
 /**
@@ -9,6 +10,8 @@ public class CompletedTask20Achievement extends CompletedTaskAchievement {
 
     public CompletedTask20Achievement(Task task) {
         super(task);
+        this.setTooltip("Complete 20 tasks");
+        this.setImagePath(FileNamespace.COMPLETED_TASKS_20);
     }
 
     @Override

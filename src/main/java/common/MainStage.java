@@ -32,9 +32,11 @@ public class MainStage extends Application {
 
         SuggestionTab suggestionTab = new SuggestionTab();
 
+        AchievementTab achievementTab = new AchievementTab();
+
         TabPane parent = new TabPane();
 
-        parent.getTabs().addAll(progressTab, suggestionTab);
+        parent.getTabs().addAll(progressTab, suggestionTab, achievementTab);
 
         String cssPath = this.getClass().getResource(FileNamespace.CSS).toExternalForm();
         Scene scene = new Scene(parent, 800, 600);

@@ -1,5 +1,6 @@
 package common.achievements.custom.achievements;
 
+import common.FileNamespace;
 import data.Task;
 
 /**
@@ -8,6 +9,8 @@ import data.Task;
 public class CompletedStoryPoints1000Achievement extends CompletedStoryPointsAchievement{
     public CompletedStoryPoints1000Achievement(Task task) {
         super(task);
+        this.setTooltip("Complete 1000 Story Points");
+        this.setImagePath(FileNamespace.COMPLETED_STORY_POINTS_1000);
     }
 
     @Override

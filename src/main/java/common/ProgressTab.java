@@ -91,7 +91,6 @@ public class ProgressTab extends Tab {
 
         primaryStage.titleProperty().bind(root.taskProperty().concat(Bindings.format(" (" + FormatUtils.getProperDoubleFormat(true) + ")", root.progressProperty().multiply(100.0))));
 
-        controller.onRootCreated();
         controller.addTreeItemsRecursive(root, rootItem);
 
         descriptionColumn.setCellValueFactory(param -> param.getValue().getValue().taskProperty());

@@ -13,7 +13,7 @@ import java.util.List;
  */
 public abstract class CompletedTaskAchievement extends TaskAchievement {
 
-    protected int countOfCompleted = 0;
+    protected int countOfCompleted;
 
     public CompletedTaskAchievement(Task task) {
         super(task);
@@ -21,7 +21,6 @@ public abstract class CompletedTaskAchievement extends TaskAchievement {
 
     @Override
     public AchievementStatus retest() {
-        //calcResult - incorrect practice on start should be restored from file
         countOfCompleted = 0;
         List<Task> list= task.getManager().getLeafList(task, new ArrayList<>());
         for (Task currentTask : list) {
