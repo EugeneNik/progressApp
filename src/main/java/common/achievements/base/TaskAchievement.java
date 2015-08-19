@@ -10,6 +10,8 @@ public abstract class TaskAchievement extends BaseAchievement {
 
     protected TaskAchievement(Task task) {
         this.task = task;
+        this.isInitialRun = true;
         retest();
+        this.isInitialRun = false;
     }
 }

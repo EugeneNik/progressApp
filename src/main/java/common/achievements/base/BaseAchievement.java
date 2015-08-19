@@ -3,12 +3,18 @@ package common.achievements.base;
 import common.FileNamespace;
 import common.achievements.Achievement;
 import common.achievements.AchievementStatus;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
+import javafx.util.Duration;
+import org.controlsfx.control.Notifications;
+import utils.ImageUtils;
 
 /**
  * Created by nikiforov on 12.08.2015.
  */
 public class BaseAchievement implements Achievement {
 
+    protected boolean isInitialRun = false;
     protected boolean wasCompleted = false;
     private String tooltip = "This achievement is currently unavailable";
     private String imagePath = FileNamespace.DEFAULT_ACHIEVEMENT_IMAGE;
@@ -23,11 +29,26 @@ public class BaseAchievement implements Achievement {
         return null;
     }
 
-    protected void printSuccessMessage() {
+    private void notifySuccess() {
+        printSuccessMessage();
+        if (!isInitialRun) {
+            Notifications.create().hideAfter(Duration.seconds(4.0)).title("Achievement!").graphic(new ImageView(ImageUtils.loadJavaFXImage(imagePath))).text("Achievement \"" + tooltip + "\" completed!").show();
+        }
+    }
+
+    private void notifyFail() {
+        printFailMessage();
+        if (!isInitialRun) {
+            WritableImage writableImage = ImageUtils.copyImage(ImageUtils.loadJavaFXImage(imagePath), ImageUtils.ImageRenderType.GRAYSCALE);
+            Notifications.create().hideAfter(Duration.seconds(4.0)).title("Achievement!").graphic(new ImageView(writableImage)).text("Achievement \"" + tooltip + "\" missed!").show();
+        }
+    }
+
+    private void printSuccessMessage() {
         System.out.println("Achievement " + getClass().getSimpleName() + " completed!");
     }
 
-    protected void printFailMessage() {
+    private void printFailMessage() {
         System.out.println("Achievement " + getClass().getSimpleName() + " missed!");
     }
 
@@ -39,9 +60,9 @@ public class BaseAchievement implements Achievement {
     public boolean isCompleted() {
         boolean result = calcResult();
         if (!wasCompleted && result) {
-            printSuccessMessage();
+            notifySuccess();
         } else if (wasCompleted && !result) {
-            printFailMessage();
+            notifyFail();
         }
         wasCompleted = result;
         return result;
