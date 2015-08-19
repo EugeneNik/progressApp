@@ -6,7 +6,6 @@ package common.property;
 
 import common.FileNamespace;
 import common.custom.property.ExpertLevel;
-import javafx.beans.property.IntegerProperty;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -14,7 +13,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.HashMap;
-import java.util.Observable;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -25,11 +23,13 @@ public class PropertyManager {
 
     /**
      * Key to Asana access
+     * Internal property
      */
     private static BaseProperty<String> APP_KEY;
 
     /**
      * timer on sync update
+     * Internal property
      */
     private static BaseProperty<Integer> TIMER_UPDATE_FREQUENCY;
 
@@ -38,16 +38,19 @@ public class PropertyManager {
 
     /**
      * time in millis when suggestion analyzer started last
+     * Internal property
      */
     private static BaseProperty<Long> LAST_ANALYZATION_MADE;
 
     /**
      * frequency in days when analyzer should be launched
+     * External property
      */
     private static BaseProperty<Integer> ANALYZER_FREQUENCY;
 
     /**
      * number of last periods that should be saved for analyzer
+     * External property
      */
     private static BaseProperty<Integer> SAVE_LAST_PERIODS_COUNT;
 
@@ -55,11 +58,13 @@ public class PropertyManager {
      * hours that should be spent in learning
      * e.g. period = 7 days, this param = 2 hours, so 14 hours of learning.
      * use it to calc speed it should influence to dynamic story points border
+     * External property
      */
     private static BaseProperty<Integer> DIFFICULTY_ON_LEARNING;
 
     /**
      * parameter for user, how much overwork he can do
+     * External property
      *
      * @see ExpertLevel
      */
@@ -67,19 +72,34 @@ public class PropertyManager {
 
     /**
      * unit of time when update
+     * External property
      */
     private static BaseProperty<Long> ANALYZER_FREQUENCY_UOM;
 
 
     /**
      * parameter for user, set number of digits that will be printed after point
+     * External property
      */
     private static BaseProperty<Integer> DIGITS_AFTER_POINTS;
 
     /**
      * property to make auto syncs
+     * External property
      */
     private static BaseProperty<String> AUTO_SYNC_PROPERTY;
+
+    /**
+     * property to make achievement analyze
+     * Internal property
+     */
+    private static BaseProperty<Integer> SYSTEM_ACHIEVEMENT_ANALYZE_FREQUENCY;
+
+    /**
+     * property to set lag between user service init and start of timer running
+     * Internal property
+     */
+    private static BaseProperty<Integer> SCHEDULER_LAG_TIMEOUT;
 
     /**
      * map to collect setting name and setting
@@ -101,6 +121,8 @@ public class PropertyManager {
                 ANALYZER_FREQUENCY_UOM = new BaseProperty<>(PropertyNamespace.ANALYZER_FREQUENCY_UOM, Long.parseLong(prop.getProperty(PropertyNamespace.ANALYZER_FREQUENCY_UOM, Long.toString(TimeUnit.DAYS.toMillis(1)))), TimeUnit.DAYS.toMillis(1));
                 DIGITS_AFTER_POINTS = new BaseProperty<>(PropertyNamespace.DIGITS_AFTER_POINTS, Integer.parseInt(prop.getProperty(PropertyNamespace.DIGITS_AFTER_POINTS, "2")), 2);
                 AUTO_SYNC_PROPERTY = new BaseProperty<>(PropertyNamespace.AUTO_SYNC_PROPERTY, prop.getProperty(PropertyNamespace.AUTO_SYNC_PROPERTY, "03:00:00"), "03:00:00");
+                SYSTEM_ACHIEVEMENT_ANALYZE_FREQUENCY = new BaseProperty<>(PropertyNamespace.SYSTEM_ACHIEVEMENT_ANALYZE_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.SYSTEM_ACHIEVEMENT_ANALYZE_FREQUENCY, "10000")), 10000);
+                SCHEDULER_LAG_TIMEOUT = new BaseProperty<>(PropertyNamespace.SCHEDULER_LAG_TIMEOUT, Integer.parseInt(prop.getProperty(PropertyNamespace.SCHEDULER_LAG_TIMEOUT, "5000")), 5000);
                 registerApplicationSettings();
             }
         } catch (IOException | NumberFormatException e) {

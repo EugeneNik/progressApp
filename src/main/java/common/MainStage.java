@@ -1,8 +1,11 @@
 package common;
 
 import common.property.PropertyManager;
+import common.service.base.Services;
 import common.service.base.TransPlatformService;
+import common.service.custom.UserService;
 import controller.MainStageController;
+import data.UserProfile;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TabPane;
@@ -46,6 +49,7 @@ public class MainStage extends Application {
             JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.BACKUP);
             TransPlatformService.getInstance().getRoot().getManager().anullate();
             JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.STRUCTURE);
+            JaxbMarshaller.marshall(Services.get(UserService.class).getProfile(), UserProfile.class, FileNamespace.USER_PROFILE);
             PropertyManager.save();
             System.exit(0);
         });

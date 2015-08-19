@@ -28,6 +28,7 @@ public class AchievementService extends AbstractService {
         achievementAnalyzers.add(new CompletedTaskAllAchievement(TransPlatformService.getInstance().getRoot()));
         achievementAnalyzers.add(new CompletedStoryPoints500Achievement(TransPlatformService.getInstance().getRoot()));
         achievementAnalyzers.add(new CompletedStoryPoints1000Achievement(TransPlatformService.getInstance().getRoot()));
+        achievementAnalyzers.add(new MinutesOnline10Achievement());
     }
 
     public List<Achievement> getRegisteredAchievements() {

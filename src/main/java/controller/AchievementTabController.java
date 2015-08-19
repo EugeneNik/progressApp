@@ -5,6 +5,7 @@ import common.achievements.Achievement;
 import common.service.base.ServiceListener;
 import common.service.base.Services;
 import common.service.custom.AchievementService;
+import javafx.application.Platform;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
@@ -34,7 +35,7 @@ public class AchievementTabController {
             public void onStart() {
                 completedAchievements = new HashSet<>();
                 for (Achievement achievement : achievementService.getRegisteredAchievements()) {
-                    if (achievement.isCompleted()) {
+                    if (achievement.isWasCompleted()) {
                         completedAchievements.add(achievement);
                     }
                 }
@@ -60,8 +61,10 @@ public class AchievementTabController {
                     shouldBeReloaded = true;
                 }
                 if (shouldBeReloaded) {
-                    ui.getAchievementGrid().getChildren().clear();
-                    fillGrid(ui.getAchievementGrid());
+                    Platform.runLater(() -> {
+                        ui.getAchievementGrid().getChildren().clear();
+                        fillGrid(ui.getAchievementGrid());
+                    });
                 }
             }
         });

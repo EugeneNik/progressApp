@@ -13,6 +13,8 @@ public interface FileNamespace {
     String STRUCTURE = "backup/structure.rsp";
     String SUGGESTIONS = "backup/suggestions.rsp";
 
+    String USER_PROFILE = "backup/user_profile.xml";
+
     String CSS = "/skin.css";
     String SETTINGS = "resources/settings.properties";
     String REFRESH = "resources/icons/refresh.png";
@@ -28,6 +30,7 @@ public interface FileNamespace {
     String COMPLETED_TASKS_50 = "resources/icons/completedTasks50.png";
     String COMPLETED_TASKS_100 = "resources/icons/completedTasks100.png";
     String COMPLETED_TASKS_1000 = "resources/icons/completedTasks1000.png";
+    String MINUTES_ONLINE_10 = "resources/icons/minutesOnline10.png";
     String COMPLETED_STORY_POINTS_500 = "resources/icons/completedStoryPoints500.png";
     String COMPLETED_STORY_POINTS_1000 = "resources/icons/completedStoryPoints1000.png";
 }

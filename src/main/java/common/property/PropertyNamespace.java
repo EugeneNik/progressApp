@@ -14,4 +14,6 @@ public interface PropertyNamespace {
     String ANALYZER_FREQUENCY_UOM = "analyzerFrequencyUom";
     String DIGITS_AFTER_POINTS = "digitsAfterPoints";
     String AUTO_SYNC_PROPERTY = "autoSyncProperty";
+    String SYSTEM_ACHIEVEMENT_ANALYZE_FREQUENCY = "systemAchievementAnalyzeFrequency";
+    String SCHEDULER_LAG_TIMEOUT = "schedulerLagTimeout";
 }

@@ -3,5 +3,11 @@ package common.achievements.base;
 /**
  * Created by nikiforov on 12.08.2015.
  */
-public abstract class SystemAchievement {
+public abstract class SystemAchievement extends BaseAchievement {
+
+    public SystemAchievement() {
+        this.isInitialRun = true;
+        retest();
+        this.isInitialRun = false;
+    }
 }
