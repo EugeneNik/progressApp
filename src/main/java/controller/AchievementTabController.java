@@ -4,17 +4,18 @@ import common.AchievementTab;
 import common.achievements.Achievement;
 import common.service.base.ServiceListener;
 import common.service.base.Services;
-import common.service.base.TransPlatformService;
 import common.service.custom.AchievementService;
-import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import utils.ImageUtils;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Евгений on 12.08.2015.
@@ -27,14 +28,41 @@ public class AchievementTabController {
         this.ui = ui;
         AchievementService achievementService = new AchievementService();
         achievementService.addServiceListener(new ServiceListener() {
+            Set<Achievement> completedAchievements;
+
             @Override
             public void onStart() {
-
+                completedAchievements = new HashSet<>();
+                for (Achievement achievement : achievementService.getRegisteredAchievements()) {
+                    if (achievement.isCompleted()) {
+                        completedAchievements.add(achievement);
+                    }
+                }
             }
 
             @Override
             public void onFinish() {
-
+                Set<Achievement> finishedAchivements = new HashSet<>();
+                for (Achievement achievement : achievementService.getRegisteredAchievements()) {
+                    if (achievement.isCompleted()) {
+                        finishedAchivements.add(achievement);
+                    }
+                }
+                boolean shouldBeReloaded = false;
+                for (Achievement achievement : finishedAchivements) {
+                    if (completedAchievements.contains(achievement)) {
+                        completedAchievements.remove(achievement);
+                    } else {
+                        shouldBeReloaded = true;
+                    }
+                }
+                if (!completedAchievements.isEmpty()) {
+                    shouldBeReloaded = true;
+                }
+                if (shouldBeReloaded) {
+                    ui.getAchievementGrid().getChildren().clear();
+                    fillGrid(ui.getAchievementGrid());
+                }
             }
         });
     }
@@ -46,12 +74,11 @@ public class AchievementTabController {
         for (Achievement achievement : achievements) {
             BorderPane cell = new BorderPane();
             Image image = ImageUtils.loadJavaFXImage(achievement.getImagePath());
-            ImageView view = new ImageView(image);
-            view.setDisable(!achievement.isCompleted());
+            ImageView view = new ImageView();
+            WritableImage writableImage = ImageUtils.copyImage(image, achievement.isCompleted() ? ImageUtils.ImageRenderType.NORMAL : ImageUtils.ImageRenderType.GRAYSCALE);
+            view.setImage(writableImage);
             cell.setTop(view);
             cell.setBottom(new Text(achievement.getTooltip()));
-//            Tooltip tooltip = new Tooltip(achievement.getTooltip());
-//            Tooltip.install(view, tooltip);
             pane.add(cell, i, j);
             i++;
             if (i == 5) {

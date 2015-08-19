@@ -41,6 +41,7 @@ public class AchievementService extends AbstractService {
     }
 
     public <T> void retest(Class<T> clazz) {
+        onStart();
         List<Achievement> list = new ArrayList<>();
         for (Achievement achievement : achievementAnalyzers) {
             if (clazz.isInstance(achievement)) {
@@ -48,6 +49,7 @@ public class AchievementService extends AbstractService {
             }
         }
         retest(false, list);
+        onFinish();
     }
 
     public void retest(List<Achievement> group) {

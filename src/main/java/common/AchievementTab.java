@@ -11,6 +11,7 @@ import javafx.scene.layout.GridPane;
 public class AchievementTab extends Tab {
 
     AchievementTabController controller;
+    GridPane achievementGrid;
 
     public AchievementTab() {
         this.setText("Achievements");
@@ -18,7 +19,7 @@ public class AchievementTab extends Tab {
 
         controller = new AchievementTabController(this);
 
-        GridPane achievementGrid = new GridPane();
+        achievementGrid = new GridPane();
         achievementGrid.setVgap(3.0);
         achievementGrid.setHgap(8.0);
 
@@ -27,5 +28,9 @@ public class AchievementTab extends Tab {
         BorderPane mainLayout = new BorderPane();
         this.setContent(mainLayout);
         mainLayout.setBottom(achievementGrid);
+    }
+
+    public GridPane getAchievementGrid() {
+        return achievementGrid;
     }
 }
