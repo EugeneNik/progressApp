@@ -27,7 +27,7 @@ public class AchievementTabController {
 
     public AchievementTabController(AchievementTab ui) {
         this.ui = ui;
-        AchievementService achievementService = new AchievementService();
+        AchievementService achievementService = Services.get(AchievementService.class);
         achievementService.addServiceListener(new ServiceListener() {
             Set<Achievement> completedAchievements;
 

@@ -21,7 +21,6 @@ import java.util.*;
 public class SuggestionService extends AbstractService {
     protected void customInitialization() {
         listeners = new ArrayList<>();
-        PredictionService predictionService = new PredictionService();
     }
 
     public List<Task> suggest() {

@@ -6,14 +6,15 @@ import common.property.PropertyNamespace;
 import common.service.base.ServiceListener;
 import common.service.base.Services;
 import common.service.base.TransPlatformService;
-import common.service.custom.AchievementService;
 import common.service.custom.AsanaService;
 import data.Task;
 import javafx.application.Platform;
 import javafx.scene.control.TreeItem;
 import utils.DateUtils;
 
-import java.util.*;
+import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by Евгений on 28.06.2015.
@@ -25,7 +26,7 @@ public class ProgressTabController {
 
     public ProgressTabController(ProgressTab ui) {
         this.ui = ui;
-        AsanaService asanaService = new AsanaService();
+        AsanaService asanaService = Services.get(AsanaService.class);
         asanaService.addServiceListener(new ServiceListener() {
             @Override
             public void onStart() {

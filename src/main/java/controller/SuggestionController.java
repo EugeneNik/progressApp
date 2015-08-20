@@ -37,7 +37,7 @@ public class SuggestionController {
 
     public SuggestionController(SuggestionTab ui) {
         this.ui = ui;
-        SuggestionService suggestionService = new SuggestionService();
+        SuggestionService suggestionService = Services.get(SuggestionService.class);
         suggestionService.addServiceListener(new ServiceListener() {
             @Override
             public void onStart() {

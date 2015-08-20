@@ -1,6 +1,7 @@
 package controller;
 
 import common.MainStage;
+import common.service.base.Services;
 import common.service.custom.UserService;
 
 /**
@@ -12,7 +13,7 @@ public class MainStageController {
 
     public MainStageController(MainStage app) {
         this.ui = app;
-        UserService userService = new UserService();
+        UserService userService = Services.get(UserService.class);
         userService.authenticate("admin", "admin");
     }
 }

@@ -25,6 +25,13 @@ public class TransPlatformService {
     }
 
     public <T extends Service> T  getService(Class<T> service) {
+        try {
+            if (!serviceMap.containsKey(service)) {
+                service.newInstance();
+            }
+        } catch (InstantiationException | IllegalAccessException e) {
+            System.err.println(service.getSimpleName() + "can't be inited");
+        }
         return (T) serviceMap.get(service);
     }
 
