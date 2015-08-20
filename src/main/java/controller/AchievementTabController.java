@@ -1,6 +1,7 @@
 package controller;
 
 import common.AchievementTab;
+import common.FileNamespace;
 import common.achievements.Achievement;
 import common.service.base.ServiceListener;
 import common.service.base.Services;
@@ -76,7 +77,12 @@ public class AchievementTabController {
         int j = 0;
         for (Achievement achievement : achievements) {
             BorderPane cell = new BorderPane();
-            Image image = ImageUtils.loadJavaFXImage(achievement.getImagePath());
+            Image image;
+            if (achievement.isCompleted()) {
+                image = ImageUtils.loadJavaFXImage(achievement.getImagePath());
+            } else {
+                image = ImageUtils.loadJavaFXImage(FileNamespace.DEFAULT_ACHIEVEMENT_IMAGE);
+            }
             ImageView view = new ImageView();
             WritableImage writableImage = ImageUtils.copyImage(image, achievement.isCompleted() ? ImageUtils.ImageRenderType.NORMAL : ImageUtils.ImageRenderType.GRAYSCALE);
             view.setImage(writableImage);

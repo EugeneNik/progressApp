@@ -55,10 +55,22 @@ public class UserService extends AbstractService {
                 profile = new UserProfile(login, password, new UserStatisticData(Calendar.getInstance().getTimeInMillis(), Calendar.getInstance().getTimeInMillis(), 0));
             }
 
+            syncProfile();
             initTimer();
             return true;
         }
         return false;
+    }
+
+    public void syncProfile() {
+        Calendar historyCandidate = Calendar.getInstance();
+        historyCandidate.set(Calendar.HOUR_OF_DAY, 0);
+        historyCandidate.set(Calendar.MINUTE, 0);
+        historyCandidate.set(Calendar.SECOND, 0);
+        long time = historyCandidate.getTimeInMillis() / 1000;
+        if (!profile.getUserStatisticData().getDateHistory().contains(time)) {
+            profile.getUserStatisticData().getDateHistory().add(time);
+        }
     }
 
     public UserProfile getProfile() {

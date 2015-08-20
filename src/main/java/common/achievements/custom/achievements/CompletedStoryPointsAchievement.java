@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by nikiforov on 12.08.2015.
  */
-public class CompletedStoryPointsAchievement extends TaskAchievement {
+public abstract class CompletedStoryPointsAchievement extends TaskAchievement {
     protected CompletedStoryPointsAchievement(Task task) {
         super(task);
     }
