@@ -18,6 +18,7 @@ public interface FileNamespace {
     String CSS = "/skin.css";
     String SETTINGS = "resources/settings.properties";
     String REFRESH = "resources/icons/refresh.png";
+    String STOP = "resources/icons/stop.png";
     String DEFAULT_ACHIEVEMENT_IMAGE = "resources/icons/default_achievement.png";
     String GLOBAL_SEARCH = "resources/icons/global.png";
 

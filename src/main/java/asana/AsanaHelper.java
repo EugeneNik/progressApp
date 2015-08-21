@@ -2,6 +2,8 @@ package asana;
 
 import common.property.PropertyManager;
 import common.property.PropertyNamespace;
+import common.service.base.Services;
+import common.service.custom.AsanaService;
 import data.Task;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -15,8 +17,12 @@ public class AsanaHelper {
     public static void parseAndFill(Task root) {
         Task currentTheme = root;
         JSONArray array = connector.getProjectTasks(Long.toString(root.getId())).getJSONArray("data");
+        AsanaService service = Services.get(AsanaService.class);
 
         for (int j = 0; j < array.length(); j++) {
+            if (service.isStopped()) {
+                break;
+            }
             JSONObject object = array.getJSONObject(j);
             String theme = object.getString("name");
             Long id = object.getLong("id");

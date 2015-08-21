@@ -15,6 +15,8 @@ import java.util.ArrayList;
  */
 public class AsanaService extends AbstractService {
 
+    private boolean stopper = false;
+
     protected void customInitialization() {
         listeners = new ArrayList<>();
     }
@@ -35,6 +37,9 @@ public class AsanaService extends AbstractService {
             JSONArray array = AsanaHelper.connector.getProjects().getJSONArray("data");
             updateProgress(0, array.length());
             for (int i = 0; i < array.length(); i++) {
+                if (isStopped()) {
+                    break;
+                }
                 JSONObject project = array.getJSONObject(i);
                 String themeName = project.getString("name");
                 Long id = project.getLong("id");
@@ -57,5 +62,13 @@ public class AsanaService extends AbstractService {
             e.printStackTrace();
         }
         updateProgress(1, 1);
+    }
+
+    public boolean isStopped() {
+        return stopper;
+    }
+
+    public void stop() {
+        stopper = true;
     }
 }

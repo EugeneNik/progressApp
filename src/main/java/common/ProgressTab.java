@@ -5,6 +5,7 @@ import common.achievements.custom.achievements.CompletedStoryPointsAchievement;
 import common.service.base.Services;
 import common.service.base.TransPlatformService;
 import common.service.custom.AchievementService;
+import common.service.custom.AsanaService;
 import controller.ProgressTabController;
 import data.Task;
 import javafx.beans.binding.Bindings;
@@ -43,6 +44,7 @@ public class ProgressTab extends Tab {
     private TreeItem<Task> foundElement;
     private final StatusBar statusBar;
     ProgressTabController controller;
+    private boolean syncRunning = false;
 
     public ProgressTab(Stage primaryStage) {
         TextArea commentArea = new TextArea();
@@ -249,18 +251,30 @@ public class ProgressTab extends Tab {
         });
 
         syncButton.setOnAction(event -> {
-            javafx.concurrent.Task<Void> task = new javafx.concurrent.Task() {
-                @Override
-                protected Void call() throws Exception {
-                    controller.sync();
-                    done();
-                    return null;
-                }
-            };
+            if (!syncRunning) {
+                syncRunning = true;
+                javafx.concurrent.Task<Void> task = new javafx.concurrent.Task() {
+                    @Override
+                    protected Void call() throws Exception {
+                        controller.sync();
+                        done();
+                        syncRunning = false;
+                        return null;
+                    }
+                };
 
-            Thread t = new Thread(task);
-            t.setDaemon(true);
-            t.start();
+                Thread t = new Thread(task);
+                t.setDaemon(true);
+                t.start();
+
+                syncButton.setText("Stop");
+                syncButton.setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.STOP)));
+            } else {
+                Services.get(AsanaService.class).stop();
+                syncRunning = false;
+                syncButton.setText("Sync");
+                syncButton.setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.REFRESH)));
+            }
         });
 
         VBox parent = new VBox();
