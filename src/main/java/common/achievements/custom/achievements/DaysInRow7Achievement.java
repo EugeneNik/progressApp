@@ -28,11 +28,10 @@ public class DaysInRow7Achievement extends DaysInRowAchievement {
         }
         int count = 0;
         for (int i = profile.getUserStatisticData().getDateHistory().size() - 2; i >= 0; i--) {
-            if (profile.getUserStatisticData().getDateHistory().get(i + 1) * 1000 - profile.getUserStatisticData().getDateHistory().get(i) * 1000 == TimeUnit.DAYS.toMillis(1)) {
+            if (profile.getUserStatisticData().getDateHistory().get(i + 1) - profile.getUserStatisticData().getDateHistory().get(i) == TimeUnit.DAYS.toMillis(1)) {
                 count++;
             }
         }
-
         return count >= 7;
     }
 }

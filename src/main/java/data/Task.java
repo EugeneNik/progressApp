@@ -1,13 +1,11 @@
 package data;
 
-import common.achievements.base.TaskAchievement;
 import controller.TaskManager;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Calendar;
 
 /**
  * Created by DARIA on 12.04.2015.
@@ -23,15 +21,17 @@ public class Task {
     private LongProperty timeEstimated;
     private DoubleProperty progress;
     private BooleanProperty completed;
+    private LongProperty completeDate;
     private TaskManager manager;
 
-    public Task(long id, String task, Long timeEstimated, Double storyPoints, Double progress, Boolean completed, Task parent) {
+    public Task(long id, String task, Long timeEstimated, Double storyPoints, Double progress, Boolean completed, Long completeDate, Task parent) {
         this.id = id;
         this.task = new SimpleStringProperty(task);
         this.progress = new SimpleDoubleProperty(progress);
         this.completed = new SimpleBooleanProperty(completed);
         this.storyPoints = new SimpleDoubleProperty(storyPoints);
         this.timeEstimated = new SimpleLongProperty(timeEstimated);
+        this.completeDate = new SimpleLongProperty(completeDate);
         this.parent = parent;
         this.manager = new TaskManager(this);
     }
@@ -132,11 +132,28 @@ public class Task {
         return completed;
     }
 
+    public long getCompleteDate() {
+        return completeDate.get();
+    }
+
+    public LongProperty completeDateProperty() {
+        return completeDate;
+    }
+
+    public void setCompleteDate(long completeDate) {
+        this.completeDate.set(completeDate);
+    }
+
     public void setCompleted(double progress) {
         if (progress != 0.0) {
             manager.reset();
         }
         this.completed.set(progress == 1.0);
+        if (progress == 1.0) {
+            this.completeDate.set(Calendar.getInstance().getTimeInMillis());
+        } else {
+            this.completeDate.set(0);
+        }
         manager.updateParent(progress == 0 ? -this.getProgress() : progress);
         this.setProgress(progress);
     }
@@ -152,7 +169,7 @@ public class Task {
     @Override
     public boolean equals(Object obj) {
         Task task = (Task) obj;
-        return task == null ? false : this.id == task.getId();
+        return task != null && this.id == task.getId();
     }
 
     @Override

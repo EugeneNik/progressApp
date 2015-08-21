@@ -53,7 +53,7 @@ public class CSVHelper {
                     }
                     String comments = values[2];
                     double progress = Double.parseDouble(values[3]);
-                    Task subTheme = new Task(id, theme, 1L, 8.0, progress, progress == 1.0, currentTheme);
+                    Task subTheme = new Task(id, theme, 1L, 8.0, progress, progress == 1.0, 0L, currentTheme);
                     subTheme.setDescription(comments);
                     currentTheme.getSubtasks().add(subTheme);
                     currentTheme = subTheme;

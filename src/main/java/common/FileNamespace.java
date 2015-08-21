@@ -31,10 +31,17 @@ public interface FileNamespace {
     String COMPLETED_TASKS_50 = "resources/icons/completedTasks50.png";
     String COMPLETED_TASKS_100 = "resources/icons/completedTasks100.png";
     String COMPLETED_TASKS_1000 = "resources/icons/completedTasks1000.png";
+
+    String COMPLETE_5_IN_1_DAY = "resources/icons/complete5in1Day.png";
+    String COMPLETE_10_IN_1_DAY = "resources/icons/complete10in1Day.png";
+    String COMPLETE_20_IN_1_DAY = "resources/icons/complete20in1Day.png";
+
     String MINUTES_ONLINE_10 = "resources/icons/minutesOnline10.png";
     String MINUTES_ONLINE_1440 = "resources/icons/minutesOnline1440.png";
+
     String DAYS_FROM_START_365 = "resources/icons/daysStart365.png";
     String DAYS_IN_ROW_7 = "resources/icons/daysInRow7.png";
+
     String COMPLETED_STORY_POINTS_500 = "resources/icons/completedStoryPoints500.png";
     String COMPLETED_STORY_POINTS_1000 = "resources/icons/completedStoryPoints1000.png";
 }

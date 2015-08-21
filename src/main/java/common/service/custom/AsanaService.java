@@ -44,7 +44,7 @@ public class AsanaService extends AbstractService {
                 String themeName = project.getString("name");
                 Long id = project.getLong("id");
                 themeName += ":";
-                Task currentTask = new Task(id, themeName, 0L, 0.0, 0.0, false, root);
+                Task currentTask = new Task(id, themeName, 0L, 0.0, 0.0, false, 0L, root);
                 int index = root.getSubtasks().indexOf(currentTask);
                 if (index < 0) {
                     root.getSubtasks().add(currentTask);

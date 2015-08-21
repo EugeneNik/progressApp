@@ -20,6 +20,7 @@ public class TaskJAXB {
     private double storyPoints;
     private long timeEstimated;
     private double progress;
+    private long completeDate;
 
     @XmlElementWrapper
     private List<TaskJAXB> tasks;
@@ -82,5 +83,13 @@ public class TaskJAXB {
 
     public void setTasks(List<TaskJAXB> tasks) {
         this.tasks = tasks;
+    }
+
+    public long getCompleteDate() {
+        return completeDate;
+    }
+
+    public void setCompleteDate(long completeDate) {
+        this.completeDate = completeDate;
     }
 }

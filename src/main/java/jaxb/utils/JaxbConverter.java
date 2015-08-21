@@ -14,6 +14,7 @@ public class JaxbConverter {
         jaxb.setProgress(task.getProgress());
         jaxb.setStoryPoints(task.getStoryPoints());
         jaxb.setTimeEstimated(task.getTimeEstimated());
+        jaxb.setCompleteDate(task.getCompleteDate());
         jaxb.setId(task.getId());
         jaxb.setName(task.getTask());
         for (Task task1 : task.getSubtasks()) {
@@ -24,7 +25,7 @@ public class JaxbConverter {
     }
 
     public static Task convertToSimple(TaskJAXB task) {
-        Task result = new Task(task.getId(), task.getName(), task.getTimeEstimated(), task.getStoryPoints(), task.getProgress(), task.getProgress() == 1.0, null);
+        Task result = new Task(task.getId(), task.getName(), task.getTimeEstimated(), task.getStoryPoints(), task.getProgress(), task.getProgress() == 1.0, task.getCompleteDate(), null);
         result.setDescription(task.getComment());
         for (TaskJAXB task1 : task.getTasks()) {
             Task child = convertToSimple(task1);

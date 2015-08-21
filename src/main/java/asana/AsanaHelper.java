@@ -30,7 +30,7 @@ public class AsanaHelper {
             JSONArray story = connector.getTaskStory(Long.toString(id)).getJSONArray("data");
             String comment = getNotes(description) + getComments(story);
             if (theme.endsWith(":")) {
-                Task subTheme = new Task(id, theme, 1L, 0.0, 0.0, false, root);
+                Task subTheme = new Task(id, theme, 1L, 0.0, 0.0, false, 0L, root);
                 subTheme.setDescription(comment);
                 int index = root.getSubtasks().indexOf(subTheme);
                 if (index < 0) {
@@ -55,7 +55,7 @@ public class AsanaHelper {
                 }
                 currentTheme = subTheme;
             } else {
-                Task task = new Task(id, theme, 0L, 8.0, 0.0, false, currentTheme);
+                Task task = new Task(id, theme, 0L, 8.0, 0.0, false, 0L, currentTheme);
                 task.setDescription(comment);
                 if (currentTheme.getSubtasks().indexOf(task) < 0) {
                     double progresses[] = new double[currentTheme.getSubtasks().size()];

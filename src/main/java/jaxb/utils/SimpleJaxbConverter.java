@@ -9,7 +9,7 @@ import jaxb.TaskJAXB;
 public class SimpleJaxbConverter {
     public static <T> T convert(Class<T> clazz) {
         if (clazz.equals(TaskJAXB.class)) {
-            return (T) JaxbConverter.convertToJaxb(new Task("My progress".hashCode(), "My progress", 1L, 0.0, 0.0, false, null));
+            return (T) JaxbConverter.convertToJaxb(new Task("My progress".hashCode(), "My progress", 1L, 0.0, 0.0, false, 0L, null));
         }
         return null;
     }

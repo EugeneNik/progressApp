@@ -15,4 +15,11 @@ public class DateUtils {
         calendar.set(Calendar.SECOND, Integer.parseInt(s[2]));
         return calendar;
     }
+
+    public static long getDayStart(Calendar calendar) {
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        return (calendar.getTimeInMillis() / 1000) * 1000;
+    }
 }

@@ -1,6 +1,5 @@
 package controller;
 
-import common.achievements.base.TaskAchievement;
 import data.Task;
 
 import java.util.List;
@@ -22,6 +21,7 @@ public class TaskManager {
         }
         if (parent.isLeaf()) {
             parent.setCompleted(task.getProgress());
+            parent.setCompleteDate(task.getCompleteDate());
             updateStoryPoints(task.getStoryPoints() == 0.0 ? 8.0 : task.getStoryPoints());
             parent.setTimeEstimated(task.getTimeEstimated());
             return;

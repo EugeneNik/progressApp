@@ -9,6 +9,7 @@ import common.service.base.Services;
 import data.UserProfile;
 import data.UserStatisticData;
 import jaxb.utils.JaxbUnmarshaller;
+import utils.DateUtils;
 
 import java.io.File;
 import java.util.*;
@@ -63,11 +64,7 @@ public class UserService extends AbstractService {
     }
 
     public void syncProfile() {
-        Calendar historyCandidate = Calendar.getInstance();
-        historyCandidate.set(Calendar.HOUR_OF_DAY, 0);
-        historyCandidate.set(Calendar.MINUTE, 0);
-        historyCandidate.set(Calendar.SECOND, 0);
-        long time = historyCandidate.getTimeInMillis() / 1000;
+        long time = DateUtils.getDayStart(Calendar.getInstance());
         if (!profile.getUserStatisticData().getDateHistory().contains(time)) {
             profile.getUserStatisticData().getDateHistory().add(time);
         }
