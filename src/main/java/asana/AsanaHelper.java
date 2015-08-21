@@ -75,7 +75,11 @@ public class AsanaHelper {
                     task.getManager().addStoryPoints(task.getStoryPoints());
                 } else {
                     currentTheme.getSubtasks().get(currentTheme.getSubtasks().indexOf(task)).setTask(theme);
-                    currentTheme.getSubtasks().get(currentTheme.getSubtasks().indexOf(task)).setDescription(comment);
+                    try {
+                        currentTheme.getSubtasks().get(currentTheme.getSubtasks().indexOf(task)).setDescription(comment);
+                    } catch (Exception e) {
+                        System.err.println("Exception on name :" + comment + " where \"" + getNotes(description) + "\" is notes and \"" + getComments(story) + "\" is comment");
+                    }
                 }
             }
         }
