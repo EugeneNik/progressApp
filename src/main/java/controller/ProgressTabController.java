@@ -44,7 +44,8 @@ public class ProgressTabController {
                     ui.getTree().setShowRoot(false);
 
                     addTreeItemsRecursive(TransPlatformService.getInstance().getRoot(), rootItem);
-                    asanaService.setStatus("Loaded");
+                    asanaService.setStatus(!Services.get(AsanaService.class).isStopped() ? "Loaded" : "Aborted");
+                    Services.get(AsanaService.class).resume();
 
                     ui.getStatusBar().textProperty().unbind();
                     ui.getStatusBar().progressProperty().unbind();

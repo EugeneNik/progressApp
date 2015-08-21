@@ -21,7 +21,7 @@ public class AsanaHelper {
 
         for (int j = 0; j < array.length(); j++) {
             if (service.isStopped()) {
-                break;
+                return;
             }
             JSONObject object = array.getJSONObject(j);
             String theme = object.getString("name");

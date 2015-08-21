@@ -54,8 +54,13 @@ public class AsanaService extends AbstractService {
                 }
                 AsanaHelper.parseAndFill(currentTask);
                 updateProgress(i + 1, array.length());
+                if (isStopped()) {
+                    break;
+                }
             }
-            TransPlatformService.getInstance().setRoot(root);
+            if (!isStopped()) {
+                TransPlatformService.getInstance().setRoot(root);
+            }
             onFinish();
         } catch (Exception e) {
             updateMessage("Asana Sync failed");
@@ -70,5 +75,9 @@ public class AsanaService extends AbstractService {
 
     public void stop() {
         stopper = true;
+    }
+
+    public void resume() {
+        stopper = false;
     }
 }
