@@ -32,6 +32,7 @@ public interface FileNamespace {
     String COMPLETED_TASKS_100 = "resources/icons/completedTasks100.png";
     String COMPLETED_TASKS_1000 = "resources/icons/completedTasks1000.png";
     String MINUTES_ONLINE_10 = "resources/icons/minutesOnline10.png";
+    String MINUTES_ONLINE_1440 = "resources/icons/minutesOnline1440.png";
     String DAYS_FROM_START_365 = "resources/icons/daysStart365.png";
     String DAYS_IN_ROW_7 = "resources/icons/daysInRow7.png";
     String COMPLETED_STORY_POINTS_500 = "resources/icons/completedStoryPoints500.png";
