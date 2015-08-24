@@ -1,4 +1,4 @@
-package common.achievements.custom.achievements;
+package common.achievements.custom.base;
 
 import common.achievements.AchievementStatus;
 import common.achievements.base.TaskAchievement;
@@ -12,7 +12,7 @@ import java.util.*;
  * Created by nikiforov on 21.08.2015.
  */
 public abstract class CompleteNTasksOnMDaysAchievement extends TaskAchievement {
-    Map<Long, Set<Task>> dayToTasksMap;
+    protected Map<Long, Set<Task>> dayToTasksMap;
 
     public CompleteNTasksOnMDaysAchievement(Task task) {
         super(task);

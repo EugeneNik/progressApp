@@ -1,4 +1,4 @@
-package common.achievements.custom.achievements;
+package common.achievements.custom.base;
 
 import common.achievements.AchievementStatus;
 import common.achievements.base.TaskAchievement;
@@ -11,21 +11,20 @@ import java.util.List;
 /**
  * Created by nikiforov on 12.08.2015.
  */
-public abstract class CompletedTaskAchievement extends TaskAchievement {
-
-    protected int countOfCompleted;
-
-    public CompletedTaskAchievement(Task task) {
+public abstract class CompletedStoryPointsAchievement extends TaskAchievement {
+    protected CompletedStoryPointsAchievement(Task task) {
         super(task);
     }
 
+    protected double countOfCompleted = 0.0;
+
     @Override
     public AchievementStatus retest() {
-        countOfCompleted = 0;
-        List<Task> list= task.getManager().getLeafList(task, new ArrayList<>());
+        countOfCompleted = 0.0;
+        List<Task> list = task.getManager().getLeafList(task, new ArrayList<>());
         for (Task currentTask : list) {
             if (currentTask.getCompleted()) {
-                countOfCompleted++;
+                countOfCompleted += currentTask.getStoryPoints();
             }
         }
         return new BooleanAchievementStatus(isCompleted());

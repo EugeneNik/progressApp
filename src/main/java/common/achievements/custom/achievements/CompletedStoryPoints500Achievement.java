@@ -1,6 +1,7 @@
 package common.achievements.custom.achievements;
 
 import common.FileNamespace;
+import common.achievements.custom.base.CompletedStoryPointsAchievement;
 import data.Task;
 
 /**

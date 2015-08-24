@@ -1,6 +1,7 @@
 package common.achievements.custom.achievements;
 
 import common.FileNamespace;
+import common.achievements.custom.base.DaysFromStartAchievement;
 import common.service.base.Services;
 import common.service.custom.UserService;
 import data.UserProfile;

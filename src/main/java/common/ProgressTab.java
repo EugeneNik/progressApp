@@ -1,7 +1,7 @@
 package common;
 
 import common.achievements.base.TaskAchievement;
-import common.achievements.custom.achievements.CompletedStoryPointsAchievement;
+import common.achievements.custom.base.CompletedStoryPointsAchievement;
 import common.service.base.Services;
 import common.service.base.TransPlatformService;
 import common.service.custom.AchievementService;

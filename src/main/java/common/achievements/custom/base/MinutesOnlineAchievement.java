@@ -1,4 +1,4 @@
-package common.achievements.custom.achievements;
+package common.achievements.custom.base;
 
 import common.achievements.base.SystemAchievement;
 
