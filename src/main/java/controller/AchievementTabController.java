@@ -87,7 +87,9 @@ public class AchievementTabController {
             WritableImage writableImage = ImageUtils.copyImage(image, achievement.isCompleted() ? ImageUtils.ImageRenderType.NORMAL : ImageUtils.ImageRenderType.GRAYSCALE);
             view.setImage(writableImage);
             cell.setTop(view);
-            cell.setBottom(new Text(achievement.getTooltip()));
+            BorderPane bottomTextArea = new BorderPane();
+            bottomTextArea.setCenter(new Text(achievement.getTooltip()));
+            cell.setBottom(bottomTextArea);
             pane.add(cell, i, j);
             i++;
             if (i == 5) {
