@@ -137,6 +137,14 @@ public class PropertyManager {
         return null;
     }
 
+    public static <T> BaseProperty<T> getProperty(String name) {
+        if (PropertyManager.settingsList.containsKey(name)) {
+            return (BaseProperty<T>) PropertyManager.settingsList.get(name);
+        }
+        return null;
+    }
+
+
     public static void setValue(String name, Object value) {
         PropertyManager.settingsList.get(name).setValue(value);
         PropertyManager.save();
