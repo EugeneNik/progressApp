@@ -26,7 +26,7 @@ public class AchievementTab extends Tab {
 
         achievementGrid = new GridPane();
         achievementGrid.setVgap(50.0);
-        achievementGrid.setHgap(25.0);
+        achievementGrid.setHgap(20.0);
 
         controller.fillGrid(achievementGrid);
 

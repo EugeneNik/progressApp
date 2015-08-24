@@ -95,5 +95,7 @@ public class AchievementTabController {
                 j++;
             }
         }
+        //2, cause order from zero + it is counting for the left high corner
+        ui.getAchievementGrid().setMinHeight((j + 2) * 128 + (j + 2) * 50);
     }
 }
