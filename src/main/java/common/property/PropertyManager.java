@@ -187,7 +187,7 @@ public class PropertyManager {
 
     public static boolean isDefault(String name) {
         if (name != null && settingsList.containsKey(name)) {
-            return settingsList.get(name).getValue().equals(settingsList.get(name).getStartValue());
+            return settingsList.get(name).getValue().equals(settingsList.get(name).getDefaultValue());
         }
         return true;
     }
