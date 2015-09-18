@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,6 +19,7 @@ public abstract class AbstractService implements Service {
     public AbstractService() {
         if (!ServiceCache.isInited(getClass())) {
             ServiceCache.init(getClass(), this);
+            listeners = new ArrayList<>();
             customInitialization();
         } else {
             throw new UnsupportedOperationException(getClass().getSimpleName() + " is initialized use Services.get");

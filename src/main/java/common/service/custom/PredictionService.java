@@ -12,7 +12,6 @@ import jaxb.HistoryJAXB;
 import jaxb.utils.JaxbMarshaller;
 import jaxb.utils.JaxbUnmarshaller;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.LinkedList;
 
@@ -28,7 +27,6 @@ public class PredictionService extends AbstractService {
 
     @Override
     protected void customInitialization() {
-        listeners = new ArrayList<>();
         this.lastUsedPeriods = PropertyManager.getValue(PropertyNamespace.SAVE_LAST_PERIODS_COUNT);
         // if last used periods = 3 it means that we should use 3 last periods and skip fourth (current one)
         lastUsedPeriods++;

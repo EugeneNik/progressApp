@@ -8,8 +8,6 @@ import javafx.application.Platform;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 /**
  * Created by Евгений on 28.06.2015.
  */
@@ -18,7 +16,6 @@ public class AsanaService extends AbstractService {
     private boolean stopper = false;
 
     protected void customInitialization() {
-        listeners = new ArrayList<>();
     }
 
     private void updateMessage(String status) {
