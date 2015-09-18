@@ -16,6 +16,12 @@ public class DateUtils {
         return calendar;
     }
 
+    /**
+     * @param calendar
+     * @return
+     * @see org.apache.commons.lang.time.DateUtils
+     */
+    @Deprecated
     public static long getDayStart(Calendar calendar) {
         calendar.set(Calendar.HOUR_OF_DAY, 0);
         calendar.set(Calendar.MINUTE, 0);
