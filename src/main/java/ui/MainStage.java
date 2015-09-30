@@ -21,7 +21,7 @@ public class MainStage extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        PropertyManager.getApplicationSettings();
+        SettingsTab settingsTab = new SettingsTab();
 
         controller = new MainStageController(this);
 
@@ -33,7 +33,7 @@ public class MainStage extends Application {
 
         TabPane parent = new TabPane();
 
-        parent.getTabs().addAll(progressTab, suggestionTab, achievementTab);
+        parent.getTabs().addAll(progressTab, suggestionTab, achievementTab, settingsTab);
 
         String cssPath = this.getClass().getResource(FileNamespace.CSS).toExternalForm();
         Scene scene = new Scene(parent, 800, 600);

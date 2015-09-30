@@ -6,6 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import org.apache.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,6 +22,7 @@ public abstract class AbstractService implements Service {
         if (!ServiceCache.isInited(getClass())) {
             log = Logger.getLogger(getClass());
             ServiceCache.init(getClass(), this);
+            listeners = new ArrayList<>();
             customInitialization();
         } else {
             throw new UnsupportedOperationException(getClass().getSimpleName() + " is initialized use Services.get");

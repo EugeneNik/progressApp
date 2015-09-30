@@ -12,7 +12,10 @@ import jaxb.utils.JaxbUnmarshaller;
 import utils.DateUtils;
 
 import java.io.File;
-import java.util.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by Евгений on 20.08.2015.
@@ -23,7 +26,6 @@ public class UserService extends AbstractService {
 
     @Override
     protected void customInitialization() {
-        listeners = new ArrayList<>();
     }
 
     private void initTimer() {

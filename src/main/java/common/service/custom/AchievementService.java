@@ -17,7 +17,6 @@ public class AchievementService extends AbstractService {
     private List<Achievement> achievementAnalyzers;
 
     protected void customInitialization() {
-        listeners = new ArrayList<>();
         achievementAnalyzers = new ArrayList<>();
         achievementAnalyzers.add(new CompletedTask1Achievement(TransPlatformService.getInstance().getRoot()));
         achievementAnalyzers.add(new CompletedTask10Achievement(TransPlatformService.getInstance().getRoot()));

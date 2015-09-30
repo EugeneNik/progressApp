@@ -20,7 +20,6 @@ import java.util.*;
  */
 public class SuggestionService extends AbstractService {
     protected void customInitialization() {
-        listeners = new ArrayList<>();
     }
 
     public List<Task> suggest() {

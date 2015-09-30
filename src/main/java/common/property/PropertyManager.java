@@ -137,6 +137,14 @@ public class PropertyManager {
         return null;
     }
 
+    public static <T> BaseProperty<T> getProperty(String name) {
+        if (PropertyManager.settingsList.containsKey(name)) {
+            return (BaseProperty<T>) PropertyManager.settingsList.get(name);
+        }
+        return null;
+    }
+
+
     public static void setValue(String name, Object value) {
         PropertyManager.settingsList.get(name).setValue(value);
         PropertyManager.save();
@@ -179,7 +187,7 @@ public class PropertyManager {
 
     public static boolean isDefault(String name) {
         if (name != null && settingsList.containsKey(name)) {
-            return settingsList.get(name).getValue().equals(settingsList.get(name).getStartValue());
+            return settingsList.get(name).getValue().equals(settingsList.get(name).getDefaultValue());
         }
         return true;
     }
