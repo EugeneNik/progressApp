@@ -9,7 +9,7 @@ import common.service.base.Services;
 import data.UserProfile;
 import data.UserStatisticData;
 import jaxb.utils.JaxbUnmarshaller;
-import utils.DateUtils;
+import org.apache.commons.lang.time.DateUtils;
 
 import java.io.File;
 import java.util.Calendar;
@@ -66,7 +66,7 @@ public class UserService extends AbstractService {
     }
 
     public void syncProfile() {
-        long time = DateUtils.getDayStart(Calendar.getInstance());
+        long time = DateUtils.truncate(Calendar.getInstance(), Calendar.DAY_OF_MONTH).getTimeInMillis();
         if (!profile.getUserStatisticData().getDateHistory().contains(time)) {
             profile.getUserStatisticData().getDateHistory().add(time);
         }

@@ -10,7 +10,6 @@ import common.service.base.TransPlatformService;
 import data.Task;
 import javafx.application.Platform;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +21,6 @@ public class AsanaService extends AbstractService {
     private Client client;
 
     protected void customInitialization() {
-        listeners = new ArrayList<>();
         //can be changed to oauth 2 protocol
         client = Client.basicAuth(PropertyManager.getValue(PropertyNamespace.APP_KEY));
     }

@@ -1,7 +1,7 @@
 package ui;
 
 import common.FileNamespace;
-import common.property.PropertyManager;
+import common.SettingsTab;
 import controller.MainStageController;
 import javafx.application.Application;
 import javafx.scene.Scene;

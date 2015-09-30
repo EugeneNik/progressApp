@@ -4,7 +4,7 @@ import common.achievements.AchievementStatus;
 import common.achievements.base.TaskAchievement;
 import common.achievements.custom.BooleanAchievementStatus;
 import data.Task;
-import utils.DateUtils;
+import org.apache.commons.lang.time.DateUtils;
 
 import java.util.*;
 
@@ -26,7 +26,7 @@ public abstract class CompleteNTasksOnMDaysAchievement extends TaskAchievement {
             if (currentTask.getCompleted()) {
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTimeInMillis(currentTask.getCompleteDate());
-                long day = DateUtils.getDayStart(calendar);
+                long day = DateUtils.truncate(calendar, Calendar.DAY_OF_MONTH).getTimeInMillis();
                 if (!dayToTasksMap.containsKey(day)) {
                     dayToTasksMap.put(day, new HashSet<>());
                 }
