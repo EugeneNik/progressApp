@@ -40,8 +40,4 @@ public class AchievementTab extends Tab {
     public GridPane getAchievementGrid() {
         return achievementGrid;
     }
-
-    public ScrollPane getAchievementScrollPane() {
-        return achievementScrollPane;
-    }
 }

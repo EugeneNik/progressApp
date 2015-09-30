@@ -2,20 +2,14 @@ package common;
 
 import common.property.PropertyManager;
 import common.property.PropertyNamespace;
-import common.service.custom.PredictionService;
 import common.service.base.Services;
-import common.service.custom.SuggestionService;
-import controller.DataConverter;
+import common.service.custom.PredictionService;
 import controller.SuggestionController;
 import data.SuggestedTaskData;
-import data.Task;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
@@ -29,12 +23,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import javafx.util.Callback;
 import utils.FormatUtils;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 
 /**
@@ -52,7 +43,7 @@ public class SuggestionTab extends Tab {
         selectedTable = new TableView();
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
-        completeChart = new BarChart<String, Number>(xAxis, yAxis);
+        completeChart = new BarChart<>(xAxis, yAxis);
 
         controller = new SuggestionController(this);
 
@@ -86,23 +77,13 @@ public class SuggestionTab extends Tab {
 
         TableColumn topicCol = new TableColumn("Topic (story points)");
         topicCol.setResizable(false);
-        topicCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<SuggestedTaskData, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<SuggestedTaskData, String> p) {
-                return p.getValue().nameProperty().concat(Bindings.format(" (" + FormatUtils.getProperDoubleFormat(false) + ")", p.getValue().storyPointsProperty().multiply(100.0)));
-            }
-        });
+        topicCol.setCellValueFactory(controller.getTopicColumnCellValueFactory());
 
         topicCol.setMinWidth(150);
 
         TableColumn parentCol = new TableColumn("Parent (Completed %)");
         parentCol.setResizable(false);
-        parentCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<SuggestedTaskData, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TableColumn.CellDataFeatures<SuggestedTaskData, String> p) {
-                return p.getValue().parentTaskNameProperty().concat(Bindings.format(" (" + FormatUtils.getProperDoubleFormat(true) + ")", p.getValue().parentTaskCompleteProperty().multiply(100.0)));
-            }
-        });
+        parentCol.setCellValueFactory(controller.getParentColumnCellValueFactory());
         parentCol.setMinWidth(150);
 
         selectedTable.getColumns().addAll(selectedColumn, topicCol, parentCol);
@@ -111,31 +92,7 @@ public class SuggestionTab extends Tab {
 
         Button changeSelectedButton = new Button("Change suggestion on selected");
         changeSelectedButton.setWrapText(true);
-        changeSelectedButton.setOnAction(event -> {
-            List<Task> toChange = new ArrayList<Task>();
-            List<Task> alreadyPlanner = new ArrayList<Task>();
-            ObservableList<SuggestedTaskData> newList = FXCollections.observableArrayList();
-            for (SuggestedTaskData data : selectedTable.getItems()) {
-                if (data.getSelected()) {
-                    toChange.add(DataConverter.convertSuggestedTaskToTask(data));
-                } else {
-                    newList.add(data);
-                    alreadyPlanner.add(DataConverter.convertSuggestedTaskToTask(data));
-                }
-            }
-            double storyPoints = 0;
-            for (Task change : toChange) {
-                storyPoints += change.getStoryPoints() - change.getStoryPoints() * change.getProgress();
-            }
-            List<Task> list = Services.get(SuggestionService.class).suggest(storyPoints, toChange, alreadyPlanner);
-            for (Task task :list) {
-                newList.add(DataConverter.convertTaskToSuggestedTask(task));
-            }
-
-            selectedTable.getItems().clear();
-            selectedTable.setItems(newList);
-
-        });
+        changeSelectedButton.setOnAction(controller.getOnChangeButtonPressListener());
 
         buttonPane.setRight(changeSelectedButton);
 
@@ -152,7 +109,7 @@ public class SuggestionTab extends Tab {
         controller.updateChart();
     }
 
-    public TableView getTable() {
+    public TableView<SuggestedTaskData> getTable() {
         return selectedTable;
     }
 

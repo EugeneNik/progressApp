@@ -2,22 +2,22 @@ package ui;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.StringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import org.apache.log4j.Logger;
 import utils.FormatUtils;
 
 import java.text.DecimalFormat;
-import java.util.Locale;
 
 /**
  * Created by Acer on 23.02.2015.
  */
 public class StatusBar extends BorderPane {
+
+    private Logger log = Logger.getLogger(StatusBar.class);
 
     private StatusBar self;
     private Text text;
@@ -38,22 +38,19 @@ public class StatusBar extends BorderPane {
         this.setLeft(text);
         this.setRight(pane);
         progressBar.setVisible(false);
-        progressBar.progressProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                if (newValue != null && newValue.doubleValue() == 1.0) {
-                    progressBar.getStyleClass().addAll("green-bar");
-                } else if (progressBar.getStyleClass().contains("green-bar")) {
-                    progressBar.getStyleClass().remove("green-bar");
-                }
-                progressBar.setVisible(newValue != null && newValue.longValue() >= 0);
-                DecimalFormat format = new DecimalFormat(FormatUtils.getProperDoubleFormatForProgressBars());
-                System.out.println(progressBar.getProgress() * 100.0);
-                if (!Double.isNaN(progressBar.progressProperty().doubleValue())) {
-                    progressText.setText(format.format(progressBar.getProgress() * 100.0) + "%");
-                }
-                System.out.println("Value changed " + (newValue != null && newValue.longValue() >= 0));
+        progressBar.progressProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null && newValue.doubleValue() == 1.0) {
+                progressBar.getStyleClass().addAll("green-bar");
+            } else if (progressBar.getStyleClass().contains("green-bar")) {
+                progressBar.getStyleClass().remove("green-bar");
             }
+            progressBar.setVisible(newValue != null && newValue.longValue() >= 0);
+            DecimalFormat format = new DecimalFormat(FormatUtils.getProperDoubleFormatForProgressBars());
+            log.info(progressBar.getProgress() * 100.0);
+            if (!Double.isNaN(progressBar.progressProperty().doubleValue())) {
+                progressText.setText(format.format(progressBar.getProgress() * 100.0) + "%");
+            }
+            log.info("Value changed " + (newValue != null && newValue.longValue() >= 0));
         });
     }
 

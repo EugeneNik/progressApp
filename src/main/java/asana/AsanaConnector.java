@@ -1,5 +1,6 @@
 package asana;
 
+import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,6 +19,8 @@ import java.util.Scanner;
  * Created by nikiforov on 16.04.2015.
  */
 public class AsanaConnector {
+
+    private Logger log = Logger.getLogger(AsanaConnector.class);
 
     public String apiVersion = "1.0";
     public String url = "https://app.asana.com/api/";
@@ -190,21 +193,21 @@ public class AsanaConnector {
 
             if (responseCode == 200) {
                 // handle an OK response
-                System.out.println(url.toString());
+                log.info(url.toString());
                 //System.out.println("Response Code: 200");
 
                 InputStream inStream = urlConn.getInputStream();
                 data = convertStreamToString(inStream);
             } else {
                 // handle all other responses
-                System.out.println("Something has gone wrong. Response code was: " + responseCode);
+                log.error("Something has gone wrong. Response code was: " + responseCode);
                 data = "ERROR:" + responseCode;
             }
 
         } catch (MalformedURLException e) {
-            System.out.println("The url is not valid for listing a project's tasks: " + url.toString());
+            log.error("The url is not valid for listing a project's tasks: " + url.toString());
         } catch (IOException e) {
-            System.out.println("An IOException has occurred: " + e.getMessage());
+            log.error("An IOException has occurred: " + e.getMessage());
             e.printStackTrace();
         }
 

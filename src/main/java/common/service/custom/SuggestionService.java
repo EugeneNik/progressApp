@@ -33,9 +33,9 @@ public class SuggestionService extends AbstractService {
 
         List<Task> suggestions = suggest(maxStoryPoints, new ArrayList<>(), new ArrayList<>());
 
-        System.out.println("Predicted story points:" + maxStoryPoints);
+        log.info("Predicted story points:" + maxStoryPoints);
         PropertyManager.setValue(PropertyNamespace.LAST_ANALYZATION_MADE, Calendar.getInstance().getTimeInMillis());
-        System.out.println(suggestions.toString());
+        log.info(suggestions.toString());
         onFinish();
         return suggestions;
     }
@@ -73,8 +73,8 @@ public class SuggestionService extends AbstractService {
             }
         }
         if (toIgnoreList.size() != 0 || toForbidden.size() != 0) {
-            System.out.println("Replaned story points:" + maxStoryPoints);
-            System.out.println(suggestions.toString());
+            log.info("Replaned story points:" + maxStoryPoints);
+            log.info(suggestions.toString());
         }
         saveSuggestions(suggestions);
         return suggestions;

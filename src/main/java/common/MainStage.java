@@ -1,18 +1,11 @@
 package common;
 
 import common.property.PropertyManager;
-import common.service.base.Services;
-import common.service.base.TransPlatformService;
-import common.service.custom.UserService;
 import controller.MainStageController;
-import data.UserProfile;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TabPane;
 import javafx.stage.Stage;
-import jaxb.TaskJAXB;
-import jaxb.utils.JaxbConverter;
-import jaxb.utils.JaxbMarshaller;
 
 /**
  * Created by DARIA on 12.04.2015.
@@ -45,14 +38,7 @@ public class MainStage extends Application {
         Scene scene = new Scene(parent, 800, 600);
         scene.getStylesheets().add(cssPath);
 
-        primaryStage.setOnCloseRequest(event -> {
-            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.BACKUP);
-            TransPlatformService.getInstance().getRoot().getManager().anullate();
-            JaxbMarshaller.marshall(JaxbConverter.convertToJaxb(TransPlatformService.getInstance().getRoot()), TaskJAXB.class, FileNamespace.STRUCTURE);
-            JaxbMarshaller.marshall(Services.get(UserService.class).getProfile(), UserProfile.class, FileNamespace.USER_PROFILE);
-            PropertyManager.save();
-            System.exit(0);
-        });
+        primaryStage.setOnCloseRequest(controller.getOnCloseListener());
 
         //System.out.println(Services.get(PredictionService.class).predict());
 

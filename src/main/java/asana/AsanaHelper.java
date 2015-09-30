@@ -14,12 +14,14 @@ import org.json.JSONObject;
 public class AsanaHelper {
     public static AsanaConnector connector = new AsanaConnector(PropertyManager.getValue(PropertyNamespace.APP_KEY));
 
-    public static void parseAndFill(Task root) {
+    public static void parseAndFill(Task root, double current, double full) {
         Task currentTheme = root;
         JSONArray array = connector.getProjectTasks(Long.toString(root.getId())).getJSONArray("data");
+        int length = array.length();
         AsanaService service = Services.get(AsanaService.class);
 
-        for (int j = 0; j < array.length(); j++) {
+        for (int j = 0; j < length; j++) {
+            Services.get(AsanaService.class).updateProgress(current + (double) (j + 1) / length, full);
             if (service.isStopped()) {
                 return;
             }

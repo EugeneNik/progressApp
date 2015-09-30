@@ -25,12 +25,13 @@ public class AsanaService extends AbstractService {
         Platform.runLater(() -> this.status.setValue(status));
     }
 
-    private void updateProgress(double progress, double full) {
+    public void updateProgress(double progress, double full) {
         Platform.runLater(() -> this.progress.setValue(progress / full));
     }
 
     public void sync(Task root) {
         onStart();
+        log.info("Auto Sync start");
         updateMessage("Wait for data loading...");
 
         try {
@@ -52,8 +53,7 @@ public class AsanaService extends AbstractService {
                     currentTask = root.getSubtasks().get(index);
                     currentTask.setTask(themeName);
                 }
-                AsanaHelper.parseAndFill(currentTask);
-                updateProgress(i + 1, array.length());
+                AsanaHelper.parseAndFill(currentTask, i, array.length());
                 if (isStopped()) {
                     break;
                 }
@@ -67,6 +67,7 @@ public class AsanaService extends AbstractService {
             e.printStackTrace();
         }
         updateProgress(1, 1);
+        log.info("Auto Sync finish");
     }
 
     public boolean isStopped() {

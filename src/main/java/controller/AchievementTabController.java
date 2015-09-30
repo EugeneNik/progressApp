@@ -18,6 +18,7 @@ import utils.ImageUtils;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Created by Евгений on 12.08.2015.
@@ -35,21 +36,12 @@ public class AchievementTabController {
             @Override
             public void onStart() {
                 completedAchievements = new HashSet<>();
-                for (Achievement achievement : achievementService.getRegisteredAchievements()) {
-                    if (achievement.isWasCompleted()) {
-                        completedAchievements.add(achievement);
-                    }
-                }
+                completedAchievements.addAll(achievementService.getRegisteredAchievements().stream().filter(achievement -> achievement.isWasCompleted()).collect(Collectors.toList()));
             }
 
             @Override
             public void onFinish() {
-                Set<Achievement> finishedAchivements = new HashSet<>();
-                for (Achievement achievement : achievementService.getRegisteredAchievements()) {
-                    if (achievement.isCompleted()) {
-                        finishedAchivements.add(achievement);
-                    }
-                }
+                Set<Achievement> finishedAchivements = achievementService.getRegisteredAchievements().stream().filter(achievement -> achievement.isCompleted()).collect(Collectors.toSet());
                 boolean shouldBeReloaded = false;
                 for (Achievement achievement : finishedAchivements) {
                     if (completedAchievements.contains(achievement)) {
