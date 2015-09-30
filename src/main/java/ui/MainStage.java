@@ -1,5 +1,6 @@
-package common;
+package ui;
 
+import common.FileNamespace;
 import common.property.PropertyManager;
 import controller.MainStageController;
 import javafx.application.Application;
@@ -26,9 +27,9 @@ public class MainStage extends Application {
 
         ProgressTab progressTab = new ProgressTab(primaryStage);
 
-        SuggestionTab suggestionTab = new SuggestionTab();
+        SuggestionTab suggestionTab = new SuggestionTab(primaryStage);
 
-        AchievementTab achievementTab = new AchievementTab();
+        AchievementTab achievementTab = new AchievementTab(primaryStage);
 
         TabPane parent = new TabPane();
 
@@ -43,7 +44,6 @@ public class MainStage extends Application {
         //System.out.println(Services.get(PredictionService.class).predict());
 
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
 
         primaryStage.show();
     }

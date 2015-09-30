@@ -1,7 +1,6 @@
 package controller;
 
 import common.FileNamespace;
-import common.SuggestionTab;
 import common.property.PropertyManager;
 import common.property.PropertyNamespace;
 import common.service.base.ServiceListener;
@@ -26,6 +25,7 @@ import jaxb.HistoryJAXB;
 import jaxb.SuggestedTaskJAXB;
 import jaxb.SuggestionsJAXB;
 import jaxb.utils.JaxbUnmarshaller;
+import ui.SuggestionTab;
 import utils.FormatUtils;
 
 import java.text.DateFormat;

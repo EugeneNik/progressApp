@@ -18,6 +18,7 @@ import java.util.Scanner;
 /**
  * Created by nikiforov on 16.04.2015.
  */
+@Deprecated
 public class AsanaConnector {
 
     private Logger log = Logger.getLogger(AsanaConnector.class);

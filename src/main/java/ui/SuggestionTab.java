@@ -1,4 +1,4 @@
-package common;
+package ui;
 
 import common.property.PropertyManager;
 import common.property.PropertyNamespace;
@@ -19,10 +19,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import utils.FormatUtils;
 
 import java.util.Date;
@@ -39,11 +39,13 @@ public class SuggestionTab extends Tab {
     private StringProperty lastSuggestionMadeDate;
 
 
-    public SuggestionTab() {
+    public SuggestionTab(Stage primaryStage) {
         selectedTable = new TableView();
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
         completeChart = new BarChart<>(xAxis, yAxis);
+        completeChart.prefWidthProperty().bind(primaryStage.widthProperty().multiply(.5));
+        completeChart.prefHeightProperty().bind(primaryStage.heightProperty());
 
         controller = new SuggestionController(this);
 
@@ -55,8 +57,8 @@ public class SuggestionTab extends Tab {
         HBox mainLayout = new HBox();
 
         selectedTable.setEditable(true);
-
-        selectedTable.setMinWidth(380);
+        selectedTable.prefWidthProperty().bind(primaryStage.widthProperty().multiply(.5));
+        selectedTable.prefHeightProperty().bind(primaryStage.heightProperty());
 
         VBox leftColumn = new VBox();
         VBox rightColumn = new VBox();
@@ -88,15 +90,11 @@ public class SuggestionTab extends Tab {
 
         selectedTable.getColumns().addAll(selectedColumn, topicCol, parentCol);
 
-        BorderPane buttonPane = new BorderPane();
-
         Button changeSelectedButton = new Button("Change suggestion on selected");
         changeSelectedButton.setWrapText(true);
         changeSelectedButton.setOnAction(controller.getOnChangeButtonPressListener());
 
-        buttonPane.setRight(changeSelectedButton);
-
-        leftColumn.getChildren().addAll(storyPointsOnLastPeriods, lastSuggestionMade, learningDifficulty, selectedTable, changeSelectedButton);
+        leftColumn.getChildren().addAll(storyPointsOnLastPeriods, lastSuggestionMade, learningDifficulty, changeSelectedButton, selectedTable);
         rightColumn.getChildren().addAll(completeChart);
 
         completeChart.setTitle("Last periods");

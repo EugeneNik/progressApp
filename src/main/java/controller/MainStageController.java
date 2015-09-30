@@ -1,7 +1,6 @@
 package controller;
 
 import common.FileNamespace;
-import common.MainStage;
 import common.property.PropertyManager;
 import common.service.base.Services;
 import common.service.base.TransPlatformService;
@@ -12,6 +11,7 @@ import javafx.stage.WindowEvent;
 import jaxb.TaskJAXB;
 import jaxb.utils.JaxbConverter;
 import jaxb.utils.JaxbMarshaller;
+import ui.MainStage;
 
 
 /**

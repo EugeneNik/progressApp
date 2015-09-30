@@ -1,5 +1,6 @@
-package common;
+package ui;
 
+import common.FileNamespace;
 import common.service.base.TransPlatformService;
 import controller.ProgressTabController;
 import data.Task;
@@ -18,7 +19,6 @@ import javafx.stage.Stage;
 import jaxb.TaskJAXB;
 import jaxb.utils.JaxbConverter;
 import jaxb.utils.JaxbUnmarshaller;
-import ui.StatusBar;
 import utils.FormatUtils;
 import utils.ImageUtils;
 
@@ -43,7 +43,8 @@ public class ProgressTab extends Tab {
         searchField = new TextField();
         searchField.setMaxWidth(80);
 
-        commentArea.setMinWidth(700);
+        commentArea.minWidthProperty().bind(primaryStage.widthProperty().subtract(120));
+        commentArea.minHeightProperty().bind(primaryStage.heightProperty().multiply(.3));
         openLink = new Button("Open link");
         openLink.setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.GLOBAL_SEARCH)));
         syncButton = new Button("Sync");
@@ -52,6 +53,7 @@ public class ProgressTab extends Tab {
         statusBar = new StatusBar();
         tree = new TreeTableView<>();
         tree.setColumnResizePolicy(TreeTableView.CONSTRAINED_RESIZE_POLICY);
+        tree.prefHeightProperty().bind(primaryStage.heightProperty().multiply(.7));
 
         TreeTableColumn<Task, String> descriptionColumn = new TreeTableColumn<>("Description");
         TreeTableColumn<Task, Double> progressColumn = new TreeTableColumn<>("Progress");

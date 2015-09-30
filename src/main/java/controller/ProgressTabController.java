@@ -1,7 +1,6 @@
 package controller;
 
 import common.FileNamespace;
-import common.ProgressTab;
 import common.achievements.base.TaskAchievement;
 import common.achievements.custom.base.CompletedStoryPointsAchievement;
 import common.property.PropertyManager;
@@ -28,6 +27,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
+import ui.ProgressTab;
 import utils.DateUtils;
 import utils.FormatUtils;
 import utils.ImageUtils;
@@ -111,7 +111,7 @@ public class ProgressTabController {
     }
 
     private boolean recursiveSearch(TreeItem<Task> task, String name) {
-        if (task.getValue().getTask().contains(name)) {
+        if (task.getValue().getTask().toLowerCase().contains(name.toLowerCase())) {
             task.setExpanded(true);
             foundElement = task;
             return true;
@@ -193,7 +193,7 @@ public class ProgressTabController {
                 @Override
                 protected void updateItem(Double t, boolean bln) {
                     super.updateItem(t, bln);
-                    if (bln) {
+                    if (t == null) {
                         setText(null);
                         setGraphic(null);
                     } else {
@@ -231,7 +231,7 @@ public class ProgressTabController {
                 @Override
                 protected void updateItem(String t, boolean bln) {
                     super.updateItem(t, bln);
-                    if (bln) {
+                    if (t == null) {
                         setContextMenu(null);
                         setGraphic(null);
                     } else {
