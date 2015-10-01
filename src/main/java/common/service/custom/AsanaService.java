@@ -21,8 +21,14 @@ public class AsanaService extends AbstractService {
     private Client client;
 
     protected void customInitialization() {
-        //can be changed to oauth 2 protocol
-        client = Client.basicAuth(PropertyManager.getValue(PropertyNamespace.APP_KEY));
+        try {
+            client = Client.accessToken(PropertyManager.getValue(PropertyNamespace.PERSONAL_ASANA_TOKEN));
+            if (client == null) {
+                throw new Exception();
+            }
+        } catch (Exception e) {
+            client = Client.basicAuth(PropertyManager.getValue(PropertyNamespace.APP_KEY));
+        }
     }
 
     private void updateMessage(String status) {
