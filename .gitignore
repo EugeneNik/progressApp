@@ -11,7 +11,7 @@
 hs_err_pid*
 .idea
 *.iml
-#settings.properties
+settings.properties
 backup
 out
 target
