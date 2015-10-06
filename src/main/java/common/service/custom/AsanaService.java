@@ -23,9 +23,7 @@ public class AsanaService extends AbstractService {
     protected void customInitialization() {
         try {
             client = Client.accessToken(PropertyManager.getValue(PropertyNamespace.PERSONAL_ASANA_TOKEN));
-            if (client == null) {
-                throw new Exception();
-            }
+            client.projects.findAll().execute();
         } catch (Exception e) {
             client = Client.basicAuth(PropertyManager.getValue(PropertyNamespace.APP_KEY));
         }

@@ -7,11 +7,11 @@ package common.property;
 import common.FileNamespace;
 import common.custom.property.ExpertLevel;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -115,7 +115,7 @@ public class PropertyManager {
     public static void getApplicationSettings() {
         try {
             Properties prop = new Properties();
-            try (InputStream is = PropertyManager.class.getResourceAsStream(FileNamespace.SETTINGS)) {
+            try (InputStream is = new FileInputStream(FileNamespace.SETTINGS)) {
 
                 prop.load(is);
                 APP_KEY = new BaseProperty<>(PropertyNamespace.APP_KEY, prop.getProperty(PropertyNamespace.APP_KEY, ""), "");
@@ -176,8 +176,7 @@ public class PropertyManager {
     public static void save() {
         try {
             Properties prop = new Properties();
-            URL resourceUrl = PropertyManager.class.getResource(FileNamespace.SETTINGS);
-            try (FileOutputStream fos = new FileOutputStream(resourceUrl.getFile())) {
+            try (FileOutputStream fos = new FileOutputStream(FileNamespace.SETTINGS)) {
                 settingsList.keySet().stream().filter((propName) -> (settingsList.get(propName) != null))
                         .forEach((propName) -> prop.put(propName, settingsList.get(propName).getValue().toString()));
                 prop.store(fos, "Settings");

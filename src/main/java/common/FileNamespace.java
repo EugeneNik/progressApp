@@ -16,7 +16,7 @@ public interface FileNamespace {
     String USER_PROFILE = "backup/user_profile.xml";
 
     String CSS = "/skin.css";
-    String SETTINGS = "/settings.properties";
+    String SETTINGS = "src/main/resources/settings.properties";
     String REFRESH = "/icons/refresh.png";
     String STOP = "/icons/stop.png";
     String DEFAULT_ACHIEVEMENT_IMAGE = "/icons/default_achievement.png";
