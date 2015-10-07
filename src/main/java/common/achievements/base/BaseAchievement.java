@@ -7,6 +7,7 @@ import javafx.application.Platform;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.util.Duration;
+import org.apache.log4j.Logger;
 import org.controlsfx.control.Notifications;
 import utils.ImageUtils;
 
@@ -17,6 +18,7 @@ public class BaseAchievement implements Achievement {
 
     protected boolean isInitialRun = false;
     protected boolean wasCompleted = false;
+    protected Logger log = Logger.getLogger(getClass());
     private String tooltip = "This achievement is currently unavailable";
     private String imagePath = FileNamespace.DEFAULT_ACHIEVEMENT_IMAGE;
 
@@ -50,11 +52,11 @@ public class BaseAchievement implements Achievement {
     }
 
     private void printSuccessMessage() {
-        System.out.println("Achievement " + getClass().getSimpleName() + " completed!");
+        log.info("Achievement " + getClass().getSimpleName() + " completed!");
     }
 
     private void printFailMessage() {
-        System.out.println("Achievement " + getClass().getSimpleName() + " missed!");
+        log.info("Achievement " + getClass().getSimpleName() + " missed!");
     }
 
     protected boolean calcResult() {

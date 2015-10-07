@@ -30,6 +30,12 @@ public class PropertyManager {
     private static BaseProperty<String> APP_KEY;
 
     /**
+     * personal token for asana connect
+     * Internal property
+     */
+    private static BaseProperty<String> PERSONAL_ASANA_TOKEN;
+
+    /**
      * timer on sync update
      * Internal property
      */
@@ -112,8 +118,10 @@ public class PropertyManager {
         try {
             Properties prop = new Properties();
             try (InputStream is = new FileInputStream(FileNamespace.SETTINGS)) {
+
                 prop.load(is);
                 APP_KEY = new BaseProperty<>(PropertyNamespace.APP_KEY, prop.getProperty(PropertyNamespace.APP_KEY, ""), "");
+                PERSONAL_ASANA_TOKEN = new BaseProperty<>(PropertyNamespace.PERSONAL_ASANA_TOKEN, prop.getProperty(PropertyNamespace.PERSONAL_ASANA_TOKEN, ""), "");
                 TIMER_UPDATE_FREQUENCY = new BaseProperty<>(PropertyNamespace.TIMER_UPDATE_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.TIMER_UPDATE_FREQUENCY, "5")), 5);
                 LAST_ANALYZATION_MADE = new BaseProperty<>(PropertyNamespace.LAST_ANALYZATION_MADE, Long.parseLong(prop.getProperty(PropertyNamespace.LAST_ANALYZATION_MADE, "0")), 0L);
                 ANALYZER_FREQUENCY = new BaseProperty<>(PropertyNamespace.ANALYZER_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.ANALYZER_FREQUENCY, "7")), 7);

@@ -1,10 +1,11 @@
-package common;
+package ui;
 
 import controller.AchievementTabController;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 /**
  * Created by Евгений on 12.08.2015.
@@ -15,7 +16,7 @@ public class AchievementTab extends Tab {
     GridPane achievementGrid;
     ScrollPane achievementScrollPane;
 
-    public AchievementTab() {
+    public AchievementTab(Stage primaryStage) {
         this.setText("Achievements");
         this.setClosable(false);
 
@@ -25,6 +26,11 @@ public class AchievementTab extends Tab {
         achievementScrollPane.setStyle("-fx-background-color:transparent;");
 
         achievementGrid = new GridPane();
+        achievementGrid.prefWidthProperty().bind(primaryStage.widthProperty());
+        achievementGrid.prefHeightProperty().bind(primaryStage.heightProperty());
+
+        achievementGrid.widthProperty().addListener(controller.getOnResizeListener());
+        achievementGrid.heightProperty().addListener(controller.getOnResizeListener());
         achievementGrid.setVgap(50.0);
         achievementGrid.setHgap(20.0);
 
@@ -39,9 +45,5 @@ public class AchievementTab extends Tab {
 
     public GridPane getAchievementGrid() {
         return achievementGrid;
-    }
-
-    public ScrollPane getAchievementScrollPane() {
-        return achievementScrollPane;
     }
 }

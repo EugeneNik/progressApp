@@ -6,8 +6,6 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 /**
@@ -26,14 +24,8 @@ public class ImageUtils {
     }
 
     public static Image loadJavaFXImage(String file) {
-        Image image = null;
-        try {
-            InputStream is = new FileInputStream(file);
-            image = new Image(is);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            //createException(Exceptions.UnsupportedSkinException, getLanguage(), JavaFXUtils.class, e);
-        }
+        InputStream is = ImageUtils.class.getResourceAsStream(file);
+        Image image = new Image(is);
         return image;
     }
 

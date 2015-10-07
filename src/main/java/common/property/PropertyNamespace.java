@@ -6,6 +6,7 @@ package common.property;
 public interface PropertyNamespace {
     String APP_KEY = "appKey";
     String TIMER_UPDATE_FREQUENCY = "timerUpdateFrequency";
+    String PERSONAL_ASANA_TOKEN = "personalAsanaToken";
     String LAST_ANALYZATION_MADE = "lastAnalyzationMade";
     String ANALYZER_FREQUENCY = "analyzerFrequency";
     String SAVE_LAST_PERIODS_COUNT = "numberOfLastPeriods";
