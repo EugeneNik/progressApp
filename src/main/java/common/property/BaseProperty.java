@@ -14,7 +14,7 @@ public class BaseProperty<T> {
         this.name = name;
         this.value = value;
         this.startValue = value;
-        this.defaultValue = value;
+        this.defaultValue = defaultValue;
     }
 
     public void setDefaultValue(T defaultValue) {

@@ -40,6 +40,8 @@ import java.util.Calendar;
  * Created by nikiforov on 25.05.2015.
  */
 public class ProgressTab extends Tab {
+
+    private Stage mainStage;
     private TreeTableView<Task> tree;
     private TreeItem<Task> foundElement;
     private final StatusBar statusBar;
@@ -48,6 +50,7 @@ public class ProgressTab extends Tab {
 
     public ProgressTab(Stage primaryStage) {
         TextArea commentArea = new TextArea();
+        this.mainStage = primaryStage;
 
         controller = new ProgressTabController(this);
 
@@ -307,6 +310,10 @@ public class ProgressTab extends Tab {
             }
         }
         return false;
+    }
+
+    public Stage getMainStage() {
+        return mainStage;
     }
 
     public TreeTableView<Task> getTree() {

@@ -9,8 +9,10 @@ import common.service.base.TransPlatformService;
 import common.service.custom.AsanaService;
 import data.Task;
 import javafx.application.Platform;
+import javafx.beans.binding.Bindings;
 import javafx.scene.control.TreeItem;
 import utils.DateUtils;
+import utils.FormatUtils;
 
 import java.util.Calendar;
 import java.util.Timer;
@@ -19,7 +21,7 @@ import java.util.TimerTask;
 /**
  * Created by Евгений on 28.06.2015.
  */
-public class ProgressTabController {
+public class ProgressTabController extends AbstractTabController {
 
     private ProgressTab ui;
     private Timer timerToNextStart = null;
@@ -87,5 +89,10 @@ public class ProgressTabController {
 
             addTreeItemsRecursive(subtask, subTaskItem);
         }
+    }
+
+    public void changeDigits() {
+        ui.getMainStage().titleProperty().unbind();
+        ui.getMainStage().titleProperty().bind(TransPlatformService.getInstance().getRoot().taskProperty().concat(Bindings.format(" (" + FormatUtils.getProperDoubleFormat(true) + ")", TransPlatformService.getInstance().getRoot().progressProperty().multiply(100.0))));
     }
 }

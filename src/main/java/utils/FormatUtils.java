@@ -17,7 +17,7 @@ public class FormatUtils {
     public static String getProperDoubleFormatForProgressBars() {
         int digits = PropertyManager.getValue(PropertyNamespace.DIGITS_AFTER_POINTS);
         StringBuilder sb = new StringBuilder("#0.");
-        for (int i=0; i<digits;i++) {
+        for (int i = 0; i < digits; i++) {
             sb.append("0");
         }
         return sb.toString();

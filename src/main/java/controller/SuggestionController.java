@@ -31,7 +31,7 @@ import java.util.TimerTask;
 /**
  * Created by Евгений on 28.06.2015.
  */
-public class SuggestionController {
+public class SuggestionController extends AbstractTabController {
     private SuggestionTab ui;
     private Timer timerToNextStart = null;
 

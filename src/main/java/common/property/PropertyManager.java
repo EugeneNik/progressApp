@@ -6,6 +6,8 @@ package common.property;
 
 import common.FileNamespace;
 import common.custom.property.ExpertLevel;
+import javafx.beans.property.Property;
+import javafx.beans.property.SimpleIntegerProperty;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -81,7 +83,7 @@ public class PropertyManager {
      * parameter for user, set number of digits that will be printed after point
      * External property
      */
-    private static BaseProperty<Integer> DIGITS_AFTER_POINTS;
+    private static ObservableBaseProperty<Property<Number>, Number> DIGITS_AFTER_POINTS;
 
     /**
      * property to make auto syncs
@@ -119,7 +121,7 @@ public class PropertyManager {
                 DIFFICULTY_ON_LEARNING = new BaseProperty<>(PropertyNamespace.DIFFICULTY_ON_LEARNING, Integer.parseInt(prop.getProperty(PropertyNamespace.DIFFICULTY_ON_LEARNING, "2")), 2);
                 EXPERT_LEVEL = new BaseProperty<>(PropertyNamespace.EXPERT_LEVEL, ExpertLevel.getByName(prop.getProperty(PropertyNamespace.EXPERT_LEVEL, "Base")), ExpertLevel.BASE);
                 ANALYZER_FREQUENCY_UOM = new BaseProperty<>(PropertyNamespace.ANALYZER_FREQUENCY_UOM, Long.parseLong(prop.getProperty(PropertyNamespace.ANALYZER_FREQUENCY_UOM, Long.toString(TimeUnit.DAYS.toMillis(1)))), TimeUnit.DAYS.toMillis(1));
-                DIGITS_AFTER_POINTS = new BaseProperty<>(PropertyNamespace.DIGITS_AFTER_POINTS, Integer.parseInt(prop.getProperty(PropertyNamespace.DIGITS_AFTER_POINTS, "2")), 2);
+                DIGITS_AFTER_POINTS = new ObservableBaseProperty<>(PropertyNamespace.DIGITS_AFTER_POINTS, new SimpleIntegerProperty(Integer.parseInt(prop.getProperty(PropertyNamespace.DIGITS_AFTER_POINTS, "2"))), 2);
                 AUTO_SYNC_PROPERTY = new BaseProperty<>(PropertyNamespace.AUTO_SYNC_PROPERTY, prop.getProperty(PropertyNamespace.AUTO_SYNC_PROPERTY, "03:00:00"), "03:00:00");
                 SYSTEM_ACHIEVEMENT_ANALYZE_FREQUENCY = new BaseProperty<>(PropertyNamespace.SYSTEM_ACHIEVEMENT_ANALYZE_FREQUENCY, Integer.parseInt(prop.getProperty(PropertyNamespace.SYSTEM_ACHIEVEMENT_ANALYZE_FREQUENCY, "10000")), 10000);
                 SCHEDULER_LAG_TIMEOUT = new BaseProperty<>(PropertyNamespace.SCHEDULER_LAG_TIMEOUT, Integer.parseInt(prop.getProperty(PropertyNamespace.SCHEDULER_LAG_TIMEOUT, "5000")), 5000);
@@ -144,6 +146,13 @@ public class PropertyManager {
         return null;
     }
 
+    public static <T extends Property<E>, E> ObservableBaseProperty<T, E> getObservableProperty(String name) {
+        if (PropertyManager.settingsList.containsKey(name)) {
+            return (ObservableBaseProperty<T, E>) PropertyManager.settingsList.get(name);
+        }
+        return null;
+    }
+
 
     public static void setValue(String name, Object value) {
         PropertyManager.settingsList.get(name).setValue(value);
@@ -152,7 +161,7 @@ public class PropertyManager {
 
     private static void registerApplicationSettings() {
         for (Field field : PropertyManager.class.getDeclaredFields()) {
-            if (field.getType() == BaseProperty.class) {
+            if (field.getType() == BaseProperty.class || field.getType() == ObservableBaseProperty.class) {
                 try {
                     String propertyName = PropertyNamespace.class.getField(field.getName()).get(PropertyNamespace.class.getField(field.getName())).toString();
                     settingsList.put(propertyName, (BaseProperty) field.get(null));

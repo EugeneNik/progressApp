@@ -12,19 +12,25 @@ import javafx.scene.text.Text;
  */
 public class LabeledEdit<T> extends HBox implements Valuable<T> {
     private Text label;
+    private Class<T> clazz;
     private TextInputControl field;
 
-    public LabeledEdit(String name, T value) {
+    public LabeledEdit(String name,Class<T> clazz, T value) {
         this.label = new Text(name);
-        if (value instanceof Integer) {
+        this.clazz = clazz;
+        if (clazz == Integer.class) {
             this.field = new NumberField((Integer) value);
-        } else if (value instanceof String) {
+        } else if (clazz == String.class) {
             this.field = new TextField((String) value);
         }
         BorderPane leftAlignment = new BorderPane();
         leftAlignment.setCenter(this.label);
         this.setSpacing(8);
         this.getChildren().addAll(leftAlignment, field);
+    }
+
+    public TextInputControl getField() {
+        return field;
     }
 
     @Override
@@ -35,5 +41,10 @@ public class LabeledEdit<T> extends HBox implements Valuable<T> {
     @Override
     public T getValue() {
         return (T) field.getText();
+    }
+
+    @Override
+    public Class<T> getClazz() {
+        return clazz;
     }
 }

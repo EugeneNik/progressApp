@@ -22,7 +22,7 @@ import java.util.Set;
 /**
  * Created by Евгений on 12.08.2015.
  */
-public class AchievementTabController {
+public class AchievementTabController extends AbstractTabController {
 
     private AchievementTab ui;
 

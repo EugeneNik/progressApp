@@ -27,8 +27,10 @@ public class SettingsTab extends Tab {
         this.setClosable(false);
 
         VBox mainPage = new VBox();
+        mainPage.setSpacing(8);
 
-        LabeledEdit<Integer> digitsAfterPoint = new LabeledEdit<>("Digits after point:", PropertyManager.getValue(PropertyNamespace.DIGITS_AFTER_POINTS));
+        LabeledEdit<Integer> digitsAfterPoint = new LabeledEdit<>("Digits after point : ", Integer.class, PropertyManager.getValue(PropertyNamespace.DIGITS_AFTER_POINTS));
+
 
         map.put(digitsAfterPoint, PropertyManager.getProperty(PropertyNamespace.DIGITS_AFTER_POINTS));
 
@@ -37,7 +39,13 @@ public class SettingsTab extends Tab {
             mainPage.getChildren().add((HBox) valuableElement);
         }
 
+        digitsAfterPoint.getField().setOnKeyPressed(controller.getSaveSettingsAction());
 
+        controller.registerListeners();
         this.setContent(mainPage);
+    }
+
+    public Map<Valuable, BaseProperty> getMap() {
+        return map;
     }
 }

@@ -8,4 +8,6 @@ public interface Valuable<T> {
     void setValue(T value);
 
     T getValue();
+
+    Class<T> getClazz();
 }

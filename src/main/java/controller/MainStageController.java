@@ -7,13 +7,17 @@ import common.service.custom.UserService;
 /**
  * Created by Евгений on 28.06.2015.
  */
-public class MainStageController {
+public class MainStageController extends AbstractUIController {
 
-    MainStage ui;
+    private MainStage ui;
 
     public MainStageController(MainStage app) {
         this.ui = app;
         UserService userService = Services.get(UserService.class);
         userService.authenticate("admin", "admin");
+    }
+
+    public MainStage getUi() {
+        return ui;
     }
 }
