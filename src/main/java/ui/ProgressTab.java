@@ -33,12 +33,14 @@ public class ProgressTab extends Tab {
     private Button syncButton;
     private TextField searchField;
     private TextArea commentArea;
+    private Stage mainStage;
     ProgressTabController controller;
 
     public ProgressTab(Stage primaryStage) {
         controller = new ProgressTabController(this);
 
         commentArea = new TextArea();
+        mainStage = primaryStage;
 
         searchField = new TextField();
         searchField.setMaxWidth(80);
@@ -136,5 +138,9 @@ public class ProgressTab extends Tab {
 
     public StatusBar getStatusBar() {
         return statusBar;
+    }
+
+    public Stage getMainStage() {
+        return mainStage;
     }
 }
