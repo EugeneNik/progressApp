@@ -303,14 +303,14 @@ public class ProgressTabController extends AbstractTabController {
 
     public EventHandler<ActionEvent> getOnSyncButtonPressListener() {
         return event -> {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("System message");
-            alert.setHeaderText(null);
-            alert.setContentText("Do you really want to do it? It will delete all your data");
-            Optional<ButtonType> result = alert.showAndWait();
-            result.ifPresent((type) -> {
-                if (type.getButtonData() == ButtonBar.ButtonData.OK_DONE) {
-                    if (!syncRunning) {
+            if (!syncRunning) {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("System message");
+                alert.setHeaderText(null);
+                alert.setContentText("Do you really want to do it? It will delete all your data");
+                Optional<ButtonType> result = alert.showAndWait();
+                result.ifPresent((type) -> {
+                    if (type.getButtonData() == ButtonBar.ButtonData.OK_DONE) {
                         syncRunning = true;
                         javafx.concurrent.Task<Void> task = new javafx.concurrent.Task<Void>() {
                             @Override
@@ -328,14 +328,23 @@ public class ProgressTabController extends AbstractTabController {
 
                         ui.getSyncButton().setText("Stop");
                         ui.getSyncButton().setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.STOP)));
-                    } else {
+                    }
+                });
+            } else {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("System message");
+                alert.setHeaderText(null);
+                alert.setContentText("Do you really want to do it? It will stop synchronizing your repo data");
+                Optional<ButtonType> result = alert.showAndWait();
+                result.ifPresent((type) -> {
+                    if (type.getButtonData() == ButtonBar.ButtonData.OK_DONE) {
                         Services.get(AsanaService.class).stop();
                         syncRunning = false;
                         ui.getSyncButton().setText("Sync");
                         ui.getSyncButton().setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.REFRESH)));
                     }
-                }
-            });
+                });
+            }
         };
     }
 
