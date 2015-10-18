@@ -28,10 +28,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 import ui.ProgressTab;
-import javafx.beans.binding.Bindings;
-import javafx.scene.control.TreeItem;
 import utils.DateUtils;
-import utils.FormatUtils;
 import utils.FormatUtils;
 import utils.ImageUtils;
 
@@ -40,6 +37,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.DecimalFormat;
 import java.util.Calendar;
+import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -305,30 +303,39 @@ public class ProgressTabController extends AbstractTabController {
 
     public EventHandler<ActionEvent> getOnSyncButtonPressListener() {
         return event -> {
-            if (!syncRunning) {
-                syncRunning = true;
-                javafx.concurrent.Task<Void> task = new javafx.concurrent.Task() {
-                    @Override
-                    protected Void call() throws Exception {
-                        sync();
-                        done();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("System message");
+            alert.setHeaderText(null);
+            alert.setContentText("Do you really want to do it? It will delete all your data");
+            Optional<ButtonType> result = alert.showAndWait();
+            result.ifPresent((type) -> {
+                if (type.getButtonData() == ButtonBar.ButtonData.OK_DONE) {
+                    if (!syncRunning) {
+                        syncRunning = true;
+                        javafx.concurrent.Task<Void> task = new javafx.concurrent.Task<Void>() {
+                            @Override
+                            protected Void call() throws Exception {
+                                sync();
+                                done();
+                                syncRunning = false;
+                                return null;
+                            }
+                        };
+
+                        Thread t = new Thread(task);
+                        t.setDaemon(true);
+                        t.start();
+
+                        ui.getSyncButton().setText("Stop");
+                        ui.getSyncButton().setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.STOP)));
+                    } else {
+                        Services.get(AsanaService.class).stop();
                         syncRunning = false;
-                        return null;
+                        ui.getSyncButton().setText("Sync");
+                        ui.getSyncButton().setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.REFRESH)));
                     }
-                };
-
-                Thread t = new Thread(task);
-                t.setDaemon(true);
-                t.start();
-
-                ui.getSyncButton().setText("Stop");
-                ui.getSyncButton().setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.STOP)));
-            } else {
-                Services.get(AsanaService.class).stop();
-                syncRunning = false;
-                ui.getSyncButton().setText("Sync");
-                ui.getSyncButton().setGraphic(new ImageView(ImageUtils.loadJavaFXImage(FileNamespace.REFRESH)));
-            }
+                }
+            });
         };
     }
 
